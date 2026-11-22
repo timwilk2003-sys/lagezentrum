@@ -2657,6 +2657,23 @@ body{line-height:1.5}
 #v-firmen .rmb,#v-firmen .co2-b,#v-firmen .co2-f .tag.ok,#v-firmen td .tag.ok{display:none!important}
 #v-firmen .co2.seen,#v-firmen tr.seen{opacity:1!important}
 #cp.lookup .rmb,#cp.lookup [data-seen],#cp.lookup .cstand{display:none!important}
+/* v34 Merkliste */
+.star{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;font-size:18px;line-height:1;color:var(--mute);cursor:pointer;user-select:none;position:relative;z-index:3;flex:none;transition:color .15s,background .15s}
+.star:hover{background:color-mix(in srgb,var(--amber) 14%,transparent);color:var(--amber)}
+.star.on{color:var(--amber)}
+.co2-t{display:flex;align-items:flex-start;gap:6px;justify-content:space-between}
+.fs-ht h1 .star{vertical-align:4px;margin-left:4px}
+.fc .star{position:absolute;top:8px;right:8px}
+.fb .star{margin-right:4px}
+.p4-ti+.star,.lnk2+.star{margin-left:4px;vertical-align:middle;width:24px;height:24px;font-size:15px}
+.ml-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:14px}.ml-head h1{margin:4px 0 6px}.ml-head .lead{margin:0;color:var(--ink2);max-width:620px}
+.ml-sec{border-radius:12px;padding:12px 16px;margin-bottom:12px}
+.ml-l{list-style:none;margin:0;padding:0}
+.ml-it{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line)}.ml-it:first-child{border-top:0}
+.ml-it>div{flex:1;min-width:0}.ml-it b{display:block;font-size:14px;font-weight:600}.ml-it b a,.ml-it b .lnk2{color:var(--ink);text-decoration:none;text-align:left;font:inherit;font-weight:600;background:none;border:0;padding:0;cursor:pointer}
+.ml-it b a:hover,.ml-it b .lnk2:hover{color:var(--accent)}.ml-it span:not(.star){font-size:12.5px;color:var(--mute)}
+@media(max-width:760px){.ml-head{flex-direction:column;align-items:flex-start}.star{width:36px;height:36px}}
+.p4-t td:first-child>.star{float:right;margin:-2px -4px 0 4px}.p4-card>.star{position:absolute;top:6px;right:6px}.p4-card{position:relative}.p4-card .p4-ct{padding-right:26px}
 </style>
 </head>
 <body><div id="gate" role="dialog" aria-label="Anmeldung"><form id="gatef" autocomplete="off"><b>AUTOFLUG Lagezentrum</b><p>Testversion – bitte Passwort eingeben.</p><input id="gatep" type="password" placeholder="Passwort" aria-label="Passwort" autofocus><span class="err" id="gatee"></span><button type="submit">Öffnen</button></form></div><script>(function(){var H='f62490f783b6aeebc0b83a3c7b451a3f686bffa131ec8763f03e0d0243648534';function sha(s){function r(n,x){return(x>>>n)|(x<<(32-n))}var K=[],W=[],h=[],i,j,b=unescape(encodeURIComponent(s)),l=b.length*8,w=[];for(var c=2,n=0;n<64;c++){for(j=2;j*j<=c;j++)if(c%j===0)break;if(j*j>c){if(n<8)h[n]=(Math.pow(c,1/2)*4294967296)|0;K[n++]=(Math.pow(c,1/3)*4294967296)|0;}}b+='\x80';while(b.length%64-56)b+='\x00';for(i=0;i<b.length;i++){j=b.charCodeAt(i);w[i>>2]|=j<<((3-i)%4)*8;}w[w.length]=(l/4294967296)|0;w[w.length]=l;for(j=0;j<w.length;){var a=h.slice(0,8);for(i=0;i<64;i++){var x=i<16?w[j+i]|0:(r(17,W[i-2])^r(19,W[i-2])^(W[i-2]>>>10))+W[i-7]+(r(7,W[i-15])^r(18,W[i-15])^(W[i-15]>>>3))+W[i-16]|0;W[i]=x;var t1=a[7]+(r(6,a[4])^r(11,a[4])^r(25,a[4]))+((a[4]&a[5])^(~a[4]&a[6]))+K[i]+x,t2=(r(2,a[0])^r(13,a[0])^r(22,a[0]))+((a[0]&a[1])^(a[0]&a[2])^(a[1]&a[2]));a=[(t1+t2)|0].concat(a);a[4]=(a[4]+t1)|0;a.pop();}for(i=0;i<8;i++)h[i]=(h[i]+a[i])|0;j+=16;}var o='';for(i=0;i<8;i++)for(j=3;j+1;j--){var v=(h[i]>>(j*8))&255;o+=(v<16?'0':'')+v.toString(16);}return o;}var f=document.getElementById('gatef');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var p=document.getElementById('gatep');if(sha(p.value)===H){try{sessionStorage.setItem('lz_gate',H)}catch(x){}document.documentElement.classList.remove('locked');window.dispatchEvent(new Event('resize'));}else{document.getElementById('gatee').textContent='Falsches Passwort.';p.value='';p.focus();}});})();</script>
@@ -2680,6 +2697,7 @@ body{line-height:1.5}
   <section class="view" id="v-pipeline"><div id="pl"></div></section>
   <section class="view" id="v-kreativ"><div id="hub"></div></section>
   <section class="view" id="v-messeki"><div id="mki"></div></section>
+  <section class="view" id="v-merkliste"><div id="ml"></div></section>
   <!-- Cockpit -->
   <section class="view" id="v-cockpit">
    <div class="quick" id="quick"></div>
@@ -2816,7 +2834,7 @@ const ICON={
  messen:'<path d="M2.5 8.5L9 3l6.5 5.5"/><path d="M4 8v7.5h10V8"/><path d="M7.5 15.5v-4h3v4"/>',
  planer:'<rect x="2.5" y="3.5" width="13" height="12" rx="2"/><path d="M2.5 7.5h13M6 2v3M12 2v3"/><circle cx="6" cy="12" r="1"/><circle cx="12.5" cy="10.5" r="1"/><path d="M7 11.6l4.5-.8"/>',
  firmen:'<rect x="3" y="2.5" width="8" height="13" rx="1.2"/><path d="M11 7h4v8.5h-4M5.5 5.5h1M8 5.5h1M5.5 8.5h1M8 8.5h1M5.5 11.5h1M8 11.5h1"/>'};
-const VIEWS=[['briefing','Wochenbriefing'],['messeki','Mit KI planen'],['kreativ','Creativity Hub'],['pipeline','Pipeline'],['cockpit','Lage-Radar'],['landkarte','Chancen-Landkarte'],['opportunities','Chancen'],['ausschreibungen','Ausschreibungen'],['netz','Wissensnetz'],['maerkte','Märkte'],['signale','Signale'],['innovation','Innovation'],['fristen','Fristen'],['messen','Messen'],['planer','Messeplaner'],['firmen','Unternehmen'],['sparten','Sparten'],['wettbewerb','Wettbewerb'],['luecken','Lücken'],['frag','Fragen']];
+const VIEWS=[['briefing','Wochenbriefing'],['merkliste','Merkliste'],['messeki','Mit KI planen'],['kreativ','Creativity Hub'],['pipeline','Pipeline'],['cockpit','Lage-Radar'],['landkarte','Chancen-Landkarte'],['opportunities','Chancen'],['ausschreibungen','Ausschreibungen'],['netz','Wissensnetz'],['maerkte','Märkte'],['signale','Signale'],['innovation','Innovation'],['fristen','Fristen'],['messen','Messen'],['planer','Messeplaner'],['firmen','Unternehmen'],['sparten','Sparten'],['wettbewerb','Wettbewerb'],['luecken','Lücken'],['frag','Fragen']];
 let DV='alle';try{DV=localStorage.getItem('lz3_div')||'alle';}catch(e){}
 let db=null,uid=null,canWrite=false,sample=null,tts=null,dbOk=false;
 const use=n=>(window.claude&&typeof window.claude.use==='function')?window.claude.use(n).catch(()=>null):Promise.resolve(null);
@@ -2876,8 +2894,8 @@ function renderSubnav(){const el=$('#subnav');if(!el)return;const A=areaOf(NAVK)
  el.innerHTML=`<div class="snav"><span class="sarea">${esc(A[1])}</span><div class="stabs" role="tablist">${A[3].map(v=>`<a href="#${v}" role="tab" class="${v===NAVK?'on':''}" aria-selected="${v===NAVK}">${esc(SUBL[v]||v)}</a>`).join('')}</div>${filt}</div>`;}
 function renderSeg(){$('#divseg').innerHTML=[['alle','Alle'],['as','AS'],['ls','LS'],['gs','GS']].map(([k,l])=>`<button data-div="${k}" class="${DV===k?'on':''}" aria-pressed="${DV===k}" title="${esc(k==='alle'?'Alle Sparten anzeigen':'Nur '+(DNAME[k]||k)+' anzeigen')}">${k!=='alle'?`<i style="background:${cv(k)}"></i>`:''}${l}</button>`).join('');}
 let cur='cockpit';
-const AREAS=[['briefing','Wochenbriefing','Briefing',['briefing']],['pipeline','Pipeline','Pipeline',['pipeline','ausschreibungen','fristen'],['opportunities']],['messen','Messen','Messen',['messen','messeki','planer']],['firmen','Kunden & Wettbewerb','Kunden',['firmen','wettbewerb']],['wissen','Markt & Analysen','Markt',['maerkte','signale','landkarte','innovation','netz'],['cockpit','sparten','luecken','frag']],['kreativ','Creativity Hub','Hub',['kreativ']]];
-const SUBL={messeki:'Mit KI planen',kreativ:'Creativity Hub',briefing:'Wochenbriefing',pipeline:'Pipeline',landkarte:'Chancen-Landkarte',planer:'Messeplaner',cockpit:'Lage-Radar',fristen:'Fristen',messen:'Messen',firmen:'Unternehmen',wettbewerb:'Wettbewerb',opportunities:'Chancen-Akten',ausschreibungen:'Ausschreibungen',signale:'Signale',maerkte:'Märkte',netz:'Wissensnetz',innovation:'Innovation',sparten:'Sparten',luecken:'Lücken & Nachtlauf',frag:'Fragen'};
+const AREAS=[['briefing','Wochenbriefing','Briefing',['briefing']],['pipeline','Pipeline','Pipeline',['pipeline','ausschreibungen','fristen'],['opportunities']],['messen','Messen','Messen',['messen','messeki','planer']],['firmen','Kunden & Wettbewerb','Kunden',['firmen','wettbewerb','merkliste']],['wissen','Markt & Analysen','Markt',['maerkte','signale','landkarte','innovation','netz'],['cockpit','sparten','luecken','frag']],['kreativ','Creativity Hub','Hub',['kreativ']]];
+const SUBL={merkliste:'Merkliste ★',messeki:'Mit KI planen',kreativ:'Creativity Hub',briefing:'Wochenbriefing',pipeline:'Pipeline',landkarte:'Chancen-Landkarte',planer:'Messeplaner',cockpit:'Lage-Radar',fristen:'Fristen',messen:'Messen',firmen:'Unternehmen',wettbewerb:'Wettbewerb',opportunities:'Chancen-Akten',ausschreibungen:'Ausschreibungen',signale:'Signale',maerkte:'Märkte',netz:'Wissensnetz',innovation:'Innovation',sparten:'Sparten',luecken:'Lücken & Nachtlauf',frag:'Fragen'};
 const areaOf=v=>(AREAS.find(a=>a[3].includes(v)||(a[4]||[]).includes(v))||AREAS[0]);
 let LASTSUB={};try{LASTSUB=JSON.parse(localStorage.getItem('lz3_sub')||'{}');}catch(e){}
 const NAVG=[['',['briefing','pipeline','messen','firmen','wissen','kreativ']]];
@@ -2889,7 +2907,7 @@ function route(){let h=decodeURIComponent((location.hash||'#briefing').slice(1))
  else{cur=VIEWS.some(([k])=>k===h)?h:'briefing';NAVK=cur;const A=areaOf(cur);if(A[3].length>1){LASTSUB[A[0]]=cur;try{localStorage.setItem('lz3_sub',JSON.stringify(LASTSUB));}catch(e){}}}
  if(cur==='fair'){renderFairPage();document.documentElement.style.setProperty('--toph',($('.top')||{offsetHeight:64}).offsetHeight+'px');}if(cur==='co')renderCoPage();
  $$('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+cur));markNav();decorateHeads();
- if(cur==='cockpit')requestAnimationFrame(drawRadar);if(cur==='netz')initNet();if(cur==='maerkte')initGlobe();if(cur==='planer')renderPlaner();if(cur==='landkarte')renderLk();if(cur==='kreativ')renderHub();if(cur==='messeki')renderMki();if(cur==='briefing')renderBrief();if(cur==='pipeline')renderPipe();else if(typeof mpStop==='function'&&MPPLAY)mpStop(true);if(cur==='innovation')requestAnimationFrame(drawTRadar);if(cur==='signale')requestAnimationFrame(drawHist);if(cur==='messen')requestAnimationFrame(()=>{drawGantt();if(MX.mode==='karte')drawMxMap();});
+ if(cur==='cockpit')requestAnimationFrame(drawRadar);if(cur==='netz')initNet();if(cur==='maerkte')initGlobe();if(cur==='planer')renderPlaner();if(cur==='landkarte')renderLk();if(cur==='kreativ')renderHub();if(cur==='merkliste')renderMerk();if(cur==='messeki')renderMki();if(cur==='briefing')renderBrief();if(cur==='pipeline')renderPipe();else if(typeof mpStop==='function'&&MPPLAY)mpStop(true);if(cur==='innovation')requestAnimationFrame(drawTRadar);if(cur==='signale')requestAnimationFrame(drawHist);if(cur==='messen')requestAnimationFrame(()=>{drawGantt();if(MX.mode==='karte')drawMxMap();});
  pauseHeavy();}
 addEventListener('hashchange',()=>{route();scrollTo(0,0);});
 function renderStatus(){const m=S.meta||{};const nSrc=srcCount();
@@ -3004,7 +3022,7 @@ function fitRadar(fit,col){const ks=Object.keys(fit);const n=ks.length,R=88,c=11
 let ticks={};try{ticks=JSON.parse(localStorage.getItem('lz3_ticks')||'{}');}catch(e){}
 function openDeal(id){const o=S.opps[id];if(!o)return;const st=(S.meta||{}).stages||[];const col=cv(o.div);
  const comps=(o.competitors||[]).filter(c=>S.nodes[c]);const sig=(o.signals||[]).filter(s=>S.signals[s]);
- $('#drawerin').innerHTML=`<div class="meta" style="justify-content:space-between"><span class="k">DEAL-ROOM · ${esc(id.toUpperCase())}</span><button class="btn" id="dclose">Schließen</button></div>
+ $('#drawerin').innerHTML=`<div class="meta" style="justify-content:space-between"><span class="k">DEAL-ROOM · ${esc(id.toUpperCase())}</span><span style="display:flex;gap:6px;align-items:center">${starBtn(id)}<button class="btn" id="dclose">Schließen</button></span></div>
  <div class="meta">${dvb(o.div)}<span class="tag ${o.prio>=16?'hot':''}">Priorität ${o.prio} = Markt ${o.M} × Machbarkeit ${o.F}</span><span class="tag">Volumen ${esc(o.vol)}</span></div>
  <h1 style="font-size:clamp(24px,3vw,32px)">${esc(o.title)}</h1>
  <div class="steps">${st.map((s,i)=>`<span class="${i<(o.stage||1)?'on':''}">${esc(s)}</span>`).join('')}</div>
@@ -3217,8 +3235,8 @@ function drawHist(){const svg=$('#hist');if(!svg)return;const W=svg.clientWidth,
  svg.innerHTML=g;$('#histnote').textContent=`${Object.values(S.signals).filter(inDiv).length} Signale in der Auswahl`;}
 new ResizeObserver(()=>{if(cur==='signale')drawHist();}).observe($('#histfig'));
 function fbHtml(id,kind){const v=S.votes[id]||0;
- if(kind==='idea')return `<div class="fb"><button data-vote="${esc(id)}" data-v="1" class="${v===1?'on':''}">${v===1?'Meine Stimme ✓':'Dafür stimmen'}</button></div>`;
- return `<div class="fb"><button data-vote="${esc(id)}" data-v="1" class="${v===1?'on':''}">Relevant</button><button data-vote="${esc(id)}" data-v="-1" class="${v===-1?'on':''}">Nicht relevant</button></div>`;}
+ if(kind==='idea')return `<div class="fb">${starBtn(id)}<button data-vote="${esc(id)}" data-v="1" class="${v===1?'on':''}">${v===1?'Meine Stimme ✓':'Dafür stimmen'}</button></div>`;
+ return `<div class="fb">${starBtn(id)}<button data-vote="${esc(id)}" data-v="1" class="${v===1?'on':''}">Relevant</button><button data-vote="${esc(id)}" data-v="-1" class="${v===-1?'on':''}">Nicht relevant</button></div>`;}
 
 /* ---------- Innovation ---------- */
 const RINGS=['Einsetzen','Erproben','Beobachten'],SECTORS=['Sensorik','Material','Fertigung','Autonomie','Medizin','Software'];
@@ -3276,7 +3294,7 @@ const fdvb=f=>(f.divs||[]).map(dvb).join('');
 function winOk(f){const d=daysTo(f.start);if(MX.win==='alle')return true;if(MX.win==='q')return d<=92;if(MX.win==='h')return d<=183;if(MX.win==='y')return d<=366;if(MX.win==='2027')return f.start.startsWith('2027');if(MX.win==='2028')return f.start>='2028';return true;}
 function mxList(){const q=MX.q.trim().toLowerCase();
  return Object.entries(S.fairs).filter(([k,f])=>fIn(f)&&(MX.reg==='alle'||f.region===MX.reg)&&(MX.typ==='alle'||f.type===MX.typ)&&(MX.goal==='alle'||f.goal===MX.goal)
-  &&(!MX.p4||f.prio>=4)&&(!MX.af||f.af)&&(!MX.exl||f.exUrl||exOf(k).length)&&(!MX.fav||S.votes[k]===1)&&winOk(f)&&f.end>=todayISO
+  &&(!MX.p4||f.prio>=4)&&(!MX.af||f.af)&&(!MX.exl||f.exUrl||exOf(k).length)&&(!MX.fav||isFav(k))&&winOk(f)&&f.end>=todayISO
   &&(!q||JSON.stringify(f).toLowerCase().includes(q)||exOf(k).some(([,x])=>x.name.toLowerCase().includes(q))));}
 const SORTS={date:(a,b)=>a[1].start.localeCompare(b[1].start),prio:(a,b)=>b[1].prio-a[1].prio||a[1].start.localeCompare(b[1].start),ex:(a,b)=>((b[1].last||{}).ex||0)-((a[1].last||{}).ex||0),vis:(a,b)=>((b[1].last||{}).vis||0)-((a[1].last||{}).vis||0)};
 function renderMessen(){if(!$('#mxbody'))return;const all=Object.entries(S.fairs);
@@ -3318,11 +3336,11 @@ function renderMessen(){if(!$('#mxbody'))return;const all=Object.entries(S.fairs
  else $('#mxbody').innerHTML=mxTimeline(L);
  if(cur==='messen')requestAnimationFrame(drawGantt);
  renderExTable();}
-function fCard(k,f,past){const c=cv(fdiv(f));const d=past?f.last.start:f.start;const[y,m,dd]=d.split('-');const nEx=exOf(k).length;const tot=(f.last||{}).ex;const fav=S.votes[k]===1;
+function fCard(k,f,past){const c=cv(fdiv(f));const d=past?f.last.start:f.start;const[y,m,dd]=d.split('-');const nEx=exOf(k).length;const tot=(f.last||{}).ex;const fav=isFav(k);
  const sub=past?`<span class="tag">Rückblick ${esc(f.last.label)}</span>`:`<span class="mono">${esc(fWhen(f))}</span><span class="mono" style="color:var(--mute)">${esc(fCd(f))}</span>`;
  return `<button class="glass fc ${past?'past':''}" style="--c:${c}" data-open="fairs:${esc(k)}">
  <span class="fdate"><span>${MON[+m-1]}</span><b>${f.conf==='erwartet'&&!past&&f.when&&!/\d{2}\./.test(f.when)?'~':dd}</b><span>${y}</span>${past?'':`<i>${esc(f.cycle.split(' ')[0])}</i>`}</span>
- <span style="display:flex;flex-direction:column;gap:6px;min-width:0"><span class="meta">${fdvb(f)}<span class="tag">${esc(f.type)}</span><span class="tag ${f.goal==='Ausstellen'?'go':''}">${esc(f.goal)}</span>${f.af?'<span class="afb">AUTOFLUG</span>':''}${fav?'<span class="tag">★ gemerkt</span>':''}<span style="margin-left:auto">${pdots(f.prio,c)}</span></span>
+ <span style="display:flex;flex-direction:column;gap:6px;min-width:0">${starBtn(k)}<span class="meta">${fdvb(f)}<span class="tag">${esc(f.type)}</span><span class="tag ${f.goal==='Ausstellen'?'go':''}">${esc(f.goal)}</span>${f.af?'<span class="afb">AUTOFLUG</span>':''}${fav?'<span class="tag">★ gemerkt</span>':''}<span style="margin-left:auto">${pdots(f.prio,c)}</span></span>
  <h3>${esc(f.name)}</h3><span class="meta">${sub}<span>${esc(f.city)}, ${esc(f.country)}</span>${f.conf==='erwartet'?'<span class="tag">Termin erwartet</span>':''}</span>
  <p class="why">${esc(f.why)}</p>
  <span class="fk">${f.last&&f.last.ex?`<span><b>${nf(f.last.ex)}</b>Aussteller</span>`:''}${f.last&&f.last.vis?`<span><b>${nShort(f.last.vis)}</b>Besucher</span>`:''}${f.last&&(f.last.ctry||f.last.vctry)?`<span><b>${f.last.ctry||f.last.vctry}</b>Länder</span>`:''}${f.last&&f.last.deleg?`<span><b>${nf(f.last.deleg)}</b>Delegationen</span>`:''}</span>
@@ -3348,7 +3366,7 @@ function drawGantt(){const svg=$('#mxgantt');if(!svg||cur!=='messen')return;cons
  let g='';const mm=new Date(t0);for(let i=0;i<=24;i++){const iso=mm.toISOString().slice(0,10);const x=X(iso);const jan=mm.getMonth()===0;
   g+=`<line x1="${x}" y1="${TOP-6}" x2="${x}" y2="${H}" stroke="rgba(160,185,230,${jan?.28:.08})"/>`;if(i<24)g+=`<text x="${x+4}" y="${TOP-12}" style="font:${jan?700:500} 10.5px var(--mono)" fill="${jan?'#EAF0FB':'rgba(167,179,201,.7)'}">${MON[mm.getMonth()]}${jan||i===0?' '+String(mm.getFullYear()).slice(2):''}</text>`;mm.setMonth(mm.getMonth()+1);}
  const xt=X(todayISO);g+=`<line x1="${xt}" y1="${TOP-8}" x2="${xt}" y2="${H}" stroke="#F2B544" stroke-width="1.5"/><text x="${xt+4}" y="${H-4}" style="font:700 10px var(--mono)" fill="#F2B544">HEUTE</text>`;
- for(const p of pl){const c=cv(fdiv(p.f));const y=TOP+p.li*LH;const fav=S.votes[p.k]===1;
+ for(const p of pl){const c=cv(fdiv(p.f));const y=TOP+p.li*LH;const fav=isFav(p.k);
   g+=`<g class="gb" data-open="fairs:${esc(p.k)}" tabindex="0" role="button" aria-label="${esc(p.f.name+', '+fWhen(p.f))}"><title>${esc(p.f.name+' · '+fWhen(p.f)+' · '+p.f.city+' · Relevanz '+p.f.prio+'/5')}</title>
   <rect x="${p.x0}" y="${y+3}" width="${p.x1-p.x0}" height="14" rx="4" fill="${c}" fill-opacity="${.35+p.f.prio*.12}" stroke="${p.f.af?'#fff':'none'}" stroke-dasharray="${p.f.conf==='erwartet'?'3 2':''}"/>
   <text x="${p.left?p.x0-5:p.x1+5}" y="${y+14}" text-anchor="${p.left?'end':'start'}" style="font:${p.f.prio>=5?700:500} 11.5px var(--font)" fill="${p.f.prio>=4?'#EAF0FB':'#A7B3C9'}">${fav?'★ ':''}${esc(p.lab)}</text></g>`;}
@@ -3371,7 +3389,7 @@ async function drawMxMap(){const wrap=$('#mxmapw');if(!wrap)return;let geo;try{g
    tx+=`<text x="${ok[0]}" y="${ok[1]}" text-anchor="${ok[2]}" style="font:${p.f.prio>=5?700:500} ${fs}px var(--font)" fill="#EAF0FB" opacity=".92" pointer-events="none">${esc(t)}</text>`;}
   svg.innerHTML=drawMxMap.land+dots+tx;};
  draw('#mxeu','466 76 124 74',.15,f=>EU(f),2.4);draw('#mxmap','0 40 1000 350',1.3,f=>!EU(f)&&f.prio>=2,20);}
-function openFair(id){const f=S.fairs[id];if(!f)return;const c=cv(fdiv(f));const la=f.last||{};const ex=exOf(id);const fav=S.votes[id]===1;
+function openFair(id){const f=S.fairs[id];if(!f)return;const c=cv(fdiv(f));const la=f.last||{};const ex=exOf(id);const fav=isFav(id);
  const kp=[['Aussteller',la.ex],['Ausstellerländer',la.ctry],['Besucher',la.vis],['Besucherländer',la.vctry],['Delegationen',la.deleg],['Fläche m²',la.area]].filter(([,v])=>v!=null);
  const rel=(f.nodes||[]).filter(n=>S.nodes[n]).map(n=>`<button class="chip" data-open="nodes:${esc(n)}">${esc(nm(n))}</button>`).join('')+(f.markets||[]).filter(m=>S.markets[m]).map(m=>`<button class="chip" data-open="markets:${esc(m)}">Markt: ${esc(S.markets[m].name)}</button>`).join('');
  const h=`<div class="meta">${fdvb(f)}<span class="tag">${esc(f.type)}</span><span class="tag ${f.goal==='Ausstellen'?'go':''}">Empfehlung: ${esc(f.goal)}</span>${pdots(f.prio,c)}${f.af?'<span class="afb">AUTOFLUG</span>':''}</div>
@@ -3387,7 +3405,7 @@ function openFair(id){const f=S.fairs[id];if(!f)return;const c=cv(fdiv(f));const
  <div class="cov"><span>${ex.length} erfasst${la.ex?` von ${nf(la.ex)} (letzte Ausgabe)`:''}</span>${la.ex?`<span class="bar"><i style="width:${Math.max(2,Math.min(100,ex.length/la.ex*100))}%;background:${c}"></i></span>`:''}</div>
  ${ex.length?ex.map(([k,x])=>`<button class="row" data-open="exhibitors:${esc(k)}"><span class="t"><b>${esc(x.name)}</b> <span class="note">${esc(x.country)}</span><br><span class="note">${esc(x.note)}</span></span><span class="tag">${esc(x.rel)}</span></button>`).join(''):'<p class="note" style="margin:0">Noch keine Aussteller erfasst.</p>'}
  ${f.exUrl?`<p style="margin:0"><a href="${esc(f.exUrl)}" target="_blank" rel="noopener">Vollständige Ausstellerliste öffnen ↗</a></p>`:''}
- <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px"><button class="btn ${fav?'gold':''}" data-vote="${esc(id)}" data-v="1">${fav?'★ Gemerkt':'☆ Merken'}</button>${calLinks(f)}${DL?'':`<button class="btn" data-ics="${esc(id)}">.ics-Datei</button>`}${f.web?`<a class="btn" href="${esc(f.web)}" target="_blank" rel="noopener">Offizielle Seite ↗</a>`:''}</div>
+ <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px"><button class="btn ${fav?'gold':''}" data-fav="${esc(id)}">${fav?'★ Gemerkt':'☆ Merken'}</button>${calLinks(f)}${DL?'':`<button class="btn" data-ics="${esc(id)}">.ics-Datei</button>`}${f.web?`<a class="btn" href="${esc(f.web)}" target="_blank" rel="noopener">Offizielle Seite ↗</a>`:''}</div>
  ${srcHtml(f.src)}`;
  $('#dlgb').innerHTML=`<button class="btn xbtn" id="dlgx">Schließen</button>`+h;$('#dlgx').onclick=()=>$('#dlg').close();if(!$('#dlg').open)$('#dlg').showModal();}
 function openExh(id){const x=S.exhibitors[id];if(!x)return;const fs=(x.fairs||[]).filter(f=>S.fairs[f]).map(f=>[f,S.fairs[f]]).sort((a,b)=>a[1].start.localeCompare(b[1].start));
@@ -3473,13 +3491,13 @@ let FOPEN=true;try{FOPEN=matchMedia('(min-width: 761px)').matches;}catch(e){}
 let SEEN=new Set(),NOTES={};try{SEEN=new Set(JSON.parse(localStorage.getItem('lz3_seen')||'[]'));NOTES=JSON.parse(localStorage.getItem('lz3_notes')||'{}');}catch(e){}
 const saveSeen=()=>{try{localStorage.setItem('lz3_seen',JSON.stringify([...SEEN]));}catch(e){}};
 const saveNotes=()=>{try{localStorage.setItem('lz3_notes',JSON.stringify(NOTES));}catch(e){}if(typeof savePlans==='function')savePlans();};
-const isMine=k=>!!(NOTES[k]||SEEN.has(k)||(S.votes&&S.votes[k]===1)||Object.keys(PLANS).some(p=>inPlan(p,k)));
+const isMine=k=>!!(NOTES[k]||SEEN.has(k)||isFav(k)||Object.keys(PLANS).some(p=>inPlan(p,k)));
 const noteBox=(k,max)=>NOTES[k]?`<div class="nbox"><b>Meine Notiz</b><span>${esc(max&&NOTES[k].length>max?NOTES[k].slice(0,max)+' …':NOTES[k])}</span></div>`:'';
 /* Roadmap je Messe: localStorage + DB (feedback/{uid}.plans) */
 let PLANS={};try{PLANS=JSON.parse(localStorage.getItem('lz3_plans')||'{}')||{};}catch(e){}
 let plT=null,rnT=null,RMCLR=null;
 function savePlans(){try{localStorage.setItem('lz3_plans',JSON.stringify(PLANS));}catch(e){}clearTimeout(plT);plT=setTimeout(syncPlans,900);}
-async function syncPlans(){if(!db||!uid||!canWrite)return;try{await db.doc('feedback/'+uid).set({votes:S.votes||{},plans:PLANS,notes:NOTES,team:TEAMME,updated:new Date().toISOString()});}catch(e){}}
+async function syncPlans(){if(!db||!uid||!canWrite)return;try{await db.doc('feedback/'+uid).set({votes:S.votes||{},plans:PLANS,notes:NOTES,team:TEAMME,favs:[...FAV],updated:new Date().toISOString()});}catch(e){}}
 function mergePlans(r){if(!r||typeof r!=='object')return;for(const[fid,p]of Object.entries(r)){if(!p||!Array.isArray(p.items))continue;const l=PLANS[fid];if(!l||!(l.items||[]).length||String(p.u||'')>String(l.u||''))PLANS[fid]=p;}try{localStorage.setItem('lz3_plans',JSON.stringify(PLANS));}catch(e){}}
 function mergeNotes(r){if(!r||typeof r!=='object')return;for(const[k,v]of Object.entries(r))if(v&&!NOTES[k])NOTES[k]=String(v);try{localStorage.setItem('lz3_notes',JSON.stringify(NOTES));}catch(e){}}
 function migrateNotes(){let ch=false;for(const p of Object.values(PLANS))for(const i of (p&&p.items)||[])if(i.n&&!NOTES[i.k]){NOTES[i.k]=i.n;ch=true;}if(ch)try{localStorage.setItem('lz3_notes',JSON.stringify(NOTES));}catch(e){}}
@@ -3517,7 +3535,7 @@ function coMatch([k,x],st,fid){const q=st.q.trim().toLowerCase();
  if(DV!=='alle'&&x.div&&x.div!==DV&&x.div!=='x')return false;
  if((st.cats||[]).length&&!st.cats.includes(x.cat))return false;if(st.mine&&!isMine(k))return false;if(st.rel!=='alle'&&x.rel!==st.rel)return false;if((x.score||1)<+st.min)return false;
  if(st.prod!=='alle'&&!(x.prods||[]).includes(st.prod))return false;if(st.land!=='alle'&&x.country!==st.land)return false;
- if(st.quick&&st.quick!=='alle'&&QKF[st.quick]&&!QKF[st.quick][2](x))return false;if(st.fav&&S.votes[k]!==1)return false;if(st.proj&&!(x.projects||[]).length)return false;if(st.ask&&!x.ask)return false;if(st.conf&&x.conf!=='recherchiert')return false;
+ if(st.quick&&st.quick!=='alle'&&QKF[st.quick]&&!QKF[st.quick][2](x))return false;if(st.fav&&!isFav(k))return false;if(st.proj&&!(x.projects||[]).length)return false;if(st.ask&&!x.ask)return false;if(st.conf&&x.conf!=='recherchiert')return false;
  if(st.seen==='offen'&&SEEN.has(k))return false;if(st.seen==='besucht'&&!SEEN.has(k))return false;
  const f=fid||(st.fair!=='alle'?st.fair:null);if(f&&!(x.fairs||[]).includes(f))return false;
  if(st.plan&&!(f?inPlan(f,k):Object.keys(PLANS).some(p=>inPlan(p,k))))return false;
@@ -3552,9 +3570,9 @@ function fLayout(ctx,base,total,inner){const st=ST(ctx);const fid=ctx==='fx'?FP.
   <div class="frow"><span class="fcount"><b>${base}</b> von ${total} ${ctx==='fx'?'Ausstellern':'Unternehmen'}</span><div class="fsort" role="group" aria-label="Sortieren"><span>Sortieren</span>${sorts.map(([v,l])=>`<button data-f="${ctx}|sort" data-val="${v}" class="${st.sort===v?'on':''}" aria-pressed="${st.sort===v}">${l}</button>`).join('')}</div><div class="seg2" role="group" aria-label="Darstellung">${[['karten','▦ Karten'],['liste','☰ Liste']].map(([v,l])=>`<button data-f="${ctx}|view" data-val="${v}" class="${st.view===v?'on':''}" aria-pressed="${st.view===v}">${l}</button>`).join('')}</div><button class="btn sm" data-fcsv="${ctx}" title="Aktuelle Auswahl als CSV">CSV</button></div>
   ${act.length?`<div class="fchips">${act.map(([k,l])=>`<button class="achip" data-fclr="${ctx}|${k}" title="Filter entfernen">${esc(l)} <span aria-hidden="true">×</span></button>`).join('')}<button class="achip clr" data-freset="${ctx}">Alle zurücksetzen</button></div>`:''}</div>`;
  return `<div class="flay${FSHEET[ctx]?' sheet':''}" data-flay="${ctx}">${side}<div class="fback" data-fsheet="${ctx}"></div><div class="fmain">${tool}${inner}</div></div>`;}
-function coCard([k,x],fid){const pf=planFid(x,fid);const b=pf?boothOf(x,pf):'';const seen=SEEN.has(k);const np=(x.projects||[]).length;const fav=S.votes[k]===1;const lp=lastP(x);const sc=x.score||1;const me=x.rel==='AUTOFLUG';
+function coCard([k,x],fid){const pf=planFid(x,fid);const b=pf?boothOf(x,pf):'';const seen=SEEN.has(k);const np=(x.projects||[]).length;const fav=isFav(k);const lp=lastP(x);const sc=x.score||1;const me=x.rel==='AUTOFLUG';
  return `<article class="co2${seen?' seen':''}${me?' me':''}" style="--c:${me?palK('ink'):SCOL[sc]}"><div class="co2-s" title="Relevanz ${sc} von 5 – ${esc(SCOREN[sc])}"><b>${me?'★':sc}</b><span>${me?'WIR':(fid?{5:'Pflicht',4:'Hoch',3:'Mittel',2:'Beob.',1:'Gering'}:{5:'Sehr hoch',4:'Hoch',3:'Mittel',2:'Beob.',1:'Gering'})[sc]}</span></div>
- <div class="co2-m"><div class="co2-t"><a class="co2-n" href="${coHref(k,fid)}">${esc(x.name)}</a></div>
+ <div class="co2-m"><div class="co2-t"><a class="co2-n" href="${coHref(k,fid)}">${esc(x.name)}</a>${starBtn(k)}</div>
  <div class="co2-k">${b?`<span class="co2-b">${fid?'':esc(S.fairs[pf].short||S.fairs[pf].name)+' · '}Stand <b>${esc(bshort(b))}</b></span>`:''}${!b&&x.origin==='markt'?`<span class="co2-o" title="Steckbrief aus der Marktrecherche – nicht als Messeaussteller erfasst">Marktrecherche</span>`:''}<span class="tag ${relCls(x.rel)}">${esc(x.rel)}</span><span class="co2-c">${CATI[x.cat]||''} ${esc(CATN[x.cat]||'')}</span>${x.country?`<span class="note">${esc(x.country)}</span>`:''}</div>
  <p>${esc(x.chance||x.overlap||x.note||'')}</p>
  <div class="co2-f">${(x.prods||[]).slice(0,3).map(p=>`<span class="pp">${esc(PRODN[p]||p)}</span>`).join('')}${np?`<span class="note">${np} Projekte${lp?' · zuletzt '+esc(fmtPD(lp)):''}</span>`:''}${seen?'<span class="tag ok">✓ besucht</span>':''}${fav?'<span class="tag go">★</span>':''}</div>${coNote(k)}</div>
@@ -3566,7 +3584,7 @@ function coResults(L,st,fid,extra){extra=extra||'';if(!L.length&&!extra)return '
 function coTable(L,fid,hall){const f=S.fairs[fid];
  const rows=hall||L.map(([k,x])=>({co:[k,x],b:fid?boothOf(x,fid):''}));
  return `<div class="glass scroll"><table class="stack hall hall2"><thead><tr>${fid?'<th class="num">Stand</th>':''}<th>Unternehmen</th><th>Relevanz</th><th class="hide-s">Warum hingehen</th><th><span class="sr">Aktionen</span></th></tr></thead><tbody>${rows.map(r=>{const x=r.co&&r.co[1];const xid=r.xid||(x&&x.stands&&fid&&x.stands[fid]?x.stands[fid].x:'');const pl=f?tplU(f,'plan',xid,r.b):'';const det=f?tplU(f,'det',xid,r.b):'';
-  if(x){const k=r.co[0];const pf=planFid(x,fid);return `<tr class="hr on${SEEN.has(k)?' seen':''}" data-go="${esc(coHref(k,fid))}" tabindex="0" style="--c:${SCOL[x.score||1]}">${fid?`<td class="num">${esc(bshort(r.b))}</td>`:''}<td><b>${esc(x.name)}</b>${x.rel==='AUTOFLUG'?' <span class="afb">WIR</span>':''}${SEEN.has(k)?' <span class="tag ok">✓</span>':''}<div class="note">${CATI[x.cat]||''} ${esc(CATN[x.cat]||'')}${x.country?' · '+esc(x.country):''}</div>${coNote(k)}</td><td>${sdots(x.score||1)}<div class="note"><span class="tag ${relCls(x.rel)}">${esc(x.rel)}</span></div></td><td class="hide-s" style="color:var(--ink2)">${esc(x.note||'')}</td><td class="acts">${x.rel==='AUTOFLUG'?'':rmBtn(k,pf,'sm')}${pl?`<a class="chip" href="${esc(pl)}" target="_blank" rel="noopener" title="Stand im offiziellen Hallenplan zeigen">Plan ↗</a>`:''}</td></tr>`;}
+  if(x){const k=r.co[0];const pf=planFid(x,fid);return `<tr class="hr on${SEEN.has(k)?' seen':''}" data-go="${esc(coHref(k,fid))}" tabindex="0" style="--c:${SCOL[x.score||1]}">${fid?`<td class="num">${esc(bshort(r.b))}</td>`:''}<td><b>${esc(x.name)}</b>${x.rel==='AUTOFLUG'?' <span class="afb">WIR</span>':''}${SEEN.has(k)?' <span class="tag ok">✓</span>':''}<div class="note">${CATI[x.cat]||''} ${esc(CATN[x.cat]||'')}${x.country?' · '+esc(x.country):''}</div>${coNote(k)}</td><td>${sdots(x.score||1)}<div class="note"><span class="tag ${relCls(x.rel)}">${esc(x.rel)}</span></div></td><td class="hide-s" style="color:var(--ink2)">${esc(x.note||'')}</td><td class="acts">${starBtn(k)}${x.rel==='AUTOFLUG'?'':rmBtn(k,pf,'sm')}${pl?`<a class="chip" href="${esc(pl)}" target="_blank" rel="noopener" title="Stand im offiziellen Hallenplan zeigen">Plan ↗</a>`:''}</td></tr>`;}
   const hk='h:'+r.xid;return `<tr class="hr${SEEN.has(hk)?' seen':''}">${fid?`<td class="num">${esc(bshort(r.b))}</td>`:''}<td><a href="${esc(det)}" target="_blank" rel="noopener" style="color:var(--ink2)">${esc(r.name)} ↗</a></td><td class="note">nicht bewertet</td><td class="hide-s"></td><td class="acts">${rmBtn(hk,fid,'sm')}${pl?`<a class="chip" href="${esc(pl)}" target="_blank" rel="noopener">Plan ↗</a>`:''}</td></tr>`;}).join('')||`<tr><td colspan="5" class="note">Keine Treffer – Filter lockern.</td></tr>`}</tbody></table></div>`;}
 /* Reiter Unternehmen */
 function renderFirmen(){if(!$('#fmbody'))return;const all=Object.entries(S.exhibitors);
@@ -3597,7 +3615,7 @@ function renderFairPage(){const el=$('#fp');if(!el)return;const fid=FP.id;const 
  const c=cv(fdiv(f));const at=coAt(fid);const la=f.last||{};const af=at.find(([,x])=>x.rel==='AUTOFLUG');const d=daysTo(f.start);
  const must=at.filter(([,x])=>x.score>=5&&x.rel!=='AUTOFLUG');const comp=at.filter(([,x])=>x.rel==='Wettbewerber');const seenN=at.filter(([k])=>SEEN.has(k)).length;
  const route=at.filter(([,x])=>x.score>=4&&x.rel!=='AUTOFLUG'&&(x.stands||{})[fid]).sort((a,b)=>bnum(boothOf(a[1],fid))-bnum(boothOf(b[1],fid)));
- const rDone=route.filter(([k])=>SEEN.has(k)).length;const fav=S.votes[fid]===1;
+ const rDone=route.filter(([k])=>SEEN.has(k)).length;const fav=isFav(fid);
  const tabs=[['info','Überblick'],['aussteller',`Aussteller & Stände · ${f.hall?f.hall.length:at.length}`],...(f.hall?[['plan','Stand-Navigator']]:[]),['roadmap',`Meine Roadmap · ${planItems(fid).length}`],['vb','Vorbereitung & Bericht'],['wettbewerb',`Wettbewerb vor Ort · ${comp.length}`]];
  if(FP.tab==='route')FP.tab='roadmap';if(!tabs.some(t=>t[0]===FP.tab))FP.tab='info';
  const kp=[[f.hall?f.hall.length:'–','Aussteller 2026'],[at.length,'für AUTOFLUG bewertet'],[must.length,'Pflichtbesuche'],[comp.length,'Wettbewerber vor Ort'],[la.vis?nShort(la.vis):'–','Besucher (letzte Ausgabe)'],[`${seenN}/${at.length}`,'schon besucht']];
@@ -3606,7 +3624,7 @@ function renderFairPage(){const el=$('#fp');if(!el)return;const fid=FP.id;const 
   <h1>${esc(f.name)}</h1><div class="meta" style="font-size:14px">${fdvb(f)}<span class="mono" style="color:var(--ink)">${esc(fWhen(f))}</span>${pdots(f.prio,c)}<span class="tag ${f.goal==='Ausstellen'?'go':''}">Empfehlung: ${esc(f.goal)}</span></div>
   <div class="fh-cd">${d>0?`<b>${d}</b><span>${d===1?'Tag':'Tage'} bis zur Eröffnung</span>`:f.end>=todayISO?'<b>LIVE</b><span>Die Messe läuft</span>':'<b>✓</b><span>Vorbei – nächste Ausgabe folgt</span>'}</div>
   ${af?`<div class="fh-af"><span class="afb">AUTOFLUG</span><div><b>${esc(f.af&&f.af.note?f.af.note:'Eigener Stand')}</b><span class="note">Stand ${esc(boothOf(af[1],fid))}</span></div></div>`:''}
-  <div class="fh-btn"><button class="btn gold" data-fptab="roadmap">Meine Roadmap${planItems(fid).length?" · "+planItems(fid).length:""} öffnen</button>${f.plan?`<a class="btn" href="${esc(f.plan)}" target="_blank" rel="noopener">Hallenplan ↗</a>`:''}</div><div class="fh-btn fh-sub">${calLinks(f)}${f.web?`<a class="btn q" href="${esc(f.web)}" target="_blank" rel="noopener">Website ↗</a>`:''}<button class="btn q${fav?' on':''}" data-vote="${esc(fid)}" data-v="1">${fav?'★ Gemerkt':'☆ Merken'}</button></div></div>
+  <div class="fh-btn"><button class="btn gold" data-fptab="roadmap">Meine Roadmap${planItems(fid).length?" · "+planItems(fid).length:""} öffnen</button>${f.plan?`<a class="btn" href="${esc(f.plan)}" target="_blank" rel="noopener">Hallenplan ↗</a>`:''}</div><div class="fh-btn fh-sub">${calLinks(f)}${f.web?`<a class="btn q" href="${esc(f.web)}" target="_blank" rel="noopener">Website ↗</a>`:''}<button class="btn q${fav?' on':''}" data-fav="${esc(fid)}">${fav?'★ Gemerkt':'☆ Merken'}</button></div></div>
   <div class="fh-r">${f.hall?`<div class="mos-h">${heli()}<span class="k">HALLEN-MOSAIK · ${f.hall.length} STÄNDE</span></div><div class="fh-ill">${mosaic(fid,{cols:23,cell:14,gap:4})}</div><div class="fh-leg"><span><i style="background:var(--as)"></i>Pflichtbesuch</span><span><i style="background:var(--ls)"></i>Hoch</span><span><i style="background:#8FA3D6"></i>Mittel/Beobachten</span><span><i style="background:var(--gs)"></i>AUTOFLUG</span><span><i style="background:rgba(var(--ln),.25)"></i>weitere Aussteller</span><span><i class="ring"></i>in meiner Roadmap</span></div><p class="note" style="margin:4px 0 0">Jeder Punkt ist ein Stand, sortiert nach Standnummer – keine maßstäbliche Hallenkarte.</p>`:`<div class="mos-h big">${heli()}</div>`}</div></section>
  <div class="fkpi">${kp.map(([v,l])=>`<div class="kpi"><div class="v">${v}</div><div class="l">${l}</div></div>`).join('')}</div>
  <div class="ftabs2" role="tablist">${tabs.map(([t,l])=>`<button role="tab" data-fptab="${t}" class="${FP.tab===t?'on':''}" aria-selected="${FP.tab===t}">${l}</button>`).join('')}</div>
@@ -3798,7 +3816,7 @@ let CP={id:null,fid:null};
 function renderCoPage(){const el=$('#cp');if(!el)return;const id=CP.id;const x=S.exhibitors[id];
  if(!x){el.innerHTML='<div class="glass pad">Unternehmen nicht gefunden. <a href="#firmen">Zur Übersicht</a></div>';return;}
  const fid=CP.fid&&S.fairs[CP.fid]?CP.fid:Object.keys(x.stands||{}).find(f=>S.fairs[f])||null;const f=fid?S.fairs[fid]:null;
- const fav=S.votes[id]===1;const seen=SEEN.has(id);const col=SCOL[x.score||2];
+ const fav=isFav(id);const seen=SEEN.has(id);const col=SCOL[x.score||2];
  const fs=(x.fairs||[]).filter(k=>S.fairs[k]).map(k=>[k,S.fairs[k]]).sort((a,b)=>a[1].start.localeCompare(b[1].start));
  const list=f?(f.hall?hallRows(fid,FX).filter(r=>r.co).map(r=>r.co):coList(FX,fid)):coList(FM);const idx=list.findIndex(([k])=>k===id);
  const prev=idx>0?list[idx-1]:null,next=idx>=0&&idx<list.length-1?list[idx+1]:null;
@@ -3815,7 +3833,7 @@ function renderCoPage(){const el=$('#cp');if(!el)return;const id=CP.id;const x=S
   <h1>${esc(x.name)}</h1><p class="lead" style="margin:0">${esc(x.what||x.note||'')}</p>
   <div class="prodstrip" aria-label="Berührte AUTOFLUG-Produkte">${Object.entries(PRODN).map(([p,n])=>`<span class="${(x.prods||[]).includes(p)?'on':''}">${esc(n)}</span>`).join('')}</div></div>
   <div class="ch-r">${st||(x.origin==='markt'?`<div class="cstand"><div><span class="k">HERKUNFT</span><b style="font-size:22px">Marktrecherche</b><span class="note">Kein Messeaussteller · Sitz: ${esc(x.hq||'–')}</span></div></div>`:'<div class="cstand"><div><span class="k">STAND</span><b>–</b><span class="note">Keine Standnummer hinterlegt</span></div></div>')}
-  <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn ${seen?'gold':''}" data-seen="${esc(id)}">${seen?'✓ Besucht':'Als besucht markieren'}</button><button class="btn q${fav?' on':''}" data-vote="${esc(id)}" data-v="1">${fav?'★ Gemerkt':'☆ Merken'}</button>${x.web?`<a class="btn q" href="${esc(x.web)}" target="_blank" rel="noopener">Website ↗</a>`:''}</div></div></section>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn ${seen?'gold':''}" data-seen="${esc(id)}">${seen?'✓ Besucht':'Als besucht markieren'}</button><button class="btn q${fav?' on':''}" data-fav="${esc(id)}">${fav?'★ Gemerkt':'☆ Merken'}</button>${x.web?`<a class="btn q" href="${esc(x.web)}" target="_blank" rel="noopener">Website ↗</a>`:''}</div></div></section>
  <div class="cgrid2"><div class="c-main">
   <div class="imp" style="--c:var(--ls)"><span class="k">ÜBERSCHNEIDUNG MIT AUTOFLUG</span><br>${esc(x.overlap||x.note||'')}</div>
   ${(x.prods||[]).length?`<div class="chips">${x.prods.map(p=>S.nodes[p]?`<button class="chip" data-open="nodes:${esc(p)}">${esc(PRODN[p]||p)} im Wissensnetz</button>`:'').join('')}</div>`:''}
@@ -3891,7 +3909,7 @@ function tList(){let L=Object.entries(S.tenders).filter(([,t])=>inDiv(t));
  const dk=t=>t.deadline||'9999';
  L.sort((a,b)=>TX.sort==='rel'?((b[1].score||0)-(a[1].score||0)||dk(a[1]).localeCompare(dk(b[1]))):(dk(a[1]).localeCompare(dk(b[1]))||(b[1].score||0)-(a[1].score||0)));
  return L;}
-function tCard([k,t]){const st=tStatus(t);const d=t.deadline?daysTo(t.deadline):null;const fav=S.votes[k]===1;const p=S.portals[t.portal];
+function tCard([k,t]){const st=tStatus(t);const d=t.deadline?daysTo(t.deadline):null;const fav=isFav(k);const p=S.portals[t.portal];
  const col=st==='zu'?'var(--mute)':st==='erw'?'var(--ls)':d<=7?'var(--red)':d<=30?'var(--as)':'var(--gs)';
  const left=st==='offen'?`<b>${d}</b><span>${d===1?'Tag':'Tage'}</span><i>${esc(fmtD(t.deadline))}</i>`:st==='erw'?`<b>◷</b><span>erwartet</span>`:`<b>✓</b><span>beendet</span>`;
  return `<article class="tdc s-${st}" id="tx-${esc(k)}" style="--c:${col}"><div class="tdl">${left}</div><div class="tdm">
@@ -3900,7 +3918,7 @@ function tCard([k,t]){const st=tStatus(t);const d=t.deadline?daysTo(t.deadline):
   <p>${esc(t.why||'')}</p>
   <div class="tdf">${(t.prods||[]).map(x=>`<span class="pp">${esc(PRODN[x]||x)}</span>`).join('')}${t.value?`<span class="note">Volumen: ${esc(t.value)}</span>`:''}</div>
   ${t.next?`<div class="tnext"><b>Nächster Schritt</b>${esc(t.next)}</div>`:''}
-  <div class="tact">${t.url?`<a class="btn gold" href="${esc(t.url)}" target="_blank" rel="noopener">Zur Ausschreibung ↗</a>`:''}${st==='offen'&&t.deadline?`<a class="btn cal" href="${esc(tOutlook(t))}" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M1.5 6.5h13M5 1v3M11 1v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Frist in Outlook</a>`:''}${p?`<button class="btn q" data-txportal="${esc(t.portal)}">Portal: ${esc(p.name)}</button>`:''}<button class="btn q${fav?' on':''}" data-vote="${esc(k)}" data-v="1">${fav?'★ Gemerkt':'☆ Merken'}</button></div>
+  <div class="tact">${t.url?`<a class="btn gold" href="${esc(t.url)}" target="_blank" rel="noopener">Zur Ausschreibung ↗</a>`:''}${st==='offen'&&t.deadline?`<a class="btn cal" href="${esc(tOutlook(t))}" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M1.5 6.5h13M5 1v3M11 1v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Frist in Outlook</a>`:''}${p?`<button class="btn q" data-txportal="${esc(t.portal)}">Portal: ${esc(p.name)}</button>`:''}<button class="btn q${fav?' on':''}" data-fav="${esc(k)}">${fav?'★ Gemerkt':'☆ Merken'}</button></div>
   ${srcHtml(t.src)}</div></article>`;}
 function renderTenders(){const el=$('#tx');if(!el)return;const all=Object.entries(S.tenders).filter(([,t])=>inDiv(t));const P=Object.entries(S.portals);
  const n={offen:0,erw:0,zu:0};all.forEach(([,t])=>n[tStatus(t)]++);const soon=all.filter(([,t])=>tStatus(t)==='offen'&&daysTo(t.deadline)<=30).length;
@@ -3965,7 +3983,7 @@ function nodeHtml(id){const n=S.nodes[id];if(!n)return'';
 let saving=false;
 async function vote(id,v){if(!db||!uid||!canWrite){toast('Bewerten ist mit Mitwirkenden-Rechten möglich.');return;}if(saving)return;saving=true;
  const nv=S.votes[id]===v?0:v;const votes={...S.votes};if(nv)votes[id]=nv;else delete votes[id];
- try{await db.doc('feedback/'+uid).set({votes,plans:PLANS,notes:NOTES,team:TEAMME,updated:new Date().toISOString()});S.votes=votes;renderSignale();renderInno();renderMessen();{const y=scrollY;refreshAll();scrollTo(0,y);}if($('#dlg').open&&S.fairs[id]){openFair(id);toast(nv?'Gemerkt.':'Nicht mehr gemerkt.');return;}if($('#dlg').open)$$('#dlgb [data-vote]').forEach(b=>b.classList.toggle('on',(S.votes[b.dataset.vote]||0)===+b.dataset.v));toast('Gespeichert – der Nachtlauf berücksichtigt das.');}
+ try{await db.doc('feedback/'+uid).set({votes,plans:PLANS,notes:NOTES,team:TEAMME,favs:[...FAV],updated:new Date().toISOString()});S.votes=votes;renderSignale();renderInno();renderMessen();{const y=scrollY;refreshAll();scrollTo(0,y);}if($('#dlg').open&&S.fairs[id]){openFair(id);toast(nv?'Gemerkt.':'Nicht mehr gemerkt.');return;}if($('#dlg').open)$$('#dlgb [data-vote]').forEach(b=>b.classList.toggle('on',(S.votes[b.dataset.vote]||0)===+b.dataset.v));toast('Gespeichert – der Nachtlauf berücksichtigt das.');}
  catch(e){toast('Bewertung konnte nicht gespeichert werden.');}finally{saving=false;}}
 
 /* ---------- KI: Frag + Angriffsplan ---------- */
@@ -4537,7 +4555,7 @@ async function pnLoad(){if(!USERCAP||!USERCAP.profiles)return;const ids=new Set(
 let teamT=0;
 function teamSave(){try{localStorage.setItem('lz4_team',JSON.stringify(TEAMME));}catch(e){}
  clearTimeout(teamT);teamT=setTimeout(async()=>{if(!db||!uid||!canWrite)return;
-  try{await db.doc('feedback/'+uid).set({votes:S.votes||{},plans:PLANS,notes:NOTES,team:TEAMME,updated:nowISO()});}catch(e){toast('Speichern fehlgeschlagen – Änderung bleibt lokal.');}},500);}
+  try{await db.doc('feedback/'+uid).set({votes:S.votes||{},plans:PLANS,notes:NOTES,team:TEAMME,favs:[...FAV],updated:nowISO()});}catch(e){toast('Speichern fehlgeschlagen – Änderung bleibt lokal.');}},500);}
 function teamOpp(id){return TEAMALL.opps[id]||{};}
 function setOpp(id,patch){const c={...teamOpp(id),...patch,ts:nowISO()};delete c.by;TEAMME.opps[id]=c;TEAMALL.opps[id]={...c,by:uid};teamSave();}
 function setTask(id,patch){const c={...(TEAMALL.tasks[id]||{}),...patch,ts:nowISO()};delete c.by;TEAMME.tasks[id]=c;TEAMALL.tasks[id]={...c,by:uid};teamSave();}
@@ -4665,9 +4683,9 @@ function renderPipe(){const el=$('#pl');if(!el||!S.opps||!Object.keys(S.opps).le
  <div id="plb"></div>`;renderPipeBody();peopleLoad();}
 function renderPipeBody(){const el=$('#plb');if(!el)return;const st=STG();const L=plList();
  if(PL.view==='board'){el.innerHTML=`<div class="p4-board">${st.map((n,i)=>{const C=L.filter(([k,o])=>oStage(k,o)===i+1);const s=C.reduce((a,[k])=>a+oEur(k),0);
-  return `<div class="p4-col"><div class="p4-ch"><b>${esc(n)}</b><span>${C.length}${s?' · '+eurF(s):''}</span></div>${C.map(([k,o])=>{const t=teamOpp(k);const d=oDue(k,o);return`<div class="p4-card"><button class="p4-ct" data-open="opps:${esc(k)}">${esc(o.title)}</button><div class="p4-cm">${(o.bus||[]).map(buTag).join('')}<span>P${o.prio}</span>${oEur(k)?`<span>${eurF(oEur(k))}</span>`:''}</div><div class="p4-cf"><span>${esc(ownerName(t.owner)||'Niemand zuständig')}</span>${d?`<span class="${daysTo(d)<0?'neg':''}">${dShort(d)}</span>`:''}</div><div class="p4-mv">${i>0?`<button data-plmv="${esc(k)}" data-d="-1" aria-label="Phase zurück">‹</button>`:'<span></span>'}${i<st.length-1?`<button data-plmv="${esc(k)}" data-d="1" aria-label="Nächste Phase">›</button>`:''}</div></div>`;}).join('')||'<p class="note">–</p>'}</div>`;}).join('')}</div>`;return;}
+  return `<div class="p4-col"><div class="p4-ch"><b>${esc(n)}</b><span>${C.length}${s?' · '+eurF(s):''}</span></div>${C.map(([k,o])=>{const t=teamOpp(k);const d=oDue(k,o);return`<div class="p4-card"><button class="p4-ct" data-open="opps:${esc(k)}">${esc(o.title)}</button>${starBtn(k)}<div class="p4-cm">${(o.bus||[]).map(buTag).join('')}<span>P${o.prio}</span>${oEur(k)?`<span>${eurF(oEur(k))}</span>`:''}</div><div class="p4-cf"><span>${esc(ownerName(t.owner)||'Niemand zuständig')}</span>${d?`<span class="${daysTo(d)<0?'neg':''}">${dShort(d)}</span>`:''}</div><div class="p4-mv">${i>0?`<button data-plmv="${esc(k)}" data-d="-1" aria-label="Phase zurück">‹</button>`:'<span></span>'}${i<st.length-1?`<button data-plmv="${esc(k)}" data-d="1" aria-label="Nächste Phase">›</button>`:''}</div></div>`;}).join('')||'<p class="note">–</p>'}</div>`;}).join('')}</div>`;return;}
  el.innerHTML=`<div class="scroll p4-tw"><table class="p4-t"><colgroup>${[1,2,3,4,5,6,7,8].map(i=>`<col class="c${i}">`).join("")}</colgroup><thead><tr><th>Chance</th><th>Unit</th><th>Phase</th><th>Nächster Schritt</th><th>Verantwortlich</th><th>Fällig</th><th class="num">Volumen €</th><th class="num">Prio</th></tr></thead><tbody>${L.map(([k,o])=>{const t=teamOpp(k);const d=oDue(k,o);
-  return `<tr class="${d&&daysTo(d)<0?'od':''}"><td><button class="lnk2 p4-ti" data-open="opps:${esc(k)}">${esc(o.title)}</button><i>${esc(o.product||'')}</i>${t.ts?`<i class="b4-by">zuletzt ${esc(whoBy(t.by))}, ${esc(relD(t.ts.slice(0,10)))}</i>`:''}</td>
+  return `<tr class="${d&&daysTo(d)<0?'od':''}"><td><button class="lnk2 p4-ti" data-open="opps:${esc(k)}">${esc(o.title)}</button>${starBtn(k)}<i>${esc(o.product||'')}</i>${t.ts?`<i class="b4-by">zuletzt ${esc(whoBy(t.by))}, ${esc(relD(t.ts.slice(0,10)))}</i>`:''}</td>
   <td class="p4-bu">${(o.bus||[]).map(b=>`<span class="p4-bt" style="--b:${BUC(b)}" title="${esc(BUN(b))}">${b.toUpperCase()}</span>`).join('')}</td><td><select class="b4-in" data-pf="stage" data-id="${esc(k)}">${st.map((n,i)=>`<option value="${i+1}" ${oStage(k,o)===i+1?'selected':''}>${esc(n)}</option>`).join('')}</select></td>
   <td><textarea class="b4-in p4-nx" rows="2" data-pf="next" data-id="${esc(k)}">${esc(oNext(k,o))}</textarea></td>
   <td><input class="b4-in" list="people" data-pf="owner" data-id="${esc(k)}" data-owner="${esc(t.owner||'')}" value="${esc(ownerName(t.owner))}" placeholder="Wer?"></td>
@@ -5379,7 +5397,7 @@ renderFairPage=function(){const el=$('#fp');if(!el)return;const fid=FP.id;const 
  const d=daysTo(f.start);const cd=d>1?`noch ${d} Tage`:d===1?'morgen':f.end>=todayISO?'läuft gerade':'vorbei';const ab=afBooth(fid);const la=f.last||{};
  const kp=[['Aussteller',f.hall?f.hall.length:coAt(fid).length],['Besucher zuletzt',la.vis?nShort(la.vis):null],['Länder',la.ctry||null]].filter(x=>x[1]!=null);
  const head=`<nav class="fs-crumb"><a href="#messen">← Alle Messen</a></nav>
- <header class="fs-head"><div class="fs-ht"><h1>${esc(f.short||f.name)} <span>${esc(String(f.start||'').slice(0,4))}</span></h1>
+ <header class="fs-head"><div class="fs-ht"><h1>${esc(f.short||f.name)} <span>${esc(String(f.start||'').slice(0,4))}</span>${starBtn(fid)}</h1>
   <div class="fs-meta"><span>${esc(f.city)}</span><span>${esc(fWhen(f))}</span><span class="fs-cd${d>=0&&d<=14?' soon':''}">${cd}</span>${ab?`<span class="fs-af">Unser Stand ${esc(ab)}</span>`:''}${fdvb(f)}</div></div>
   <details class="fs-about"><summary>Über die Messe</summary><div class="fs-ab">
    <p>${esc(f.why||'')}</p>${f.show&&f.show.length?`<p class="note"><b>Zeigen oder ansprechen:</b> ${f.show.map(esc).join(' · ')}</p>`:''}
@@ -5658,7 +5676,42 @@ function qHit(name,hay,q){const qn=nrm(q);if(!qn)return 1;const toks=qn.split(' 
 const qNum=q=>/^\d+$/.test(String(q||'').trim());
 
 {const c0=renderCoPage;renderCoPage=function(){const r=c0.apply(this,arguments);const el=document.getElementById('cp');if(el)el.classList.toggle('lookup',!CP.fid);return r;};}
-function renderAll(){if(cur==='messeki')setTimeout(renderMki,0);HADJ=null;HNAMES=null;if(cur==='kreativ')setTimeout(renderHub,0);try{if(S.bus)for(const k in S.bus)S.bus[k].color=buCol(k);}catch(e){}for(const k in MPSC)delete MPSC[k];if(cur==='briefing')setTimeout(renderBrief,0);if(cur==='pipeline')setTimeout(renderPipe,0);if(cur==='landkarte')setTimeout(renderLk,0);if(cur==='planer')setTimeout(renderPlaner,0);setTimeout(decorateHeads,0);renderNav();renderStatus();renderCockpit();renderQuick();renderToday();renderTenders();renderMarkets();renderOpps();renderSignale();renderInno();renderFristen();renderMessen();renderFirmen();if(cur==='fair')renderFairPage();if(cur==='co')renderCoPage();renderSparten();renderComp();renderLuecken();renderLog();}
+/* ---------- v34: Merkliste – Stern überall, alles in einer Liste, für jeden (lokal + Konto) ---------- */
+let FAV=new Set();try{FAV=new Set(JSON.parse(localStorage.getItem('lz5_fav')||'[]'));}catch(e){}
+const isFav=id=>FAV.has(id);
+function favSave(){try{localStorage.setItem('lz5_fav',JSON.stringify([...FAV]));}catch(e){}clearTimeout(plT);plT=setTimeout(syncPlans,900);}
+function favMerge(a){if(Array.isArray(a)){let ch=false;a.forEach(id=>{if(!FAV.has(id)){FAV.add(id);ch=true;}});if(ch)try{localStorage.setItem('lz5_fav',JSON.stringify([...FAV]));}catch(e){}}}
+function favMigrate(){if(!S.votes)return;for(const[id,v]of Object.entries(S.votes))if(v===1&&((S.exhibitors||{})[id]||(S.fairs||{})[id]||(S.tenders||{})[id]))FAV.add(id);try{localStorage.setItem('lz5_fav',JSON.stringify([...FAV]));}catch(e){}}
+const starBtn=(id,cls)=>{const on=isFav(id);return `<span class="star${on?' on':''}${cls?' '+cls:''}" role="button" tabindex="0" data-fav="${esc(id)}" aria-pressed="${on}" title="${on?'Von der Merkliste nehmen':'Auf die Merkliste'}">${on?'★':'☆'}</span>`;};
+function favToggle(id){const on=!FAV.has(id);on?FAV.add(id):FAV.delete(id);if(!on&&S.votes&&S.votes[id]===1&&((S.exhibitors||{})[id]||(S.fairs||{})[id]||(S.tenders||{})[id]))delete S.votes[id];favSave();
+ document.querySelectorAll(`[data-fav="${CSS.escape(id)}"]`).forEach(b=>{b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);if(b.classList.contains('star'))b.textContent=on?'★':'☆';else{b.textContent=on?'★ Gemerkt':'☆ Merken';b.classList.toggle('gold',on);}});
+ toast(on?'Auf der Merkliste.':'Von der Merkliste genommen.');if(cur==='merkliste')renderMerk();const n=$('#mlnav');if(n)n.textContent=FAV.size||'';}
+window.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-fav]');if(!b)return;e.preventDefault();e.stopPropagation();favToggle(b.dataset.fav);},true);
+window.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.dataset&&e.target.dataset.fav&&e.target.classList.contains('star')){e.preventDefault();e.stopPropagation();favToggle(e.target.dataset.fav);}},true);
+const MLT=[['exhibitors','Unternehmen'],['fairs','Messen'],['opps','Chancen'],['tenders','Ausschreibungen'],['signals','Signale'],['markets','Märkte'],['ideas','Ideen'],['tech','Technologien'],['nodes','Wissensnetz'],['competitors','Wettbewerb']];
+function mlItem(c,id,v){const F={exhibitors:()=>[v.name,[v.rel,CATN[v.cat],v.country].filter(Boolean).join(' · '),coHref(id)],
+ fairs:()=>[v.short||v.name,[v.city,fWhen(v)].filter(Boolean).join(' · '),'#messe/'+id],
+ opps:()=>[v.title,[`Prio ${v.prio}`,v.product,v.market].filter(Boolean).join(' · '),null],
+ tenders:()=>[v.title,[v.buyer,v.deadline?'Frist '+fmtD(v.deadline):''].filter(Boolean).join(' · '),null],
+ signals:()=>[v.title,[fmtD(v.date),v.scout].filter(Boolean).join(' · '),null],
+ markets:()=>[v.name,[v.stage,v.region].filter(Boolean).join(' · '),null]}[c];
+ const[t,s,href]=F?F():[label(v)||id,FNAME[c]||'',null];
+ return `<li class="ml-it"><div><b>${href?`<a href="${esc(href)}">${esc(t)}</a>`:`<button class="lnk2" data-open="${esc(c)}:${esc(id)}">${esc(t)}</button>`}</b>${s?`<span>${esc(s)}</span>`:''}</div>${starBtn(id)}</li>`;}
+function mlFind(id){if((S.exhibitors||{})[id])return['exhibitors',S.exhibitors[id]];for(const[c]of MLT)if(S[c]&&S[c][id])return[c,S[c][id]];return null;}
+function renderMerk(){const el=$('#ml');if(!el)return;favMigrate();const G={};let unknown=0;
+ for(const id of FAV){const f=mlFind(id);if(!f){unknown++;continue;}(G[f[0]]=G[f[0]]||[]).push([id,f[1]]);}
+ const n=FAV.size-unknown;
+ el.innerHTML=`<div class="ml-head"><div><span class="k">KUNDEN & WETTBEWERB · MERKLISTE</span><h1>Merkliste</h1><p class="lead">Alles, was du irgendwo im Lagezentrum mit ☆ markierst – Unternehmen, Messen, Chancen, Ausschreibungen, Signale – landet hier.</p></div>${n?`<button class="btn" id="mlcopy">Liste kopieren</button>`:''}</div>
+ ${n?MLT.filter(([c])=>G[c]&&G[c].length).map(([c,l])=>`<section class="glass ml-sec"><div class="vb-sh"><h3>${l}</h3><span class="note">${G[c].length}</span></div><ul class="ml-l">${G[c].sort((a,b)=>String(label(a[1])||a[1].name||'').localeCompare(String(label(b[1])||b[1].name||''),'de')).map(([id,v])=>mlItem(c,id,v)).join('')}</ul></section>`).join('')
+  :`<div class="glass fs-empty"><b>Noch nichts gemerkt</b><p class="note">Tippe überall auf ☆ – bei Unternehmen, Messen, Chancen, Ausschreibungen oder Signalen. Gespeichert in diesem Browser${uid&&canWrite?' und in deinem Lagezentrum-Konto':''}.</p></div>`}`;
+ const cp=$('#mlcopy');if(cp)cp.onclick=()=>{const t=MLT.filter(([c])=>G[c]).map(([c,l])=>l+':\n'+G[c].map(([id,v])=>'• '+(label(v)||v.name||id)).join('\n')).join('\n\n');navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>toast('Merkliste kopiert.'),()=>toast('Kopieren nicht möglich.'));};}
+
+/* Bewerten (Relevant / Dafür stimmen) auch ohne Mitwirkenden-Rechte – dann lokal */
+try{const lv=JSON.parse(localStorage.getItem('lz5_votes')||'{}');if(lv&&typeof lv==='object')S.votes={...lv,...(S.votes||{})};}catch(e){}
+{const v0=vote;vote=async function(id,v){if(db&&uid&&canWrite)return v0.apply(this,arguments);const nv=(S.votes||{})[id]===v?0:v;const votes={...(S.votes||{})};if(nv)votes[id]=nv;else delete votes[id];S.votes=votes;
+ try{localStorage.setItem('lz5_votes',JSON.stringify(votes));}catch(e){}const y=scrollY;try{renderSignale();renderInno();}catch(e){}scrollTo(0,y);toast('In diesem Browser gespeichert.');};}
+
+function renderAll(){favMigrate();if(cur==='merkliste')setTimeout(renderMerk,0);if(cur==='messeki')setTimeout(renderMki,0);HADJ=null;HNAMES=null;if(cur==='kreativ')setTimeout(renderHub,0);try{if(S.bus)for(const k in S.bus)S.bus[k].color=buCol(k);}catch(e){}for(const k in MPSC)delete MPSC[k];if(cur==='briefing')setTimeout(renderBrief,0);if(cur==='pipeline')setTimeout(renderPipe,0);if(cur==='landkarte')setTimeout(renderLk,0);if(cur==='planer')setTimeout(renderPlaner,0);setTimeout(decorateHeads,0);renderNav();renderStatus();renderCockpit();renderQuick();renderToday();renderTenders();renderMarkets();renderOpps();renderSignale();renderInno();renderFristen();renderMessen();renderFirmen();if(cur==='fair')renderFairPage();if(cur==='co')renderCoPage();renderSparten();renderComp();renderLuecken();renderLog();}
 
 /* ---------- Laden ---------- */
 function ingest(rec,overlay){const{c,id,...d}=rec;
@@ -5674,7 +5727,7 @@ async function load(){applyPal();renderSeg();route();renderLog();
    snaps.forEach((s,i)=>{if(s)for(const d of s.docs)ingest({c:COLS[i],id:d.id,...d.data()},true);});
    const m=await db.doc('meta/state').get().catch(()=>null);if(m&&m.exists)ingest({c:'meta',id:'state',...m.data()},true);dbOk=true;
    const user=await use('user');if(user){try{uid=await user.id();}catch(e){}try{const c=await user.can('data.write');canWrite=c!==false;}catch(e){canWrite=true;}}
-   if(uid){try{const f=await db.doc('feedback/'+uid).get();if(f.exists){S.votes={...(f.data().votes||{})};mergePlans(f.data().plans);mergeNotes(f.data().notes);}}catch(e){}}
+   if(uid){try{const f=await db.doc('feedback/'+uid).get();if(f.exists){S.votes={...(f.data().votes||{})};mergePlans(f.data().plans);mergeNotes(f.data().notes);favMerge(f.data().favs);}}catch(e){}}
    try{await teamLoad();}catch(e){}
   }catch(e){}renderAll();if(G3)G3.graphData(netData());updateGlobe();}}
 load();
