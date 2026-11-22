@@ -2609,6 +2609,49 @@ body{line-height:1.5}
 .vb-top{grid-template-columns:24px 1fr 28px}
 @media(max-width:900px){.fm-pjh{display:none}.fm-pr{grid-template-columns:30px minmax(0,1fr) 28px}.fm-pr>.vb-ta{grid-column:2/3}.fm-pr>.rm5-ib{grid-row:1;grid-column:3}.fm-pj .vb-padd{margin-left:0}}
 @media(max-width:760px){.fm-h{grid-template-columns:52px minmax(0,1fr)}.fm-h .fo-done{grid-column:1/-1;justify-self:start}}
+/* v32 Handy */
+.cu-d>summary,.fv-pickd>summary .fv-pk-m{display:none}
+.fv-pickd>summary{list-style:none;cursor:default}.fv-pickd>summary::-webkit-details-marker{display:none}
+@media(max-width:1100px){
+ .fv-grid{display:flex;flex-direction:column;min-width:0}.fv-main{min-width:0;max-width:100%;width:100%}.fs,.fs-body{min-width:0;max-width:100%}.fv-pick{order:2;position:static;max-height:none}
+ .fv-pickd>summary{cursor:pointer}.fv-pickd>summary .fv-pk-m{display:inline;font-size:12.5px;color:var(--accent);margin-left:auto}
+ .fv-pickd:not([open])>summary{margin:0}
+}
+@media(max-width:760px){
+ html,body{overflow-x:clip}
+ input,select,textarea,.vb-in,.vb-ta,.rm5-fld input,.rm5-fld textarea,.fm-q input,.co2-nt{font-size:16px!important}
+ .fs-crumb{margin-bottom:4px}
+ .fs-head{gap:10px;margin-bottom:10px}.fs-head h1{font-size:22px}
+ .fs-meta{gap:4px 10px;font-size:12.5px}
+ .pf-chip{width:auto;margin-left:0}.pf-btn{width:auto;padding:4px 10px 4px 4px}.pf-btn em{display:none}.pf-av{width:26px;height:26px;font-size:11px}
+ .fs-about{max-width:none}.fs-about summary{padding:6px 10px}
+ .pf-demo{font-size:11.5px;padding:6px 10px;margin:0 0 10px}
+ .fs-steps{position:sticky;top:var(--toph,56px);z-index:6;background:var(--bg);margin:0 0 12px;padding:8px 0;gap:6px;border-bottom:1px solid var(--line)}
+ .fs-step{padding:8px;gap:6px;flex-direction:row;align-items:center;border-radius:10px;min-height:44px}
+ .fs-num{width:22px;height:22px;font-size:11.5px}.fs-l b{font-size:12px;line-height:1.2}
+ .fs-intro{font-size:12.5px}
+ .cu-d>summary{display:block;cursor:pointer;color:var(--accent);font-size:13.5px;list-style:none}.cu-d>summary::-webkit-details-marker{display:none}
+ .cu-d[open]>summary{margin-bottom:8px}.cu-bar{padding:10px 12px}
+ .cu-bar .cu-f{flex-direction:column;align-items:stretch}.cu-f .rm5-lb{display:none}
+ .rm5-ag{display:none}
+ .fs-sec,.vb-sec{padding:12px 14px}
+ .fv-ch{grid-template-columns:52px minmax(0,1fr) auto;gap:10px;padding:10px 12px}
+ .fv-cb,.fm-b{padding:12px}
+ .fs-h2 .btn{flex:1 1 auto;justify-content:center;text-align:center}
+ .fm-h{padding:10px 12px;gap:10px}.fm-t b{font-size:14px}.fm-n b{font-size:15px}
+ .fm-bar{position:sticky;top:calc(var(--toph,56px) + 62px);z-index:5;padding:8px 10px;gap:8px}
+ .fm-bar .fo-days{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -10px;padding:0 10px}.fm-bar .fo-days::-webkit-scrollbar{display:none}
+ .fm-bar .vb-chip,.fv-days .vb-chip{white-space:nowrap;flex:none}
+ .fv-days{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.fv-days::-webkit-scrollbar{display:none}
+ .fm-hint{display:none}
+ .fo-done{min-height:44px}
+ .vb-padd{min-height:40px}
+ .rm5-ib{width:36px;height:36px}
+ .vb-ck input,.fo-pr input[type=checkbox]{width:22px;height:22px}
+ .vb-evr{gap:6px}.vb-chip{padding:7px 12px}
+ .fs-nav{margin-bottom:76px}
+ .tpl-b{min-height:200px}
+}
 </style>
 </head>
 <body><div id="gate" role="dialog" aria-label="Anmeldung"><form id="gatef" autocomplete="off"><b>AUTOFLUG Lagezentrum</b><p>Testversion – bitte Passwort eingeben.</p><input id="gatep" type="password" placeholder="Passwort" aria-label="Passwort" autofocus><span class="err" id="gatee"></span><button type="submit">Öffnen</button></form></div><script>(function(){var H='f62490f783b6aeebc0b83a3c7b451a3f686bffa131ec8763f03e0d0243648534';function sha(s){function r(n,x){return(x>>>n)|(x<<(32-n))}var K=[],W=[],h=[],i,j,b=unescape(encodeURIComponent(s)),l=b.length*8,w=[];for(var c=2,n=0;n<64;c++){for(j=2;j*j<=c;j++)if(c%j===0)break;if(j*j>c){if(n<8)h[n]=(Math.pow(c,1/2)*4294967296)|0;K[n++]=(Math.pow(c,1/3)*4294967296)|0;}}b+='\x80';while(b.length%64-56)b+='\x00';for(i=0;i<b.length;i++){j=b.charCodeAt(i);w[i>>2]|=j<<((3-i)%4)*8;}w[w.length]=(l/4294967296)|0;w[w.length]=l;for(j=0;j<w.length;){var a=h.slice(0,8);for(i=0;i<64;i++){var x=i<16?w[j+i]|0:(r(17,W[i-2])^r(19,W[i-2])^(W[i-2]>>>10))+W[i-7]+(r(7,W[i-15])^r(18,W[i-15])^(W[i-15]>>>3))+W[i-16]|0;W[i]=x;var t1=a[7]+(r(6,a[4])^r(11,a[4])^r(25,a[4]))+((a[4]&a[5])^(~a[4]&a[6]))+K[i]+x,t2=(r(2,a[0])^r(13,a[0])^r(22,a[0]))+((a[0]&a[1])^(a[0]&a[2])^(a[1]&a[2]));a=[(t1+t2)|0].concat(a);a[4]=(a[4]+t1)|0;a.pop();}for(i=0;i<8;i++)h[i]=(h[i]+a[i])|0;j+=16;}var o='';for(i=0;i<8;i++)for(j=3;j+1;j--){var v=(h[i]>>(j*8))&255;o+=(v<16?'0':'')+v.toString(16);}return o;}var f=document.getElementById('gatef');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var p=document.getElementById('gatep');if(sha(p.value)===H){try{sessionStorage.setItem('lz_gate',H)}catch(x){}document.documentElement.classList.remove('locked');window.dispatchEvent(new Event('resize'));}else{document.getElementById('gatee').textContent='Falsches Passwort.';p.value='';p.focus();}});})();</script>
@@ -5351,9 +5394,9 @@ function fpVor(fid){const F=esc(fid);const R=vbRows(fid);const days=fairDays(S.f
  ${rmAgenda(fid)}
  <div class="fv-grid"><div class="fv-main"><div class="fs-h2"><h3>Roadmap · unsere Gespräche</h3><span class="note">${R.length}</span><span class="rm5-sp"></span>${R.length?`<button class="btn" data-vbdoc="prep|${F}">Vorbereitungsbogen (Word)</button>${!DL&&R.some(o=>o.i.t)?`<button class="btn" data-rmics="${F}">Alle Termine (.ics)</button>`:''}`:''}</div>
   ${fvDayChips(fid,R,days)}${R.length?fvFilter(R,days).map(o=>fvCard(fid,o,days)).join('')||'<p class="note">Keine Gespräche an diesem Tag.</p>':`<div class="glass fs-empty"><b>Noch keine Gespräche</b><p class="note">In Schritt 1 „Aussteller sichten“ oder rechts mit + Unternehmen aufnehmen.</p></div>`}</div>
-  <aside class="glass fv-pick"><div class="fs-h2"><h3>Schnell hinzufügen</h3><button class="rm5-link" data-fstep="aussteller">alle Aussteller →</button></div>
+  <aside class="glass fv-pick"><details class="fv-pickd"${innerWidth>1100?' open':''}><summary class="fs-h2"><h3>Schnell hinzufügen</h3><span class="fv-pk-m">Unternehmen aufnehmen ▾</span><button class="rm5-link" data-fstep="aussteller">alle Aussteller →</button></summary>
    <div class="fv-pf" role="group" aria-label="Auswahl">${[['vor','Vorschläge'],['kunde','Kunden & Partner'],['wett','Wettbewerber'],['alle','Alle']].map(([k,l])=>`<button class="vb-chip${FPK.f===k?' on':''}" data-fpk="${k}">${l}</button>`).join('')}</div>
-   <input class="vb-in" type="search" data-fpq="${F}" value="${esc(FPK.q)}" placeholder="Firma oder Stand suchen …" aria-label="Firma oder Stand suchen"><div id="fpick"></div>${cuForm(fid)}</aside></div>${typeof tplSection==="function"?tplSection(fid):""}`;}
+   <input class="vb-in" type="search" data-fpq="${F}" value="${esc(FPK.q)}" placeholder="Firma oder Stand suchen …" aria-label="Firma oder Stand suchen"><div id="fpick"></div>${cuForm(fid)}</details></aside></div>${typeof tplSection==="function"?tplSection(fid):""}`;}
 function fvCard(fid,{i,n,r},days){const F=esc(fid),K=esc(i.k);const id=`${F}|${n}`;const key=rmKey(fid,i);const x=r.x;const L=i.pj||[];
  const has=i.d&&days.some(d=>d[0]===i.d)&&tmin(i.t)!=null;const open=FGOPEN.has(key)||RMOPEN.has(key);
  const tsum=has?`${(days.find(d=>d[0]===i.d)||[])[1]} · ${i.t}–${tfmt(rmEnd(i))}`:'noch kein Termin';
@@ -5425,7 +5468,7 @@ function fvFilter(R,days){if(!FVDAY)return R;const dset=new Set(days.map(d=>d[0]
 function fvDayChips(fid,R,days){if(!R.length)return'';const dset=new Set(days.map(d=>d[0]));const open=R.filter(o=>!dset.has(o.i.d||'')).length;
  return `<div class="fo-days fv-days" role="group" aria-label="Tag"><button class="vb-chip${!FVDAY?' on':''}" data-fvday="">Alle · ${R.length}</button>${days.map(([d,l])=>{const n=R.filter(o=>o.i.d===d).length;return n?`<button class="vb-chip${FVDAY===d?' on':''}" data-fvday="${d}">${esc(l)} · ${n}</button>`:'';}).join('')}${open?`<button class="vb-chip${FVDAY==='-'?' on':''}" data-fvday="-">ohne Termin · ${open}</button>`:''}</div>`;}
 const cuForm=fid=>`<form class="cu-f" data-cunew="${esc(fid)}"><span class="rm5-lb">Nicht in der Liste?</span><div><input class="vb-in" name="n" placeholder="Eigenes Unternehmen" aria-label="Name des Unternehmens" required><input class="vb-in cu-b" name="b" placeholder="Stand" aria-label="Stand"><button class="btn" type="submit">+ Aufnehmen</button></div></form>`;
-const cuBar=fid=>`<div class="glass cu-bar">${cuForm(fid)}</div>`;
+const cuBar=fid=>`<details class="glass cu-bar cu-d"${innerWidth>760?' open':''}><summary>+ Eigenes Unternehmen anlegen</summary>${cuForm(fid)}</details>`;
 document.addEventListener('submit',e=>{const fm=e.target.closest&&e.target.closest('[data-cunew]');if(!fm)return;e.preventDefault();const fid=fm.dataset.cunew;const n=fm.n.value.trim();if(!n)return;
  planOf(fid).items.push({k:'c:'+vbId(),cn:n.slice(0,80),cb:fm.b.value.trim().slice(0,20),d:'',t:'',p:2,n:'',pj:[{id:vbId(),t:'',n:'',done:false}]});touch(fid);
  toast(`„${n}“ in die Roadmap aufgenommen.`);if(FP.tab==='aussteller'){location.hash='#messe/'+fid+'/vor';}else{const y=scrollY;renderFairPage();scrollTo(0,y);}});
