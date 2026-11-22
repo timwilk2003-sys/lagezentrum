@@ -2479,7 +2479,7 @@ svg [fill="#F2B544"]{fill:var(--accent)}svg [stroke="#F2B544"]{stroke:var(--acce
 .fs-ab{padding:0 12px 12px;display:flex;flex-direction:column;gap:8px}.fs-ab p{margin:0;line-height:1.5;color:var(--ink2)}
 .fs-abk{display:flex;gap:16px}.fs-abk span{font-size:12px;color:var(--mute)}.fs-abk b{display:block;font-size:16px;color:var(--ink)}
 .fs-abl{display:flex;gap:14px;flex-wrap:wrap}.fs-abl a{color:var(--accent);text-decoration:none}
-.fs-steps{list-style:none;margin:0 0 18px;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.fs-steps{list-style:none;margin:0 0 18px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .fs-step{width:100%;display:flex;align-items:center;gap:12px;text-align:left;border:1px solid var(--line);background:var(--surf);color:var(--ink);border-radius:12px;padding:12px 14px;cursor:pointer;transition:border-color .15s}
 .fs-step:hover{border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}
 .fs-step.on{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
@@ -2549,7 +2549,7 @@ svg [fill="#F2B544"]{fill:var(--accent)}svg [stroke="#F2B544"]{stroke:var(--acce
 .co2-nt:focus{border-color:var(--accent)}
 .nbox{background:var(--surf2)!important;box-shadow:inset 3px 0 0 var(--accent)!important}.nbox b{color:var(--mute)!important}
 td .co2-note{margin-top:6px}td .co2-nt{min-width:220px}
-@media(max-width:760px){.fs-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.fs-steps{grid-template-columns:repeat(3,1fr)}}
 .fo-dh{display:flex;align-items:baseline;gap:10px;margin:18px 0 8px}.fo-dh h3{margin:0;font:600 15px var(--disp)}
 .fv-days{margin:0 0 10px}
 .cu-bar{border-radius:12px;padding:12px 14px;margin:0 0 12px}
@@ -2578,6 +2578,37 @@ td .co2-note{margin-top:6px}td .co2-nt{min-width:220px}
 .pf-new{display:grid;grid-template-columns:1fr 1fr auto;gap:8px}
 .pf-add{margin-left:0}
 @media(max-width:760px){.pf-chip{margin-left:0;width:100%}.pf-btn{width:100%}.pf-new{grid-template-columns:1fr}}
+/* v31 Messe & Ergebnisse, ruhigere Farben */
+:root,:root[data-theme=dark]{--bg:#111316;--bg2:#14171B;--surf:#181B20;--surf2:#20242A;--glass:#181B20;--glass2:#20242A;--line:rgba(255,255,255,.075);--line2:rgba(255,255,255,.13);--ink:#E8EBEF;--ink2:#BCC2CA;--mute:#8C939D}
+:root[data-theme=light]{--bg:#F4F5F7;--bg2:#FAFBFC;--surf:#FFFFFF;--surf2:#F0F2F5;--glass:#FFFFFF;--glass2:#F0F2F5;--line:rgba(16,20,26,.09);--line2:rgba(16,20,26,.15);--ink:#14181D;--ink2:#3D4550;--mute:#66707B}
+body{line-height:1.5}
+.fs .glass,.fs-step,.fs-about{background:var(--surf)}
+.vb-in,.vb-ta,.rm5-fld input,.rm5-fld textarea,.rm5-ex input{background:var(--bg2)!important}
+.vb-in::placeholder,.vb-ta::placeholder,.rm5-fld input::placeholder,.rm5-fld textarea::placeholder{color:color-mix(in srgb,var(--mute) 75%,transparent)}
+.rm5-lb{color:var(--mute)}
+.fm-bar{border-radius:12px;padding:12px 14px;margin-bottom:14px;display:flex;flex-direction:column;gap:10px}
+.fm-q{display:flex;align-items:center;gap:8px;border:1px solid var(--line2);border-radius:10px;padding:0 12px;background:var(--bg2);color:var(--mute)}
+.fm-q:focus-within{border-color:var(--accent)}
+.fm-q input{flex:1;border:0;background:transparent;color:var(--ink);font:inherit;font-size:14px;padding:10px 0;outline:none;min-width:0}
+.fm-bar .fo-days{margin:0}.fm-hint{margin:0;font-size:12.5px}.fm-none{margin:10px 2px}
+.fm-card{border-radius:12px;margin-bottom:12px;padding:0;overflow:hidden;border:1px solid var(--line)}
+.fm-card.done{border-color:color-mix(in srgb,var(--green) 35%,var(--line))}
+.fm-h{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--surf2) 55%,var(--surf))}
+.fm-t{display:flex;flex-direction:column;align-items:center;font-family:var(--mono)}.fm-t b{font-size:16px}.fm-t span{font-size:12px;color:var(--mute)}
+.fm-n{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.fm-n b{font-size:16px;font-weight:600}.fm-st{font-size:13px;color:var(--ink2)}
+.fm-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:3px}
+.fm-lk{font-size:12.5px;color:var(--accent);text-decoration:none}.fm-lk:hover{text-decoration:underline}
+.fv-ch .fm-lk{font-size:12px}
+.fm-b{padding:14px 16px 16px;display:flex;flex-direction:column;gap:12px}
+.fm-prep{font-size:13px;color:var(--ink2);background:var(--surf2);border-radius:8px;padding:8px 12px;line-height:1.45}.fm-prep span{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);margin-bottom:2px}
+.fm-pj{display:flex;flex-direction:column;gap:6px}
+.fm-pjh,.fm-pr{display:grid;grid-template-columns:30px minmax(0,.9fr) minmax(0,1.2fr) minmax(0,1.1fr) 28px;gap:8px;align-items:start}
+.fm-pjh span{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--mute)}
+.fm-pn{font-size:12px;color:var(--mute);line-height:1.4;padding:0 2px}
+.fm-pj .vb-padd{margin-left:38px}
+.vb-top{grid-template-columns:24px 1fr 28px}
+@media(max-width:900px){.fm-pjh{display:none}.fm-pr{grid-template-columns:30px minmax(0,1fr) 28px}.fm-pr>.vb-ta{grid-column:2/3}.fm-pr>.rm5-ib{grid-row:1;grid-column:3}.fm-pj .vb-padd{margin-left:0}}
+@media(max-width:760px){.fm-h{grid-template-columns:52px minmax(0,1fr)}.fm-h .fo-done{grid-column:1/-1;justify-self:start}}
 </style>
 </head>
 <body><div id="gate" role="dialog" aria-label="Anmeldung"><form id="gatef" autocomplete="off"><b>AUTOFLUG Lagezentrum</b><p>Testversion – bitte Passwort eingeben.</p><input id="gatep" type="password" placeholder="Passwort" aria-label="Passwort" autofocus><span class="err" id="gatee"></span><button type="submit">Öffnen</button></form></div><script>(function(){var H='f62490f783b6aeebc0b83a3c7b451a3f686bffa131ec8763f03e0d0243648534';function sha(s){function r(n,x){return(x>>>n)|(x<<(32-n))}var K=[],W=[],h=[],i,j,b=unescape(encodeURIComponent(s)),l=b.length*8,w=[];for(var c=2,n=0;n<64;c++){for(j=2;j*j<=c;j++)if(c%j===0)break;if(j*j>c){if(n<8)h[n]=(Math.pow(c,1/2)*4294967296)|0;K[n++]=(Math.pow(c,1/3)*4294967296)|0;}}b+='\x80';while(b.length%64-56)b+='\x00';for(i=0;i<b.length;i++){j=b.charCodeAt(i);w[i>>2]|=j<<((3-i)%4)*8;}w[w.length]=(l/4294967296)|0;w[w.length]=l;for(j=0;j<w.length;){var a=h.slice(0,8);for(i=0;i<64;i++){var x=i<16?w[j+i]|0:(r(17,W[i-2])^r(19,W[i-2])^(W[i-2]>>>10))+W[i-7]+(r(7,W[i-15])^r(18,W[i-15])^(W[i-15]>>>3))+W[i-16]|0;W[i]=x;var t1=a[7]+(r(6,a[4])^r(11,a[4])^r(25,a[4]))+((a[4]&a[5])^(~a[4]&a[6]))+K[i]+x,t2=(r(2,a[0])^r(13,a[0])^r(22,a[0]))+((a[0]&a[1])^(a[0]&a[2])^(a[1]&a[2]));a=[(t1+t2)|0].concat(a);a[4]=(a[4]+t1)|0;a.pop();}for(i=0;i<8;i++)h[i]=(h[i]+a[i])|0;j+=16;}var o='';for(i=0;i<8;i++)for(j=3;j+1;j--){var v=(h[i]>>(j*8))&255;o+=(v<16?'0':'')+v.toString(16);}return o;}var f=document.getElementById('gatef');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var p=document.getElementById('gatep');if(sha(p.value)===H){try{sessionStorage.setItem('lz_gate',H)}catch(x){}document.documentElement.classList.remove('locked');window.dispatchEvent(new Event('resize'));}else{document.getElementById('gatee').textContent='Falsches Passwort.';p.value='';p.focus();}});})();</script>
@@ -5192,8 +5223,8 @@ function vbCard(fid,i,r,n,pre){const F=esc(fid),K=esc(i.k);const c=resOf(fid,i.k
   <button class="vb-padd" data-vbpadd="${F}|${K}">+ Projekt</button></div>
   <label class="rm5-fld vb-opp"><span class="rm5-lb">Opportunities, die wir in Betracht ziehen <em>neue Chancen, Bedarfe, Ausschreibungen – mit grober Größe S / M / L / XL</em></span><textarea class="vb-ta" rows="2" data-vbc="opp|${F}|${K}" placeholder="z. B. Rüstsätze für 2. Los H145M (L) …">${esc(c.opp||'')}</textarea></label></div></article>`;}
 
-function vbAfter(fid,rf){const F=esc(fid);const top=rf.top||['','',''];const con=(rf.con&&rf.con.length?rf.con:[{},{},{}]);const ev=rf.ev||{};
- return `<section class="glass vb-sec"><div class="vb-sh"><h4>Die drei wichtigsten Ergebnisse</h4><span class="note">stehen oben im Bericht</span></div>${[0,1,2].map(n=>`<div class="vb-top"><span>${n+1}</span><input class="vb-in" data-vbf="top${n}|${F}" value="${esc(top[n]||'')}" placeholder="Ergebnis ${n+1}"></div>`).join('')}</section>
+function vbAfter(fid,rf){const F=esc(fid);const top=rf.top||[];const con=(rf.con&&rf.con.length?rf.con:[{},{},{}]);const ev=rf.ev||{};
+ return `<section class="glass vb-sec"><div class="vb-sh"><h4>Wichtigste Ergebnisse</h4><span class="note">stehen oben im Bericht · so viele wie nötig</span></div>${(top.length?top:['']).map((t,n)=>`<div class="vb-top"><span>${n+1}</span><input class="vb-in" data-vbf="top${n}|${F}" value="${esc(t||'')}" placeholder="Ergebnis ${n+1}"><button class="rm5-ib" data-topdel="${F}|${n}" title="Entfernen" aria-label="Ergebnis entfernen">${rmIco.x}</button></div>`).join('')}<button class="vb-padd" data-topadd="${F}">+ Ergebnis</button></section>
  <section class="glass vb-sec"><div class="vb-sh"><h4>Weitere Kontakte</h4><span class="note">spontane Gespräche, Besucher am Stand, neue Ansprechpartner</span></div>
   <div class="vb-con"><div class="vb-conh"><span>Firma · Person · Funktion</span><span>Worum ging es?</span><span>Nächster Schritt · wer · bis</span><span></span></div>
   ${con.map((x,n)=>`<div class="vb-conr"><input class="vb-in" data-vbk="f|${F}|${n}" value="${esc(x.f||'')}" placeholder="Firma, Person"><input class="vb-in" data-vbk="w|${F}|${n}" value="${esc(x.w||'')}" placeholder="Thema"><input class="vb-in" data-vbk="n|${F}|${n}" value="${esc(x.n||'')}" placeholder="nächster Schritt"><button class="rm5-ib" data-vbkdel="${F}|${n}" aria-label="Zeile entfernen" title="Zeile entfernen">${rmIco.x}</button></div>`).join('')}
@@ -5211,7 +5242,7 @@ document.addEventListener('input',e=>{const t=e.target;const d=t.dataset;if(!d)r
  if(d.vbp&&t.type!=='checkbox'){const[f,fid,k,p]=d.vbp.split('|');const it=vbItem(fid,k);const x=it&&(it.pj||[]).find(z=>z.id===p);if(x){x[f]=t.value;vbPlanSave(fid);}vbAuto(t);return;}
  if(d.vbr){const[f,fid,k,p]=d.vbr.split('|');vbRP(fid,k,p)[f]=t.value;clearTimeout(rgT);rgT=setTimeout(resSave,300);vbAuto(t);return;}
  if(d.vbc){const[f,fid,k]=d.vbc.split('|');vbRC(fid,k)[f]=t.value;clearTimeout(rgT);rgT=setTimeout(resSave,300);vbAuto(t);return;}
- if(d.vbf){const[f,fid]=d.vbf.split('|');const r=vbRF(fid);if(f.startsWith('top')){r.top=r.top||['','',''];r.top[+f.slice(3)]=t.value;}else r[f]=t.value;clearTimeout(rgT);rgT=setTimeout(resSave,300);vbAuto(t);return;}
+ if(d.vbf){const[f,fid]=d.vbf.split('|');const r=vbRF(fid);if(f.startsWith('top')){r.top=r.top||[];r.top[+f.slice(3)]=t.value;}else r[f]=t.value;clearTimeout(rgT);rgT=setTimeout(resSave,300);vbAuto(t);return;}
  if(d.vbgn){const[n,fid]=d.vbgn.split('|');const r=vbRF(fid);r.goals=r.goals||{};(r.goals[n]=r.goals[n]||{}).n=t.value;clearTimeout(rgT);rgT=setTimeout(resSave,300);return;}
  if(d.vbk){const[f,fid,n]=d.vbk.split('|');const r=vbRF(fid);r.con=r.con&&r.con.length?r.con:[{},{},{}];(r.con[+n]=r.con[+n]||{})[f]=t.value;clearTimeout(rgT);rgT=setTimeout(resSave,300);return;}});
 document.addEventListener('change',e=>{const t=e.target;if(t.dataset&&t.dataset.vbp&&t.type==='checkbox'){const[,fid,k,p]=t.dataset.vbp.split('|');const it=vbItem(fid,k);const x=it&&(it.pj||[]).find(z=>z.id===p);if(x){x.done=t.checked;touch(fid);const pr=t.closest('.vb-pr');if(pr)pr.classList.toggle('done',t.checked);}}});
@@ -5255,22 +5286,22 @@ function vbPrepDocx(fid){const f=S.fairs[fid];const C=DOCC;const R=vbRows(fid);c
  b+=wH1PB('Gespräche im Einzelnen');const C2=[560,3600,5746];
  R.forEach(({i,r},n)=>{b+=wFirmPB(n+1,r,i,fid,n>0)+wFld('Ansprechpartner:',i.who||'')+wFld('Unser Ziel:',i.goal||'');
   const L=(i.pj||[]).filter(p=>p.t||p.n);
-  b+=wTblR(C2,['✓','Projekt · meine Vorbereitung','Notizen'],[...L.map(p=>({h:1800,c:[wBox(p.done),wp(wr(p.t||'Projekt',{b:1,c:C.navy}),{a:40})+(p.n?wPara(p.n,{c:C.gray,i:1}):''),'']})),...Array.from({length:wBlank(L.length,1800,0)},()=>({h:2100,c:[wBox(false),wp(wr('weiteres Projekt:',{sz:18,c:C.light}),{a:0}),'']}))],{keep:1});});
+  b+=wTblR(C2,['✓','Projekt · meine Vorbereitung','Notizen'],[...L.map(p=>({h:1800,c:[wBox(p.done),wp(wr(p.t||'Projekt',{b:1,c:C.navy}),{a:40})+(p.n?wPara(p.n,{c:C.gray,i:1}):''),'']})),...Array.from({length:wBlank(L.length,1800,0)},()=>({h:2100,c:[wBox(false),wp(wr('weiteres Projekt:',{sz:18,c:C.light}),{a:0}),'']}))]);});
  if(!R.length)b+=wp(wr('Noch keine Unternehmen eingetragen.',{c:C.light,i:1}),{a:0});
  b+=wp(wr('Erstellt mit dem AUTOFLUG Lagezentrum.',{sz:15,c:C.light,i:1}),{b:240});
  return docxPack(wDoc(b),`Gesprächsvorbereitung ${f.short||f.name}`);}
 function vbResDocx(fid){const f=S.fairs[fid];const C=DOCC;const R=vbRows(fid);const st=vbStats(fid);const rf=(RES[fid]||{})._||{};const goals=vbGoals(fid);
  let b=wCover('MESSEBERICHT · ERGEBNISSE',f,fid)+wp(wr('für Unit-Leitung und Geschäftsführung · intern',{sz:16,c:C.light,i:1}),{a:200});
  b+=wKpi([[st.n,'geplante Gespräche'],[st.met||'__','geführt'],[st.done||'__','Projekte besprochen'],[st.opp||'__','mit Opportunities']]);
- b+=wH1('Zusammenfassung')+wp(wr('Die drei wichtigsten Ergebnisse:',{b:1,c:C.navy}),{a:60});
- b+=[0,1,2].map(n=>{const v=((rf.top||[])[n]||'').trim();return v?wp(wr(`${n+1}.  ${v}`,{sz:20}),{a:80}):wp(wr(`${n+1}.  ______________________________________________________________________________`,{c:'C9D0DA'}),{a:100});}).join('');
+ b+=wH1('Zusammenfassung')+wp(wr('Die wichtigsten Ergebnisse:',{b:1,c:C.navy}),{a:60});
+ {const T=(rf.top||[]).map(x=>String(x||'').trim()).filter(Boolean);b+=T.map((x,n)=>wp(wr(`${n+1}.  ${x}`,{sz:20}),{a:80})).join('')+Array.from({length:T.length?1:3},(_,n)=>wp(wr(`${T.length+n+1}.  ______________________________________________________________________________`,{c:'C9D0DA'}),{a:100})).join('');}
  b+=wH1('Ziele und Zielerreichung');const C3=[5000,1900,3006];
  b+=wTblR(C3,['Ziel','erreicht?','Bemerkung'],(goals.length?goals:['','']).map((g,n)=>{const v=((rf.goals||{})[n]||{});const ch=o=>(v.s===o?'☒ ':'☐ ')+o;return{h:560,c:[wp(wr(g||' '),{a:0}),wp(wr([ch('ja'),ch('teilweise'),ch('nein')].join('  '),{sz:16,c:C.gray}),{a:0}),wp(wr(v.n||' ',{sz:18}),{a:0})]};}));
  b+=wH1PB('Ergebnisse je Unternehmen');const C4=[560,2700,3646,3000];
  R.forEach(({i,r},n)=>{const c=resOf(fid,i.k);b+=wFirmPB(n+1,r,i,fid,n>0)+wFld('Gesprächspartner:',c.who||i.who||'');if(i.goal)b+=wFld('Unser Ziel:',i.goal);
   const L=(i.pj||[]).filter(p=>p.t||p.n);
-  b+=wTblR(C4,['✓','Projekt','Was besprochen wurde','Outcome · nächster Schritt · wer · bis'],[...L.map(p=>{const x=(c.pj||{})[p.id]||{};return{h:1650,c:[wBox(p.done),wp(wr(p.t||'Projekt',{b:1,c:C.navy}),{a:0}),x.dis?wPara(x.dis):'',x.out?wPara(x.out):'']};}),...Array.from({length:wBlank(L.length,1650,2300)},()=>({h:2100,c:[wBox(false),wp(wr('weiteres Projekt:',{sz:18,c:C.light}),{a:0}),'','']}))],{keep:1,keepLast:1});
-  b+=wp('',{a:60,keep:1})+wTblR([9906],null,[{h:2000,c:[wp(wr('Opportunities, die wir in Betracht ziehen',{b:1,c:C.navy,sz:19}),{a:40})+(c.opp?wPara(c.opp,{sz:18}):wp(wr('Neue Chancen, Bedarfe, Ausschreibungen, Kontakte – mit grober Einschätzung (S / M / L / XL)',{sz:16,c:C.light,i:1}),{a:0}))],fill:[C.zebra]}]);});
+  b+=wTblR(C4,['✓','Projekt','Was besprochen wurde','Outcome · nächster Schritt · wer · bis'],[...L.map(p=>{const x=(c.pj||{})[p.id]||{};return{h:1650,c:[wBox(p.done),wp(wr(p.t||'Projekt',{b:1,c:C.navy}),{a:0}),x.dis?wPara(x.dis):'',x.out?wPara(x.out):'']};}),...Array.from({length:wBlank(L.length,1650,2300)},()=>({h:2100,c:[wBox(false),wp(wr('weiteres Projekt:',{sz:18,c:C.light}),{a:0}),'','']}))]);
+  b+=wp('',{a:60})+wTblR([9906],null,[{h:2000,c:[wp(wr('Opportunities, die wir in Betracht ziehen',{b:1,c:C.navy,sz:19}),{a:40})+(c.opp?wPara(c.opp,{sz:18}):wp(wr('Neue Chancen, Bedarfe, Ausschreibungen, Kontakte – mit grober Einschätzung (S / M / L / XL)',{sz:16,c:C.light,i:1}),{a:0}))],fill:[C.zebra]}]);});
  const con=(rf.con||[]).filter(x=>x.f||x.w||x.n);const C6=[2900,3800,3206];
  b+=wH1PB('Weitere Kontakte')+wp(wr('Spontane Gespräche, Besucher am Stand, neue Ansprechpartner',{sz:18,c:C.gray}),{a:80});
  b+=wTblR(C6,['Firma · Person · Funktion','Worum ging es?','Nächster Schritt · wer · bis'],[...con.map(x=>({h:800,c:[wPara(x.f),wPara(x.w),wPara(x.n)]})),...Array.from({length:Math.max(3,6-con.length)},()=>({h:800,c:['','','']}))]);
@@ -5284,10 +5315,13 @@ function vbResDocx(fid){const f=S.fairs[fid];const C=DOCC;const R=vbRows(fid);co
 async function vbDocSave(kind,fid){const f=S.fairs[fid];if(!f)return;const nm=(f.short||fid).replace(/[^A-Za-z0-9]+/g,'-');const yr=String(f.start||'').slice(0,4);
  try{await saveFile(kind==='prep'?`AUTOFLUG-Gespraechsvorbereitung-${nm}-${yr}.docx`:`AUTOFLUG-Messebericht-${nm}-${yr}.docx`,kind==='prep'?vbPrepDocx(fid):vbResDocx(fid),DOCX_MIME);}catch(e){console.error(e);toast('Word-Datei konnte nicht erstellt werden.');}}
 
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('[data-topadd]');if(a){const fid=a.dataset.topadd;const r=vbRF(fid);r.top=(r.top||[]).concat(['']);if(r.top.length===1)r.top.push('');resSave();const y=scrollY;renderFairPage();scrollTo(0,y);const ins=document.querySelectorAll('[data-vbf^="top"]');if(ins.length)ins[ins.length-1].focus();return;}
+ const d=e.target.closest&&e.target.closest('[data-topdel]');if(d){const[fid,n]=d.dataset.topdel.split('|');const r=vbRF(fid);r.top=(r.top||[]);r.top.splice(+n,1);resSave();const y=scrollY;renderFairPage();scrollTo(0,y);}});
+
 /* ---------- v23: Messeseite neu – drei Schritte: Vorbereiten → Auf der Messe → Nachbereiten ---------- */
-const FSTEPS=[['aussteller','Aussteller sichten'],['vor','Roadmap & Vorbereitung'],['ort','Auf der Messe'],['nach','Nachbereiten']];
+const FSTEPS=[['aussteller','Aussteller sichten'],['vor','Roadmap & Vorbereitung'],['messe','Messe & Ergebnisse']];
 const FPK={f:'vor',q:'',n:30};const FGOPEN=new Set();let FODAY=null;
-const fpMap=t=>({aussteller:'aussteller',info:'aussteller',plan:'aussteller',wettbewerb:'aussteller',vor:'vor',roadmap:'vor',route:'vor',ort:'ort',nach:'nach',vb:VB.mode==='res'?'nach':'vor'})[t]||'aussteller';
+const fpMap=t=>({aussteller:'aussteller',info:'aussteller',plan:'aussteller',wettbewerb:'aussteller',vor:'vor',roadmap:'vor',route:'vor',ort:'messe',nach:'messe',messe:'messe',vb:VB.mode==='res'?'messe':'vor'})[t]||'aussteller';
 function fpStats(fid){const R=vbRows(fid);let pj=0,res=0;R.forEach(({i})=>{const L=(i.pj||[]).filter(p=>p.t);pj+=L.length;const c=resOf(fid,i.k);res+=L.filter(p=>{const x=(c.pj||{})[p.id]||{};return (x.dis||x.out||'').trim();}).length;});
  return{n:R.length,timed:R.filter(o=>o.i.d&&tmin(o.i.t)!=null).length,pj,met:R.filter(o=>SEEN.has(o.i.k)).length,res};}
 
@@ -5303,9 +5337,9 @@ renderFairPage=function(){const el=$('#fp');if(!el)return;const fid=FP.id;const 
    <p>${esc(f.why||'')}</p>${f.show&&f.show.length?`<p class="note"><b>Zeigen oder ansprechen:</b> ${f.show.map(esc).join(' · ')}</p>`:''}
    <div class="fs-abk">${kp.map(([l,v])=>`<span><b>${esc(String(v))}</b>${l}</span>`).join('')}</div>
    <div class="fs-abl">${f.web?`<a href="${esc(f.web)}" target="_blank" rel="noopener">Website ↗</a>`:''}${f.plan?`<a href="${esc(f.plan)}" target="_blank" rel="noopener">Hallenplan ↗</a>`:''}${f.exList?`<a href="${esc(f.exList)}" target="_blank" rel="noopener">Ausstellerverzeichnis ↗</a>`:''}</div></div></details></header>
- <ol class="fs-steps" role="list">${FSTEPS.map(([k,l],n)=>{const sub=k==='aussteller'?`${f.hall?f.hall.length:coAt(fid).length} Aussteller · ${st.n} in der Roadmap`:k==='vor'?`${st.n} ${st.n===1?"Gespräch":"Gespräche"} · ${st.timed} mit Termin · ${st.pj} ${st.pj===1?"Projekt":"Projekte"}`:k==='ort'?`${st.met} von ${st.n} geführt`:`${st.res} ${st.res===1?"Projekt":"Projekte"} mit Ergebnis`;
+ <ol class="fs-steps" role="list">${FSTEPS.map(([k,l],n)=>{const sub=k==='aussteller'?`${f.hall?f.hall.length:coAt(fid).length} Aussteller · ${st.n} in der Roadmap`:k==='vor'?`${st.n} ${st.n===1?"Gespräch":"Gespräche"} · ${st.timed} mit Termin · ${st.pj} ${st.pj===1?"Projekt":"Projekte"}`:`${st.met} von ${st.n} geführt · ${st.res} ${st.res===1?"Projekt":"Projekte"} mit Ergebnis`;
   return `<li><button class="fs-step${k===step?' on':''}${n<si?' past':''}" data-fstep="${k}" aria-current="${k===step?'step':'false'}"><span class="fs-num">${n<si?'✓':n+1}</span><span class="fs-l"><b>${l}</b><em>${sub}</em></span></button></li>`;}).join('')}</ol>`;
- const body=step==='aussteller'?`<p class="note fs-intro">Alle Aussteller durchsehen, filtern und Notizen machen. Mit „+ Roadmap“ kommt ein Unternehmen in Schritt 2 – dort planst du Termin, Ziel und Projekte.</p>${cuBar(fid)}<div id="fpbody">${fairTab(fid)}</div>`:step==='ort'?fpOrt(fid):step==='nach'?fpNach(fid):fpVor(fid);
+ const body=step==='aussteller'?`<p class="note fs-intro">Alle Aussteller durchsehen, filtern und Notizen machen. Mit „+ Roadmap“ kommt ein Unternehmen in Schritt 2 – dort planst du Termin, Ziel und Projekte.</p>${cuBar(fid)}<div id="fpbody">${fairTab(fid)}</div>`:step==='messe'?fpMesse(fid):fpVor(fid);
  const prev=FSTEPS[si-1],next=FSTEPS[si+1];
  const nav=`<div class="fs-nav">${prev?`<button class="btn" data-fstep="${prev[0]}">← Zurück: ${prev[1]}</button>`:`<a class="btn" href="#messen">← Alle Messen</a>`}<span class="rm5-sp"></span>${next?`<button class="btn pri" data-fstep="${next[0]}">Weiter: ${next[1]} →</button>`:`<button class="btn pri" data-vbdoc="res|${F}">Messebericht erstellen (Word)</button>`}</div>`;
  el.innerHTML=`<div class="fs">${head}<div class="fs-body">${body}</div>${nav}</div>`;
@@ -5324,7 +5358,7 @@ function fvCard(fid,{i,n,r},days){const F=esc(fid),K=esc(i.k);const id=`${F}|${n
  const has=i.d&&days.some(d=>d[0]===i.d)&&tmin(i.t)!=null;const open=FGOPEN.has(key)||RMOPEN.has(key);
  const tsum=has?`${(days.find(d=>d[0]===i.d)||[])[1]} · ${i.t}–${tfmt(rmEnd(i))}`:'noch kein Termin';
  return `<article class="glass fv-card" data-rmc="${id}"><div class="fv-ch"><div class="rm5-st"><span>Stand</span><b>${esc(bshort(r.b)||'–')}</b></div>
-  <div class="rm5-id">${r.own?`<b class="rm5-name">${esc(r.name)}</b>`:`<a class="rm5-name" href="${esc(x?coHref(i.k,fid):tplU(S.fairs[fid],'det',r.xid,r.b))}"${x?'':' target="_blank" rel="noopener"'}>${esc(r.name)}</a>`}<div class="rm5-meta">${x?`<span class="dv ${esc(x.div||'x')}">${esc(DSHORT[x.div]||'Alle')}</span><span class="tag ${relCls(x.rel)}">${esc(x.rel)}</span>`:''}${r.own?'<span class="tag">eigenes Unternehmen</span>':''}<span class="fv-ts${has?' ok':''}">${esc(tsum)}</span></div></div>
+  <div class="rm5-id">${r.own?`<b class="rm5-name">${esc(r.name)}</b>`:`<a class="rm5-name" href="${esc(x?coHref(i.k,fid):tplU(S.fairs[fid],'det',r.xid,r.b))}"${x?'':' target="_blank" rel="noopener"'}>${esc(r.name)}</a>`}<div class="rm5-meta">${x?`<span class="dv ${esc(x.div||'x')}">${esc(DSHORT[x.div]||'Alle')}</span><span class="tag ${relCls(x.rel)}">${esc(x.rel)}</span>`:''}${coLinksHtml(fid,i,r)}${r.own?'<span class="tag">eigenes Unternehmen</span>':''}<span class="fv-ts${has?' ok':''}">${esc(tsum)}</span></div></div>
   <button class="rm5-ib" data-vbrm="${F}|${K}" title="Gespräch entfernen" aria-label="Gespräch entfernen">${rmIco.x}</button></div>
  <div class="fv-cb">${r.own?`<div class="rm5-two"><label class="rm5-fld"><span class="rm5-lb">Unternehmen</span><input data-vbi="cn|${F}|${K}" value="${esc(i.cn||'')}" placeholder="Name"></label><label class="rm5-fld"><span class="rm5-lb">Stand</span><input data-vbi="cb|${F}|${K}" value="${esc(i.cb||'')}" placeholder="z. B. 512"></label></div>`:''}<div class="rm5-two"><label class="rm5-fld"><span class="rm5-lb">Ansprechpartner</span><input data-vbi="who|${F}|${K}" value="${esc(i.who||'')}" placeholder="Name, Funktion"></label><label class="rm5-fld"><span class="rm5-lb">Unser Ziel</span><input data-vbi="goal|${F}|${K}" value="${esc(i.goal||'')}" placeholder="Was wollen wir erreichen?"></label></div>
   <div class="fv-pj"><span class="rm5-lb">Projekte</span>${L.map(p=>`<div class="fv-pr"><input class="vb-in vb-pt" data-vbp="t|${F}|${K}|${esc(p.id)}" value="${esc(p.t||'')}" placeholder="Projekt"><textarea class="vb-ta" rows="1" data-vbp="n|${F}|${K}|${esc(p.id)}" placeholder="Notiz">${esc(p.n||'')}</textarea><button class="rm5-ib" data-vbpdel="${F}|${K}|${esc(p.id)}" title="Projekt entfernen" aria-label="Projekt entfernen">${rmIco.x}</button></div>`).join('')}<button class="vb-padd" data-vbpadd="${F}|${K}">+ Projekt</button></div>
@@ -5396,6 +5430,41 @@ document.addEventListener('submit',e=>{const fm=e.target.closest&&e.target.close
  planOf(fid).items.push({k:'c:'+vbId(),cn:n.slice(0,80),cb:fm.b.value.trim().slice(0,20),d:'',t:'',p:2,n:'',pj:[{id:vbId(),t:'',n:'',done:false}]});touch(fid);
  toast(`„${n}“ in die Roadmap aufgenommen.`);if(FP.tab==='aussteller'){location.hash='#messe/'+fid+'/vor';}else{const y=scrollY;renderFairPage();scrollTo(0,y);}});
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-fvday]');if(!b)return;FVDAY=b.dataset.fvday;const y=scrollY;renderFairPage();scrollTo(0,y);});
+
+/* ---------- v31: Schritt „Messe & Ergebnisse“ (vor Ort + Nachbereitung in einem), Suche, Links ---------- */
+let FMQ='';
+function coLinksHtml(fid,i,r){if(r.own)return'';const f=S.fairs[fid];const pl=tplU(f,'plan',r.xid,r.b);
+ return `${r.x?`<a class="fm-lk" href="${esc(coHref(i.k,fid))}">Unternehmensdaten →</a>`:`<a class="fm-lk" href="${esc(tplU(f,'det',r.xid,r.b))}" target="_blank" rel="noopener">Profil ↗</a>`}${pl?`<a class="fm-lk" href="${esc(pl)}" target="_blank" rel="noopener">Hallenplan ↗</a>`:''}`;}
+function fmHay(fid,i,r){const c=resOf(fid,i.k);return nrm([r.name,bshort(r.b),i.who,i.goal,i.ag,NOTES[i.k],c.who,c.opp,...(i.pj||[]).flatMap(p=>[p.t,p.n,((c.pj||{})[p.id]||{}).dis,((c.pj||{})[p.id]||{}).out])].join(' '));}
+function fmRows(fid){const R=vbRows(fid);const days=fairDays(S.fairs[fid]);const dset=new Set(days.map(d=>d[0]));
+ let L=FODAY&&FODAY!=='*'?(FODAY==='-'?R.filter(o=>!dset.has(o.i.d||'')):R.filter(o=>o.i.d===FODAY)):R;
+ const q=nrm(FMQ);if(q){const toks=q.split(' ');L=L.filter(o=>{const h=' '+fmHay(fid,o.i,o.r)+' ';return toks.every(t=>h.includes(t));});}return L;}
+function fpMesse(fid){const F=esc(fid);const R=vbRows(fid);const days=fairDays(S.fairs[fid]);const dset=new Set(days.map(d=>d[0]));const rf=(RES[fid]||{})._||{};const goals=vbGoals(fid);
+ if(FODAY==null||(FODAY!=='*'&&FODAY!=='-'&&!R.some(o=>o.i.d===FODAY)))FODAY=R.some(o=>o.i.d===todayISO)?todayISO:'*';
+ const open=R.filter(o=>!dset.has(o.i.d||'')).length;
+ const chips=`<button class="vb-chip${FODAY==='*'?' on':''}" data-foday="*">Alle Tage · ${R.length}</button>${days.map(([d,l])=>{const n=R.filter(o=>o.i.d===d).length;return n?`<button class="vb-chip${FODAY===d?' on':''}" data-foday="${d}">${esc(l)} · ${n}</button>`:'';}).join('')}${open?`<button class="vb-chip${FODAY==='-'?' on':''}" data-foday="-">ohne Termin · ${open}</button>`:''}`;
+ return `<div class="fm-bar glass"><div class="fm-q"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input type="search" data-fmq="${F}" value="${esc(FMQ)}" placeholder="Unternehmen, Ansprechpartner, Projekt oder Notiz suchen …" aria-label="Gespräche durchsuchen"></div>
+  <div class="fo-days" role="group" aria-label="Tag">${chips}</div><p class="note fm-hint">Hier alles eintragen – während der Messe und danach. Notizen aus der Vorbereitung stehen grau unter den Projekten.</p></div>
+ <div id="fmlist">${fmList(fid)}</div>
+ <section class="glass fs-sec"><div class="vb-sh"><h3>Ziele und Zielerreichung</h3>${goals.length?'':'<span class="note">Keine Ziele eingetragen – in „Roadmap & Vorbereitung“ ergänzen</span>'}</div>${goals.map((g,n)=>{const v=((rf.goals||{})[n]||{});return `<div class="vb-goal"><span>${esc(g)}</span><div class="vb-chips">${['ja','teilweise','nein'].map(o=>`<button class="vb-chip${v.s===o?' on':''}" data-vbgoal="${n}|${F}" data-val="${o}">${o}</button>`).join('')}</div><input class="vb-in" data-vbgn="${n}|${F}" value="${esc(v.n||'')}" placeholder="Bemerkung"></div>`;}).join('')}</section>
+ ${vbAfter(fid,rf)}`;}
+function fmList(fid){const L=fmRows(fid);const days=fairDays(S.fairs[fid]);
+ if(!vbRows(fid).length)return `<div class="glass fs-empty"><b>Noch keine Gespräche geplant</b><p class="note">In „Roadmap & Vorbereitung“ Unternehmen aufnehmen.</p></div>`;
+ if(!L.length)return `<p class="note fm-none">Keine Treffer${FMQ?` für „${esc(FMQ)}“`:''}.</p>`;
+ if(FODAY==='*'&&!FMQ){const dset=new Set(days.map(d=>d[0]));const G=[...days.map(([d])=>[d,LDATE(d,'de'),L.filter(o=>o.i.d===d)]),['','Ohne Termin',L.filter(o=>!dset.has(o.i.d||''))]].filter(g=>g[2].length);
+  return G.map(([d,l,X])=>`<div class="fo-dh"><h3>${esc(l)}</h3><span class="note">${X.length} ${X.length===1?'Gespräch':'Gespräche'}</span></div>`+X.map(o=>fmCard(fid,o)).join('')).join('');}
+ return L.map(o=>fmCard(fid,o)).join('');}
+function fmCard(fid,{i,r}){const F=esc(fid),K=esc(i.k);const c=resOf(fid,i.k);const L=i.pj||[];const done=SEEN.has(i.k);const x=r.x;
+ return `<article class="glass fm-card${done?' done':''}"><div class="fm-h"><div class="fm-t">${i.t?`<b>${esc(i.t)}</b><span>${esc(tfmt(rmEnd(i)))}</span>`:'<b>–</b>'}</div>
+  <div class="fm-id"><div class="fm-n"><b>${esc(r.name)}</b><span class="fm-st">Stand ${esc(bshort(r.b)||'–')}</span>${x?`<span class="dv ${esc(x.div||'x')}">${esc(DSHORT[x.div]||'Alle')}</span>`:''}</div><div class="fm-links">${coLinksHtml(fid,i,r)}</div></div>
+  <button class="fo-done${done?' on':''}" data-seen="${K}" aria-pressed="${done}">${rmIco.ok}${done?'Geführt':'Als geführt markieren'}</button></div>
+ <div class="fm-b"><div class="rm5-two"><label class="rm5-fld"><span class="rm5-lb">Gesprächspartner</span><input data-vbc="who|${F}|${K}" value="${esc(c.who||i.who||'')}" placeholder="Name, Funktion"></label><label class="rm5-fld"><span class="rm5-lb">Unser Ziel</span><input data-vbi="goal|${F}|${K}" value="${esc(i.goal||'')}" placeholder="Was wollen wir erreichen?"></label></div>
+  ${NOTES[i.k]?`<div class="fm-prep"><span>Notiz aus der Vorbereitung</span>${esc(NOTES[i.k])}</div>`:''}
+  <div class="fm-pj"><div class="fm-pjh"><span>✓</span><span>Projekt</span><span>Was besprochen wurde</span><span>Outcome · nächster Schritt · wer · bis</span><span></span></div>
+  ${L.map(p=>{const y=(c.pj||{})[p.id]||{};return `<div class="fm-pr"><label class="vb-ck"><input type="checkbox" data-vbp="done|${F}|${K}|${esc(p.id)}"${p.done?' checked':''} aria-label="besprochen"></label><div class="vb-ptx"><input class="vb-in vb-pt" data-vbp="t|${F}|${K}|${esc(p.id)}" value="${esc(p.t||'')}" placeholder="Projekt benennen">${p.n?`<span class="fm-pn">${esc(p.n)}</span>`:''}</div><textarea class="vb-ta" rows="2" data-vbr="dis|${F}|${K}|${esc(p.id)}" placeholder="Was wurde besprochen?">${esc(y.dis||'')}</textarea><textarea class="vb-ta" rows="2" data-vbr="out|${F}|${K}|${esc(p.id)}" placeholder="Ergebnis, nächster Schritt, wer, bis wann">${esc(y.out||'')}</textarea><button class="rm5-ib" data-vbpdel="${F}|${K}|${esc(p.id)}" title="Projekt entfernen" aria-label="Projekt entfernen">${rmIco.x}</button></div>`;}).join('')}
+  <button class="vb-padd" data-vbpadd="${F}|${K}">+ Projekt</button></div>
+  <label class="rm5-fld vb-opp"><span class="rm5-lb">Opportunities, die wir in Betracht ziehen <em>mit grober Größe S / M / L / XL</em></span><textarea class="vb-ta" rows="2" data-vbc="opp|${F}|${K}" placeholder="z. B. Rüstsätze für 2. Los H145M (L) …">${esc(c.opp||'')}</textarea></label></div></article>`;}
+let fmqT=null;document.addEventListener('input',e=>{const t=e.target;if(!t.dataset||!t.dataset.fmq)return;FMQ=t.value;clearTimeout(fmqT);fmqT=setTimeout(()=>{const el=$('#fmlist');if(el){el.innerHTML=fmList(t.dataset.fmq);requestAnimationFrame(rmAutosize);}},180);});
 
 /* ---------- v25: Profile – jeder arbeitet in seinem eigenen Bereich; Beispielprofil mit erfundener Roadmap ---------- */
 /* Aktives Profil = die bekannten Schlüssel (lz3_plans, lz3_notes, lz3_seen, lz4_res). Inaktive Profile liegen in lz5_slot_<id>.
