@@ -30967,6 +30967,56 @@ body{line-height:1.5}
 .b4-ml .ml-ty{font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
 .p4-fav{white-space:nowrap}
 @media(max-width:600px){.b4-dl li{grid-template-columns:48px minmax(0,1fr) auto}.b4-fig>button{border-right:0;border-bottom:1px solid var(--line)}.b4-fig>button:last-child:nth-child(odd){grid-column:1/-1}}
+/* v36 Pipeline */
+.p5-f{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 16px}
+.p5-f #plq{flex:1 1 240px;min-width:0}
+.p5-n{font-variant-numeric:tabular-nums;opacity:.7;margin-left:4px}
+.p5-l{display:flex;flex-direction:column;gap:10px}
+.p5-c{border:1px solid var(--line);border-radius:var(--r);background:var(--surf);padding:14px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.p5-c.fav{border-color:color-mix(in srgb,var(--amber) 45%,var(--line))}
+.p5-h{display:flex;gap:12px;justify-content:space-between;align-items:flex-start;min-width:0}
+.p5-tt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.p5-ti{font-size:16px;font-weight:600;text-align:left}
+.p5-sub{font-size:13px;color:var(--mute)}
+.p5-m{display:flex;align-items:center;gap:4px;flex:none}
+.p5-m .p4-bt{margin:0}
+.p5-pr{font:600 12px var(--font);color:var(--ink2);background:var(--surf2);border-radius:5px;padding:2px 6px;font-variant-numeric:tabular-nums}
+.p5-pr.hot{color:var(--as);background:color-mix(in srgb,var(--as) 12%,transparent)}
+.p5-ev{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.p5-chip{all:unset;box-sizing:border-box;display:inline-flex;align-items:baseline;gap:8px;max-width:100%;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;cursor:pointer;background:var(--bg2);transition:border-color .15s,background .15s}
+.p5-chip:hover{border-color:#0F6CBD}
+.p5-chip:focus-visible{outline:2px solid #0F6CBD;outline-offset:1px}
+.p5-chip.on{border-color:#0F6CBD;background:color-mix(in srgb,#0F6CBD 10%,var(--surf))}
+.p5-chip time{font-weight:650;font-variant-numeric:tabular-nums;flex:none}
+.p5-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.p5-chip i{font-style:normal;color:var(--mute);font-size:12.5px;flex:none}
+.p5-chip.soon time{color:var(--red)}
+.p5-chip.own{border-style:dashed}
+.p5-none{font-size:13px;color:var(--mute)}
+.p5-add{all:unset;cursor:pointer;font-size:13px;font-weight:600;color:var(--as);padding:6px 8px;border-radius:8px}
+.p5-add:hover,.p5-add.on{background:color-mix(in srgb,var(--as) 10%,transparent)}
+.p5-add:focus-visible{outline:2px solid var(--as)}
+.p5-pan{border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.p5-pt{display:flex;flex-direction:column;gap:2px}
+.p5-pa{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.p5-tm{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink2)}
+.p5-tm input,.p5-form input{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);color:var(--ink)}
+.p5-hint{margin:0}
+.p5-form{display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:10px;align-items:end}
+.p5-form label{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--mute);min-width:0}
+.p5-form .w{grid-column:auto}
+.p5-form p.w{grid-column:1/-1;margin:0}
+.p5-fb{grid-column:1/-1;display:flex;gap:8px}
+.p5-foot{margin-top:14px}
+.p5-dr .p5-dl{list-style:none;margin:8px 0 0;padding:0}
+.p5-dl li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
+.p5-dl li:last-child{border-bottom:0}
+.p5-dl time{font-weight:650;font-variant-numeric:tabular-nums}
+.p5-dl i{display:block;font-style:normal;font-size:12.5px;color:var(--mute)}
+.b4-pev .p5-ol{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:8px;color:#0F6CBD;align-self:center}
+.b4-pev .p5-ol:hover{background:color-mix(in srgb,#0F6CBD 12%,transparent)}
+.b4-pev .b4-dt>span{display:block}
+@media(max-width:700px){.p5-h{flex-direction:column;gap:6px}.p5-form{grid-template-columns:1fr 1fr}.p5-form label.w{grid-column:1/-1}.p5-chip{flex-wrap:wrap;row-gap:0}.p5-chip span{white-space:normal}}
 </style>
 </head>
 <body><div id="gate" role="dialog" aria-label="Anmeldung"><form id="gatef" autocomplete="off"><b>AUTOFLUG Lagezentrum</b><p>Testversion – bitte Passwort eingeben.</p><input id="gatep" type="password" placeholder="Passwort" aria-label="Passwort" autofocus><span class="err" id="gatee"></span><button type="submit">Öffnen</button></form></div><script>(function(){var H='f62490f783b6aeebc0b83a3c7b451a3f686bffa131ec8763f03e0d0243648534';function sha(s){function r(n,x){return(x>>>n)|(x<<(32-n))}var K=[],W=[],h=[],i,j,b=unescape(encodeURIComponent(s)),l=b.length*8,w=[];for(var c=2,n=0;n<64;c++){for(j=2;j*j<=c;j++)if(c%j===0)break;if(j*j>c){if(n<8)h[n]=(Math.pow(c,1/2)*4294967296)|0;K[n++]=(Math.pow(c,1/3)*4294967296)|0;}}b+='\x80';while(b.length%64-56)b+='\x00';for(i=0;i<b.length;i++){j=b.charCodeAt(i);w[i>>2]|=j<<((3-i)%4)*8;}w[w.length]=(l/4294967296)|0;w[w.length]=l;for(j=0;j<w.length;){var a=h.slice(0,8);for(i=0;i<64;i++){var x=i<16?w[j+i]|0:(r(17,W[i-2])^r(19,W[i-2])^(W[i-2]>>>10))+W[i-7]+(r(7,W[i-15])^r(18,W[i-15])^(W[i-15]>>>3))+W[i-16]|0;W[i]=x;var t1=a[7]+(r(6,a[4])^r(11,a[4])^r(25,a[4]))+((a[4]&a[5])^(~a[4]&a[6]))+K[i]+x,t2=(r(2,a[0])^r(13,a[0])^r(22,a[0]))+((a[0]&a[1])^(a[0]&a[2])^(a[1]&a[2]));a=[(t1+t2)|0].concat(a);a[4]=(a[4]+t1)|0;a.pop();}for(i=0;i<8;i++)h[i]=(h[i]+a[i])|0;j+=16;}var o='';for(i=0;i<8;i++)for(j=3;j+1;j--){var v=(h[i]>>(j*8))&255;o+=(v<16?'0':'')+v.toString(16);}return o;}var f=document.getElementById('gatef');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var p=document.getElementById('gatep');if(sha(p.value)===H){try{sessionStorage.setItem('lz_gate',H)}catch(x){}document.documentElement.classList.remove('locked');window.dispatchEvent(new Event('resize'));}else{document.getElementById('gatee').textContent='Falsches Passwort.';p.value='';p.focus();}});})();</script>
@@ -32898,7 +32948,7 @@ function briefData(){const[wa,wb]=weekRange();const kw=isoWeek(new Date(todayISO
  const dec=[];
  tenders.filter(([,t])=>(t.score||0)>=3&&daysTo(t.deadline)<=60).forEach(([k,t])=>dec.push({q:`Bieten wir? ${t.title}`,d:t.deadline,why:`${t.buyer||''}${t.value?' · '+t.value:''}`,rec:(t.score||0)>=4?'Empfehlung: Teilnahme prüfen und Angebotsteam benennen.':'Empfehlung: nur mit Partner oder als Unterauftragnehmer.',open:`tenders:${k}`}));
  fairs.filter(([,f])=>f.goal==='Ausstellen'&&daysTo(f.start)>14).forEach(([k,f])=>dec.push({q:`Stand auf ${f.short||f.name}?`,d:f.start,why:`${fWhen(f)} · ${f.city||''}`,rec:'Empfehlung: Stand, Exponate und Standpersonal jetzt festlegen.',h:`#messe/${k}`}));
- ops.filter(([k,o])=>o.prio>=16&&!teamOpp(k).owner).sort((a,b)=>b[1].prio-a[1].prio).slice(0,4).forEach(([k,o])=>dec.push({q:`Wer übernimmt „${o.title}“?`,d:null,why:`Priorität ${o.prio} · ${STG()[oStage(k,o)-1]}`,rec:'Verantwortliche Person in der Pipeline eintragen.',open:`opps:${k}`}));
+ 
  const moved=Object.entries(TEAMALL.opps).filter(([k,v])=>S.opps[k]&&v.ts&&daysTo(v.ts.slice(0,10))>=-7);
  return{kw,wa,wb,sig,tenders,fairs,events,tasks,ops,dec,moved};}
 function renderBrief(){const el=$('#br');if(!el||!S.opps||!Object.keys(S.opps).length)return;const B=briefData();const st=STG();
@@ -32910,11 +32960,11 @@ function renderBrief(){const el=$('#br');if(!el||!S.opps||!Object.keys(S.opps).l
  const byStage=st.map((n,i)=>B.ops.filter(([k,o])=>oStage(k,o)===i+1));const mx=Math.max(1,...byStage.map(x=>x.length));
  const eurSum=B.ops.reduce((a,[k])=>a+oEur(k),0);const nOwn=B.ops.filter(([k])=>teamOpp(k).owner).length;
  const mpS=(typeof MP!=='undefined'&&MP.S)?MP.S[MP.sc]:null;
- const favL=[...FAV].map(id=>[id,mlFind(id)]).filter(x=>x[1]);
+ const favL=[...FAV].map(id=>[id,mlFind(id)]).filter(x=>x[1]);const pG=pevGroups(B.ops,60);
  el.innerHTML=`<header class="b4-h"><div><p class="b4-kw">Kalenderwoche ${B.kw} · ${esc(range)}</p><h1>Wochenbriefing</h1>
   <p class="b4-lead">${esc(head||(top[0]?top[0][1].title:'Keine neuen Meldungen in dieser Woche.'))}</p></div>
   <div class="b4-act"><button class="btn" data-bexp="docx">Word herunterladen</button><button class="btn" data-bexp="mail">Als E-Mail kopieren</button><button class="btn" data-bexp="print">Drucken</button></div></header>
- <div class="b4-fig">${[[B.sig.length,'neue Meldungen','in 14 Tagen oder neu erfasst','b4sig'],[dl.length,'Fristen und Termine','in 60 Tagen','b4dl'],[B.dec.length,'Entscheidungen','offen','b4dec'],[nOwn+' / '+B.ops.length,'Chancen mit Verantwortlichem',eurSum?'Team-Schätzung '+eurF(eurSum):'zur Pipeline','#pipeline'],[favL.length,'gemerkt','deine Merkliste','b4ml']].map(([v,l,s,g])=>`<button type="button" data-b4go="${g}" class="${g==='b4ml'?'b4-favt':''}" title="${g[0]==='#'?'Öffnen':'Hinspringen'}"><b>${v}</b><span>${l}</span><i>${s}</i></button>`).join('')}</div>
+ <div class="b4-fig">${[[B.sig.length,'neue Meldungen','in 14 Tagen oder neu erfasst','b4sig'],[dl.length,'Fristen und Termine','in 60 Tagen','b4dl'],[B.dec.length,'Entscheidungen','offen','b4dec'],[B.ops.length,'Chancen in der Pipeline',pG.length?pG.length+' Termine in 60 Tagen':'zur Pipeline','#pipeline'],[favL.length,'gemerkt','deine Merkliste','b4ml']].map(([v,l,s,g])=>`<button type="button" data-b4go="${g}" class="${g==='b4ml'?'b4-favt':''}" title="${g[0]==='#'?'Öffnen':'Hinspringen'}"><b>${v}</b><span>${l}</span><i>${s}</i></button>`).join('')}</div>
  <section class="b4-s"><h2>Das Wichtigste</h2>${top.length?`<ol class="b4-top">${top.map(([k,s])=>`<li><div class="b4-tt"><span class="dvt ${esc(s.div)}">${esc(DSHORT[s.div]||'Alle')}</span><button class="lnk2" data-open="signals:${esc(k)}">${esc(s.title)}</button>${starBtn(k)}<span class="b4-d">${esc(s.dateText||fmtD(s.date))}</span></div><p>${esc(s.summary||'')}</p><p class="b4-imp"><b>Für uns:</b> ${esc(s.implication||'')}</p></li>`).join('')}</ol>`:'<p class="note">Diese Woche keine neuen Meldungen.</p>'}</section>
  <div class="b4-2">
  <section class="b4-s" id="b4dec"><h2>Entscheidungen</h2>${B.dec.length?`<ul class="b4-dec">${B.dec.slice(0,8).map(x=>`<li><div><b>${esc(x.q)}</b><span>${esc(x.why)}</span><span class="b4-rec">${esc(x.rec)}</span></div><div class="b4-dd">${b4id(x)?starBtn(b4id(x)):''}${x.d?`<b>${dShort(x.d)}</b><i>${relD(x.d)}</i>`:'<i>offen</i>'}${x.open?`<button class="btn sm" data-open="${esc(x.open)}">Öffnen</button>`:`<a class="btn sm" href="${x.h}">Öffnen</a>`}</div></li>`).join('')}</ul>`:'<p class="note">Keine offenen Entscheidungen.</p>'}</section>
@@ -32922,9 +32972,7 @@ function renderBrief(){const el=$('#br');if(!el||!S.opps||!Object.keys(S.opps).l
  </div>
  <section class="b4-s" id="b4ml"><div class="b4-sh"><h2>Meine Merkliste</h2><a class="lnk2" href="#merkliste">Ganze Merkliste ›</a></div>${favL.length?`<ul class="b4-ml">${favL.slice(0,8).map(([id,[c,v]])=>mlItem(c,id,v).replace('<div><b>',`<div><span class="ml-ty">${esc((MLT.find(m=>m[0]===c)||[,''])[1])}</span><b>`)).join('')}</ul>${favL.length>8?`<p class="note" style="margin-top:8px">und ${favL.length-8} weitere in der <a class="lnk2" href="#merkliste">Merkliste</a></p>`:''}`:'<p class="note">Noch nichts gemerkt. Tippe auf ☆ bei einer Meldung, Frist, Messe oder Chance – sie landet hier und in der Merkliste.</p>'}</section>
  <div class="b4-2">
- <section class="b4-s"><div class="b4-sh"><h2>Pipeline</h2><a class="lnk2" href="#pipeline">Zur Pipeline ›</a></div>
-  <div class="b4-bars">${st.map((n,i)=>`<div><span>${esc(n)}</span><em><u style="width:${byStage[i].length/mx*100}%"></u></em><b>${byStage[i].length}</b></div>`).join('')}</div>
-  <p class="note" style="margin-top:10px">${B.moved.length?`Diese Woche bewegt: ${B.moved.slice(0,5).map(([k,v])=>`${esc(S.opps[k].title)} (${esc(whoBy(v.by))})`).join(' · ')}`:'Diese Woche noch keine Änderungen durch das Team.'}</p></section>
+ <section class="b4-s"><div class="b4-sh"><h2>Pipeline: nächste Termine</h2><a class="lnk2" href="#pipeline">Zur Pipeline ›</a></div><ul class="b4-dl b4-pev">${pG.slice(0,8).map(g=>`<li class="${daysTo(g.d)<=14?'soon':''}"><time>${dShort(g.d)}</time><span class="b4-ty">${g.src==='own'?'Eigener':'Termin'}</span><span class="b4-dt"><span>${esc(g.t)}</span><i>${g.ops.map(([,o])=>esc(o.title)).join(' · ')}</i></span><span class="b4-rel">${relD(g.d)}</span><a class="p5-ol" href="${esc(remUrl(g))}" target="_blank" rel="noopener" title="In Outlook eintragen" aria-label="In Outlook eintragen">${P5ICO}</a></li>`).join('')||'<li class="note">Keine Termine in den nächsten 60 Tagen.</li>'}</ul></section>
  <section class="b4-s"><div class="b4-sh"><h2>Messen in 90 Tagen</h2><a class="lnk2" href="#planer">Zum Messeplaner ›</a></div><ul class="b4-dl">${B.fairs.map(([k,f])=>{const e=mpS&&mpS.sel?mpS.sel[k]:null;const n=planItems(k).length;return`<li><time>${dShort(f.start)}</time><span class="b4-ty">${esc(e&&e.st?({stand:'Stand',besuch:'Besuch',beob:'Beobachten'}[e.st]||''):'offen')}</span><span class="b4-dt"><a class="lnk2" href="#messe/${esc(k)}">${esc(f.name)}</a><i>${esc(f.city||'')}${n?` · Roadmap mit ${n} Unternehmen`:''}</i></span><span class="b4-rel">${relD(f.start)}</span>${starBtn(k)}</li>`;}).join('')||'<li class="note">Keine Messen in den nächsten 90 Tagen.</li>'}</ul></section>
  </div>
  <section class="b4-s" id="b4sig"><h2>Neu im Markt</h2><div class="scroll"><table class="b4-t b4-sig"><thead><tr><th>Datum</th><th>Sparte</th><th>Meldung</th><th>Bedeutung für AUTOFLUG</th></tr></thead><tbody>${B.sig.map(([k,s])=>`<tr><td class="nw">${esc(s.dateText||dShort(s.date))}</td><td><span class="dvt ${esc(s.div)}">${esc(DSHORT[s.div]||'Alle')}</span></td><td><button class="lnk2" data-open="signals:${esc(k)}">${esc(s.title)}</button>${starBtn(k)}</td><td>${esc(s.implication||'')}</td></tr>`).join('')||'<tr><td colspan="4" class="note">Keine neuen Meldungen.</td></tr>'}</tbody></table></div></section>
@@ -32951,7 +32999,7 @@ function briefDocx(){const C=DOCC;const B=briefData();const title=`Wochenbriefin
  
  const dl=[...B.tenders.filter(([,t])=>daysTo(t.deadline)<=60).map(([,t])=>[t.deadline,'Ausschreibung',t.title]),...B.events.map(([,e])=>[e.date,'Termin',e.title]),...B.fairs.filter(([,f])=>daysTo(f.start)<=60).map(([,f])=>[f.start,'Messe',f.name])].sort((a,c)=>a[0].localeCompare(c[0]));
  b+=H('Fristen und Termine (60 Tage)');b+=dl.length?tbl([1300,1700,6906],['Datum','Art','Was'],dl.map(x=>[dShort(x[0]),x[1],x[2]])):P('Keine Fristen.');
- const st=STG();b+=H('Pipeline');b+=tbl([3300,1500,5106],['Phase','Anzahl','Chancen (Auswahl)'],st.map((n,i)=>{const L=B.ops.filter(([k,o])=>oStage(k,o)===i+1).sort((a,c)=>c[1].prio-a[1].prio);return[n,L.length,L.slice(0,3).map(([,o])=>o.title).join('; ')];}));
+ {const G=pevGroups(B.ops,60);b+=H('Pipeline: nächste Termine (60 Tage)');b+=G.length?tbl([1300,4300,4306],['Datum','Termin','Chance'],G.map(g=>[dShort(g.d),g.t,g.ops.map(([,o])=>o.title).join('; ')])):P('Keine Termine in den nächsten 60 Tagen.');}
  b+=H('Neu im Markt');b+=tbl([1200,4300,4406],['Datum','Meldung','Bedeutung'],B.sig.map(([,s])=>[s.dateText||dShort(s.date),s.title,s.implication||'']));
  b+=wp(wr(`Stand ${fmtD(todayISO)}. Öffentliche Quellen; Prioritäten und Empfehlungen sind Einschätzungen.`,{sz:15,c:C.light,i:1}),{b:200});
  const doc=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><w:body>${b}<w:sectPr><w:footerReference w:type="default" r:id="rIdF"/><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1000" w:right="1000" w:bottom="1000" w:left="1000" w:header="600" w:footer="500" w:gutter="0"/></w:sectPr></w:body></w:document>`;
@@ -34010,8 +34058,78 @@ function b4id(x){if(x.id)return x.id;if(x.open)return x.open.split(':').slice(1)
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-b4go]');if(!b)return;const g=b.dataset.b4go;
  if(g[0]==='#'){location.hash=g;return;}const t=document.getElementById(g);if(!t)return;t.scrollIntoView({behavior:'smooth',block:'start'});t.classList.remove('b4-flash');void t.offsetWidth;t.classList.add('b4-flash');});
 {const o=plList;plList=function(){const L=o.apply(this,arguments);return PL.fav?L.filter(([k])=>isFav(k)):L;};}
-document.addEventListener('change',e=>{if(e.target.id==='plfav'){PL.fav=e.target.checked;plSave();renderPipeBody();}});
+
 {const o=favToggle;favToggle=function(){const r=o.apply(this,arguments);try{if(cur==='briefing'){const y=scrollY;renderBrief();scrollTo(0,y);}else if(cur==='pipeline'&&PL.fav)renderPipeBody();}catch(e){}return r;};}
+/* ---------- v36: Pipeline schlank – Merkliste + Termine mit Outlook-Erinnerung (Phasen/Angebote/Verträge laufen in NC) ---------- */
+let OEV={};try{OEV=JSON.parse(localStorage.getItem('lz5_oev')||'{}')||{};}catch(e){}
+const oevSave=()=>{try{localStorage.setItem('lz5_oev',JSON.stringify(OEV));}catch(e){}};
+const P5OPEN={};const P5TM={};
+PL.stage=0;PL.mine=false;if(!['prio','termin'].includes(PL.sort))PL.sort='prio';
+const P5ICO='<svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M1.5 6.5h13M5 1v3M11 1v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+const p5D=d=>daysTo(d)>300?`${d.slice(8,10)}.${d.slice(5,7)}.${d.slice(0,4)}`:dShort(d);
+const p5Rel=d=>{const n=daysTo(d);return n>=730?`in ${Math.round(n/365)} Jahren`:n>=60?`in ${Math.round(n/30.4)} Monaten`:relD(d);};
+const addDayISO=(d,n=1)=>{const x=new Date(d+'T12:00:00Z');x.setUTCDate(x.getUTCDate()+n);return x.toISOString().slice(0,10);};
+function oEvents(k,o){const sg=new Set(o.signals||[]);const L=[];
+ for(const[id,e]of Object.entries(S.events||{}))if(e.date&&daysTo(e.date)>=0&&(sg.has(e.ref)||(e.opps||[]).includes(k)))L.push({id,d:e.date,t:e.title,n:e.note||'',src:'lz'});
+ for(const[id,t]of Object.entries(S.tenders||{}))if(t.deadline&&daysTo(t.deadline)>=0&&(t.opps||[]).includes(k))L.push({id,d:t.deadline,t:'Frist: '+t.title,n:t.buyer||'',src:'lz'});
+ for(const[id,e]of Object.entries(OEV))if(e&&e.opp===k&&e.d&&daysTo(e.d)>=0)L.push({id,d:e.d,tm:e.tm||'',t:e.t,n:'',src:'own'});
+ return L.sort((a,b)=>a.d.localeCompare(b.d)||(a.tm||'').localeCompare(b.tm||''));}
+function pevGroups(ops,days){const M=new Map();for(const[k,o]of ops)for(const e of oEvents(k,o)){if(daysTo(e.d)>days)continue;const g=M.get(e.id)||{...e,ops:[]};g.ops.push([k,o]);M.set(e.id,g);}
+ return[...M.values()].sort((a,b)=>a.d.localeCompare(b.d));}
+function remText(ev){const ops=ev.ops||[];const o=ops.length===1?ops[0][1]:null;
+ return[...[ops.length?`Chance: ${ops.map(([,x])=>x.title).join('; ')}`:'',ev.n?`Hinweis: ${ev.n}`:'',o&&o.next?`Nächster Schritt: ${o.next}`:''].filter(Boolean),'','Erinnerung aus dem AUTOFLUG Lagezentrum (öffentliche Quellen).'].join('\n');}
+function remUrl(ev,tm){const q=encodeURIComponent;const t=tm!==undefined?tm:(ev.tm||'');const tz=Intl.DateTimeFormat().resolvedOptions().timeZone;
+ let sd,ed,ad='';if(t&&tmin(t)!=null){const e=tfmt(tmin(t)+30);sd=`${ev.d}T${t}:00${tzOff(tz,ev.d,t)}`;ed=`${ev.d}T${e}:00${tzOff(tz,ev.d,e)}`;}else{sd=ev.d;ed=addDayISO(ev.d);ad='&allday=true';}
+ return `https://outlook.office.com/calendar/0/deeplink/compose?subject=${q('Erinnerung: '+ev.t)}&startdt=${q(sd)}&enddt=${q(ed)}${ad}&body=${q(remText(ev))}`;}
+function remIcs(ev,tm){const t=tm!==undefined?tm:(ev.tm||'');const z=n=>String(n).padStart(2,'0');const now=new Date();
+ const st=`${now.getUTCFullYear()}${z(now.getUTCMonth()+1)}${z(now.getUTCDate())}T${z(now.getUTCHours())}${z(now.getUTCMinutes())}00Z`;
+ const tx=s=>String(s||'').replace(/[\\,;]/g,c=>'\\'+c).replace(/\n/g,'\\n');const D=d=>d.replace(/-/g,'');
+ const when=t&&tmin(t)!=null?[`DTSTART:${D(ev.d)}T${t.replace(':','')}00`,`DTEND:${D(ev.d)}T${tfmt(tmin(t)+30).replace(':','')}00`,'BEGIN:VALARM','TRIGGER:-PT30M']:[`DTSTART;VALUE=DATE:${D(ev.d)}`,`DTEND;VALUE=DATE:${D(addDayISO(ev.d))}`,'BEGIN:VALARM','TRIGGER:-PT15H'];
+ return['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//AUTOFLUG Lagezentrum//DE','CALSCALE:GREGORIAN','BEGIN:VEVENT',`UID:${ev.id}-${D(ev.d)}@lagezentrum.autoflug`,`DTSTAMP:${st}`,...when.slice(0,2),`SUMMARY:${tx('Erinnerung: '+ev.t)}`,`DESCRIPTION:${tx(remText(ev))}`,'TRANSP:TRANSPARENT',...when.slice(2),'ACTION:DISPLAY',`DESCRIPTION:${tx(ev.t)}`,'END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');}
+
+function p5Chip(k,e,open){return `<button type="button" class="p5-chip${open===e.id?' on':''}${e.src==='own'?' own':''}${daysTo(e.d)<=14?' soon':''}" data-p5ev="${esc(k)}|${esc(e.id)}" aria-expanded="${open===e.id}"><time>${p5D(e.d)}${e.tm?' '+esc(e.tm):''}</time><span>${esc(e.t)}</span><i>${p5Rel(e.d)}</i></button>`;}
+function p5Pan(k,o,e){if(!e)return'';const ev={...e,ops:[[k,o]]};const tm=P5TM[k+'|'+e.id]!==undefined?P5TM[k+'|'+e.id]:(e.tm||'');
+ return `<div class="p5-pt"><b>${esc(e.t)}</b><span class="note">${esc(fmtD(e.d))} · ${p5Rel(e.d)}${e.n?' · '+esc(e.n):''}${e.src==='own'?' · eigener Termin':''}</span></div>
+ <div class="p5-pa"><label class="p5-tm"><span>Uhrzeit</span><input type="time" data-p5tm="${esc(k)}|${esc(e.id)}" value="${esc(tm)}"></label>
+ <a class="btn cal on" target="_blank" rel="noopener" href="${esc(remUrl(ev,tm))}" data-p5ol="${esc(k)}|${esc(e.id)}">${P5ICO}In Outlook eintragen</a>${DL?'':`<button type="button" class="btn sm" data-p5ics="${esc(k)}|${esc(e.id)}" title="Als .ics-Datei für Outlook am Desktop, mit Erinnerung">.ics</button>`}${e.src==='own'?`<button type="button" class="btn sm" data-p5del="${esc(k)}|${esc(e.id)}">Löschen</button>`:''}</div>
+ <p class="note p5-hint">${tm?'Termin mit Uhrzeit':'Ohne Uhrzeit wird es ein ganztägiger Eintrag'} · Outlook öffnet den Eintrag, du musst nur noch speichern.</p>`;}
+function p5Form(k){return `<form class="p5-form" data-p5form="${esc(k)}"><label><span>Datum</span><input type="date" name="d" required value="${addDayISO(todayISO,7)}"></label><label><span>Uhrzeit</span><input type="time" name="tm"></label><label class="w"><span>Worum geht es?</span><input name="t" required maxlength="140" placeholder="z. B. Telefonat zur Line-Fit-Frage"></label><div class="p5-fb"><button class="btn gold">Termin speichern</button><button type="button" class="btn" data-p5ev="${esc(k)}|+">Abbrechen</button></div><p class="note w">Eigene Termine bleiben nur in diesem Browser. Bitte keine internen Angebots- oder Kundendaten eintragen.</p></form>`;}
+function p5Card(k,o,E){const open=P5OPEN[k];const bus=o.bus||[];
+ return `<article class="p5-c${isFav(k)?' fav':''}" data-p5k="${esc(k)}">
+ <div class="p5-h"><div class="p5-tt"><button class="lnk2 p5-ti" data-open="opps:${esc(k)}">${esc(o.title)}</button><span class="p5-sub">${esc([o.product,o.market].filter(Boolean).join(' · '))}</span></div>
+ <div class="p5-m">${bus.map(b=>`<span class="p4-bt" style="--b:${BUC(b)}" title="${esc(BUN(b))}">${b.toUpperCase()}</span>`).join('')}<span class="p5-pr${o.prio>=16?' hot':''}" title="Priorität = Markt ${o.M} × Machbarkeit ${o.F}">P${o.prio}</span>${starBtn(k)}</div></div>
+ <div class="p5-ev">${E.slice(0,4).map(e=>p5Chip(k,e,open)).join('')}${E.length>4?`<span class="note">+${E.length-4} weitere</span>`:''}${E.length?'':`<span class="p5-none">Kein Termin bekannt${o.window?` · Zeitfenster: ${esc(o.window)}`:''}</span>`}<button type="button" class="p5-add${open==='+'?' on':''}" data-p5ev="${esc(k)}|+">+ Termin</button></div>
+ ${open?`<div class="p5-pan">${open==='+'?p5Form(k):p5Pan(k,o,E.find(e=>e.id===open))}</div>`:''}</article>`;}
+function p5Re(k){const el=document.querySelector(`.p5-c[data-p5k="${CSS.escape(k)}"]`);const o=S.opps[k];if(el&&o)el.outerHTML=p5Card(k,o,oEvents(k,o));const dr=$('#p5dr');if(dr&&dr.dataset.k===k)dr.outerHTML=p5Deal(k);}
+renderPipe=function(){const el=$('#pl');if(!el||!S.opps||!Object.keys(S.opps).length)return;const all=Object.entries(S.opps).filter(([,o])=>inDiv(o));
+ const nEv=all.filter(([k,o])=>oEvents(k,o).length).length;const nFav=all.filter(([k])=>isFav(k)).length;
+ el.innerHTML=`<header class="p4-h"><div><h1>Pipeline</h1><p class="b4-lead">${all.length} Chancen aus öffentlichen Quellen · ${nEv} mit bevorstehendem Termin. Merke dir, was dich interessiert, und tippe auf einen Termin, um ihn in Outlook einzutragen.</p></div></header>
+ <div class="p4-f p5-f"><input id="plq" type="search" placeholder="Chance, Produkt, Markt suchen" value="${esc(PL.q)}">
+  <div class="seg4" role="group" aria-label="Auswahl"><button data-p5fav="0" class="${PL.fav?'':'on'}">Alle <span class="p5-n">${all.length}</span></button><button data-p5fav="1" class="${PL.fav?'on':''}">★ Merkliste <span class="p5-n" id="p5nf">${nFav}</span></button></div>
+  <div class="seg4" role="group" aria-label="Business Unit">${[['alle','Alle Units'],...BUS().map(([k,b])=>[k,b.name])].map(([k,l])=>`<button data-plbu="${k}" class="${PL.bu===k?'on':''}">${k!=='alle'?`<i style="background:${BUC(k)}"></i>`:''}${esc(l)}</button>`).join('')}</div>
+  <select id="plsort" aria-label="Sortierung">${[['prio','Nach Priorität'],['termin','Nach nächstem Termin']].map(([k,l])=>`<option value="${k}" ${PL.sort===k?'selected':''}>${l}</option>`).join('')}</select></div>
+ <div id="plb"></div><p class="note p5-foot">Angebote, Phasen und Verträge werden in NC geführt, nicht hier.</p>`;renderPipeBody();};
+renderPipeBody=function(){const el=$('#plb');if(!el)return;let L=plList();const ev=new Map(L.map(([k,o])=>[k,oEvents(k,o)]));
+ if(PL.sort==='termin')L=L.slice().sort((a,b)=>((ev.get(a[0])[0]||{}).d||'9999').localeCompare((ev.get(b[0])[0]||{}).d||'9999')||b[1].prio-a[1].prio);
+ el.innerHTML=L.length?`<div class="p5-l">${L.map(([k,o])=>p5Card(k,o,ev.get(k))).join('')}</div>`:`<div class="glass fs-empty"><b>${PL.fav?'Noch keine Chance gemerkt':'Keine Treffer'}</b><p class="note">${PL.fav?'Tippe bei einer Chance auf ☆ – dann erscheint sie hier und in der Merkliste.':'Suche oder Unit-Filter anpassen.'}</p></div>`;
+ const n=$('#p5nf');if(n)n.textContent=Object.entries(S.opps).filter(([k,o])=>inDiv(o)&&isFav(k)).length;};
+function p5Deal(k){const o=S.opps[k];const E=oEvents(k,o);
+ return `<div class="glass pad p5-dr" id="p5dr" data-k="${esc(k)}"><span class="k">BEVORSTEHENDE TERMINE</span>${E.length?`<ul class="p5-dl">${E.map(e=>`<li><time>${p5D(e.d)}${e.tm?' '+esc(e.tm):''}</time><span>${esc(e.t)}<i>${p5Rel(e.d)}${e.src==='own'?' · eigener Termin':''}</i></span><a class="btn sm cal on" target="_blank" rel="noopener" href="${esc(remUrl({...e,ops:[[k,o]]}))}" title="In Outlook eintragen">${P5ICO}Outlook</a></li>`).join('')}</ul>`:`<p class="note" style="margin:6px 0 0">Kein Termin bekannt. Eigene Termine legst du in der Pipeline mit „+ Termin“ an.</p>`}</div>`;}
+{const o=openDeal;openDeal=function(id){o.apply(this,arguments);const d=$('#drawerin');if(!d||!S.opps[id])return;const s=d.querySelector('.steps');if(s)s.remove();d.querySelectorAll('.p4-team [data-pf="owner"],.p4-team [data-pf="stage"],.p4-team [data-pf="due"],.p4-team [data-pf="eur"]').forEach(x=>{const l=x.closest('label');if(l)l.remove();});const h1=d.querySelector('h1');if(h1)h1.insertAdjacentHTML('afterend',p5Deal(id));};}
+
+document.addEventListener('click',e=>{const t=e.target;
+ const f=t.closest&&t.closest('[data-p5fav]');if(f){PL.fav=f.dataset.p5fav==='1';plSave();$$('[data-p5fav]').forEach(b=>b.classList.toggle('on',b===f));renderPipeBody();return;}
+ const c=t.closest&&t.closest('[data-p5ev]');if(c){const[k,id]=c.dataset.p5ev.split('|');P5OPEN[k]=P5OPEN[k]===id?null:id;p5Re(k);if(id==='+'&&P5OPEN[k]){const i=document.querySelector(`.p5-c[data-p5k="${CSS.escape(k)}"] .p5-form input[name=t]`);if(i)i.focus();}return;}
+ const ic=t.closest&&t.closest('[data-p5ics]');if(ic){const[k,id]=ic.dataset.p5ics.split('|');const o=S.opps[k];const ev=oEvents(k,o).find(x=>x.id===id);if(ev){const tm=P5TM[k+'|'+id];saveFile(`Erinnerung-${ev.t.replace(/[^A-Za-z0-9ÄÖÜäöüß]+/g,'-').slice(0,40)}.ics`,remIcs({...ev,ops:[[k,o]]},tm),'text/calendar');}return;}
+ const dl=t.closest&&t.closest('[data-p5del]');if(dl){const[k,id]=dl.dataset.p5del.split('|');delete OEV[id];oevSave();P5OPEN[k]=null;p5Re(k);toast('Termin gelöscht.');return;}
+ const ol=t.closest&&t.closest('[data-p5ol]');if(ol)toast('Outlook öffnet den Eintrag – dort nur noch speichern.');});
+document.addEventListener('input',e=>{const t=e.target;if(!t.dataset||!t.dataset.p5tm)return;const[k,id]=t.dataset.p5tm.split('|');P5TM[k+'|'+id]=t.value;
+ if(OEV[id]){OEV[id].tm=t.value;oevSave();}const o=S.opps[k];const ev=oEvents(k,o).find(x=>x.id===id);const a=document.querySelector(`[data-p5ol="${CSS.escape(k+'|'+id)}"]`);if(ev&&a)a.href=remUrl({...ev,ops:[[k,o]]},t.value);
+ const h=t.closest('.p5-pan');const hn=h&&h.querySelector('.p5-hint');if(hn)hn.textContent=(t.value?'Termin mit Uhrzeit':'Ohne Uhrzeit wird es ein ganztägiger Eintrag')+' · Outlook öffnet den Eintrag, du musst nur noch speichern.';});
+document.addEventListener('submit',e=>{const f=e.target;if(!f.dataset||!f.dataset.p5form)return;e.preventDefault();const k=f.dataset.p5form;const d=f.d.value,t=f.t.value.trim();if(!d||!t)return;
+ const id='u'+Date.now().toString(36);OEV[id]={opp:k,d,tm:f.tm.value||'',t};oevSave();P5OPEN[k]=id;p5Re(k);toast('Termin gespeichert – jetzt in Outlook eintragen.');});
+{const o=favToggle;favToggle=function(id){const r=o.apply(this,arguments);if(cur==='pipeline'){const n=$('#p5nf');if(n)n.textContent=Object.entries(S.opps).filter(([k,x])=>inDiv(x)&&isFav(k)).length;const c=document.querySelector(`.p5-c[data-p5k="${CSS.escape(id)}"]`);if(c)c.classList.toggle('fav',isFav(id));}return r;};}
+
 function renderAll(){favMigrate();if(cur==='merkliste')setTimeout(renderMerk,0);if(cur==='messeki')setTimeout(renderMki,0);HADJ=null;HNAMES=null;if(cur==='kreativ')setTimeout(renderHub,0);try{if(S.bus)for(const k in S.bus)S.bus[k].color=buCol(k);}catch(e){}for(const k in MPSC)delete MPSC[k];if(cur==='briefing')setTimeout(renderBrief,0);if(cur==='pipeline')setTimeout(renderPipe,0);if(cur==='landkarte')setTimeout(renderLk,0);if(cur==='planer')setTimeout(renderPlaner,0);setTimeout(decorateHeads,0);renderNav();renderStatus();renderCockpit();renderQuick();renderToday();renderTenders();renderMarkets();renderOpps();renderSignale();renderInno();renderFristen();renderMessen();renderFirmen();if(cur==='fair')renderFairPage();if(cur==='co')renderCoPage();renderSparten();renderComp();renderLuecken();renderLog();}
 
 /* ---------- Laden ---------- */
