@@ -31951,6 +31951,227 @@ html.ar-scrolled .ar-bt{opacity:1}
 @media (max-width:700px){#v-maerkte .mhead h1,#v-innovation>h1,#v-netz>h1{font-size:36px}.mk6-cards{grid-template-columns:1fr}#pl6q{flex:1 0 100%;order:9;margin:6px 0}.pl6-sp{display:none}.ar-lb{display:block;min-width:0}.ar-fit{grid-template-columns:90px 1fr 44px}}
 .mk6 .nw-ag{grid-template-columns:86px 1fr}
 .mk6 .nw-ag time i{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* v55: Technik-Stil für Markt & Analysen und Produkte */
+.tx,#v-maerkte,#v-innovation,#v-netz,#v-landkarte,#v-multibase{--tx-ac:#3D7BFF;--tx-ac2:#14B8A6;--tx-bg:#0A1020;--tx-ln:rgba(61,123,255,.22);--tx-glow:rgba(61,123,255,.16)}
+[data-theme=dark] .tx,[data-theme=dark] #v-maerkte,[data-theme=dark] #v-innovation,[data-theme=dark] #v-netz,[data-theme=dark] #v-landkarte,[data-theme=dark] #v-multibase{--tx-ac:#5B93FF;--tx-ac2:#2EE6C5;--tx-glow:rgba(91,147,255,.22)}
+/* Seitenköpfe */
+#v-maerkte .mhead{border-bottom:0!important;padding-bottom:16px;position:relative}
+#v-maerkte .mhead::after,#v-innovation>.lead::after,#v-netz>.lead::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,var(--tx-ac),var(--tx-ac2) 40%,transparent)}
+#v-innovation>.lead,#v-netz>.lead{position:relative;border-bottom:0!important}
+#v-maerkte .mhead .k,#v-innovation>.k,#v-netz>.k{font:600 11px var(--mono)!important;letter-spacing:.14em!important;color:var(--tx-ac)!important;display:inline-flex;align-items:center;gap:8px}
+#v-maerkte .mhead .k::before,#v-innovation>.k::before,#v-netz>.k::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--tx-ac2);box-shadow:0 0 0 3px color-mix(in srgb,var(--tx-ac2) 25%,transparent)}
+#v-maerkte .mhead h1,#v-innovation>h1,#v-netz>h1,#lk h1{font:760 44px/1.02 var(--font)!important;letter-spacing:-.035em!important}
+#v-innovation>h2{border-top:0!important;font:700 13px var(--mono)!important;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:10px}
+#v-innovation>h2::before{content:"//";color:var(--tx-ac)}
+#v-innovation>h2::after{content:"";flex:1;height:1px;background:var(--line2)}
+#v-maerkte .glass>.k:first-child,#v-innovation .glass>.k:first-child,#v-maerkte .glass>div:first-child>.k:first-child{font:600 11.5px var(--mono)!important;letter-spacing:.12em!important;text-transform:uppercase!important;color:var(--ink2)!important;border-bottom:1px solid var(--line2)!important}
+#v-maerkte .glass,#v-innovation .glass,#v-netz .glass{border-radius:12px}
+/* Karten im Technik-Stil */
+.tx .nw-vis{background:radial-gradient(90% 140% at 88% 0%,color-mix(in srgb,var(--rc) 70%,transparent) 0%,transparent 60%),linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px) 0 0/18px 18px,linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px) 0 0/18px 18px,var(--tx-bg)}
+.tx .nw-vis::before{background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.07) 50%,transparent 60%)}
+.tx .nw-vis::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--rc),transparent 80%)}
+.tx .nw-vi{display:flex;padding:10px;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:rgba(255,255,255,.04);color:color-mix(in srgb,var(--rc) 45%,#fff);filter:none}
+.tx .nw-wm,.mk6-cards .nw-vis .nw-wm{font:600 12px var(--mono)!important;letter-spacing:.14em!important;text-transform:uppercase;color:rgba(255,255,255,.72)!important}
+.tx .nw-vis-l .nw-wm{font:600 13px var(--mono)!important;letter-spacing:.16em!important;color:rgba(255,255,255,.72)!important}
+.tx .nw-card,.tx .nw-box{border-radius:12px;transition:border-color .15s,box-shadow .15s,transform .15s}
+.tx .nw-card:hover{border-color:var(--tx-ln);box-shadow:0 0 0 1px var(--tx-ln),0 10px 30px var(--tx-glow);transform:translateY(-2px)}
+.tx .nw-card:hover .nw-h3{text-decoration:none;color:var(--tx-ac)}
+.tx .nw-h3{font:700 17px/1.3 var(--font);letter-spacing:-.01em}
+.tx .nw-kick{font-family:var(--mono);letter-spacing:.1em}
+.tx .nw-sh{border-top:0;padding-top:0;font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);display:flex;align-items:center;gap:10px}
+.tx .nw-sh::before{content:"//";color:var(--tx-ac)}
+.tx .nw-sh::after{content:"";flex:1;height:1px;background:var(--line2)}
+.tx .nw-bh{border-bottom:1px solid var(--line2)}
+.tx .nw-bh h2{font:600 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+.tx .nw-ag time b{font-family:var(--mono);font-size:12.5px}
+.tx .nw-al{font-size:13.5px}
+/* Artikelseiten im Technik-Stil */
+.tx.ar .ar-head{border-radius:14px}
+.tx .ar-vis{aspect-ratio:16/4!important}
+.tx .ar-h1{font:760 clamp(30px,3.4vw,44px)/1.08 var(--font);letter-spacing:-.035em}
+.tx .ar-lead{font:400 17px/1.6 var(--font);color:var(--ink2)}
+.tx .ar-main{counter-reset:sec}
+.tx .ar-sec>h2{border-top:1px solid var(--line2);padding-top:14px;font:700 19px/1.3 var(--font);letter-spacing:-.01em;display:flex;align-items:baseline;gap:10px}
+.tx .ar-sec>h2::before{counter-increment:sec;content:counter(sec,decimal-leading-zero);font:600 12px var(--mono);color:var(--tx-ac)}
+.tx .ar-sec p,.tx .ar-sec li{font:400 15.5px/1.65 var(--font)}
+.tx .ar-bg h3,.tx .ar-cp h3,.tx .ar-rct b{font-family:var(--font);font-size:15.5px;letter-spacing:-.005em}
+.tx .ar-kp{border:1px solid var(--tx-ln);border-left:3px solid var(--tx-ac);border-radius:10px;background:linear-gradient(90deg,color-mix(in srgb,var(--tx-ac) 6%,var(--surf)),var(--surf))}
+.tx .ar-kph b{font-family:var(--mono);color:var(--tx-ac)}
+.tx .ar-kph b::before{content:"> "}
+.tx .ar-kp li{font:400 15px/1.55 var(--font)}
+.tx .ar-imp{border-left-color:var(--tx-ac2);background:color-mix(in srgb,var(--tx-ac2) 7%,var(--surf))}
+.tx .ar-stats>div{border-radius:10px;border-color:var(--tx-ln)}
+.tx .ar-stats b{font-family:var(--mono);font-size:20px}
+.tx .ar-box{border-radius:12px}
+.tx .ar-box h3{font-family:var(--mono);letter-spacing:.12em}
+.tx .ar-back{background:var(--tx-ac);color:#fff}
+.tx .ar-rc{border-radius:12px}.tx .ar-rc:hover{border-color:var(--tx-ln);box-shadow:0 0 0 1px var(--tx-ln)}
+.tx .ar-rcv{background:radial-gradient(90% 120% at 90% 0%,var(--rc),transparent 70%),var(--tx-bg);border:1px solid rgba(255,255,255,.1)}
+.tx .ar-pnb{border-radius:12px}.tx .ar-pnb b{font-family:var(--font);font-size:15.5px}
+.tx .ar-fit .bar{height:6px}
+/* Produkte · MULTIBASE */
+.mb{max-width:1240px;margin:0 auto}
+.tx-mast{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding:6px 0 18px;position:relative;margin-bottom:14px}
+.tx-mast::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,var(--tx-ac),var(--tx-ac2) 40%,transparent)}
+.tx-over{display:flex;align-items:center;gap:8px;margin:0 0 6px;font:600 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--tx-ac)}
+.tx-over i{width:6px;height:6px;border-radius:50%;background:var(--tx-ac2);box-shadow:0 0 0 3px color-mix(in srgb,var(--tx-ac2) 25%,transparent)}
+.tx-title{margin:0;font:800 52px/1 var(--font);letter-spacing:-.04em;background:linear-gradient(90deg,var(--ink) 30%,var(--tx-ac));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tx-sub{margin:10px 0 0;max-width:820px;font-size:14px;color:var(--ink2)}
+.tx-act{display:flex;gap:8px}.tx-act .btn{display:inline-flex;gap:6px;align-items:center}
+.mb-prod{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 0 14px;padding-bottom:2px}
+.mb-prod button{all:unset;box-sizing:border-box;flex:none;display:flex;flex-direction:column;gap:2px;padding:9px 14px;border:1px solid var(--line2);border-radius:10px;background:var(--surf);min-width:150px}
+.mb-prod button b{font:700 13.5px var(--font);color:var(--ink)}.mb-prod button span{font:500 11px var(--mono);color:var(--mute);letter-spacing:.04em}
+.mb-prod button.on{border-color:var(--tx-ac);box-shadow:0 0 0 1px var(--tx-ac),0 8px 24px var(--tx-glow);cursor:default}
+.mb-prod button.on span{color:var(--tx-ac)}
+.mb-prod button:disabled{opacity:.55}
+.tx-tabs{position:sticky;top:var(--toph,56px);z-index:6;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:8px 0;margin-bottom:18px;background:var(--bg);border-bottom:1px solid var(--line2)}
+.tx-tabs button{all:unset;cursor:pointer;flex:none;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:8px;font:600 13.5px var(--font);color:var(--ink2)}
+.tx-tabs button em{font:600 11px var(--mono);font-style:normal;color:var(--mute)}
+.tx-tabs button:hover{background:var(--surf2);color:var(--ink)}
+.tx-tabs button.on{background:var(--tx-bg);color:#fff}.tx-tabs button.on em{color:var(--tx-ac2)}
+[data-theme=dark] .tx-tabs button.on{background:var(--tx-ac)}
+.tx-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.tx-kpis>div{position:relative;overflow:hidden;padding:14px 16px;border:1px solid var(--line2);border-radius:12px;background:var(--surf)}
+.tx-kpis>div::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--tx-ac),var(--tx-ac2))}
+.tx-kpis span{display:block;font:600 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.tx-kpis b{display:block;margin:6px 0 2px;font:750 26px/1.1 var(--font);letter-spacing:-.02em;color:var(--ink)}
+.tx-kpis b small{font-size:14px;font-weight:600;color:var(--ink2)}
+.tx-kpis i{font-style:normal;font-size:12px;color:var(--ink2)}
+.tx-grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.tx-box{padding:16px 18px;border:1px solid var(--line2);border-radius:12px;background:var(--surf)}
+.tx-box p,.tx-p{margin:0 0 10px;font-size:14.5px;line-height:1.6;color:var(--ink)}
+.tx-p{color:var(--ink2)}
+.tx-h{display:flex;align-items:center;gap:10px;margin:0 0 12px;font:700 15px var(--font);letter-spacing:-.01em;color:var(--ink)}
+.tx-h em{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:6px;font:700 11px var(--mono);font-style:normal;color:#fff;background:linear-gradient(135deg,var(--tx-ac),var(--tx-ac2))}
+.tx-sec{margin:0 0 24px}
+.tx-sec>.tx-h{padding-bottom:10px;border-bottom:1px solid var(--line2)}
+.tx-pl{list-style:none;margin:0;padding:0}
+.tx-pl li{display:grid;grid-template-columns:110px 1fr auto;gap:10px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line)}
+.tx-pl li:last-child{border-bottom:0}
+.tx-pl b{font:700 13.5px var(--mono);color:var(--ink)}.tx-pl span{font-size:13.5px;color:var(--ink2)}
+.tx-pl i{font:600 10.5px var(--mono);font-style:normal;text-transform:uppercase;letter-spacing:.08em;padding:3px 8px;border-radius:999px}
+.tx-pl i.ok{background:color-mix(in srgb,var(--tx-ac2) 16%,transparent);color:#0f8a7c}.tx-pl i.mid{background:color-mix(in srgb,var(--tx-ac) 14%,transparent);color:var(--tx-ac)}.tx-pl i.no{background:var(--surf2);color:var(--mute)}
+[data-theme=dark] .tx-pl i.ok{color:#5ff0d6}
+.tx-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.tx-card{position:relative;display:flex;flex-direction:column;gap:6px;padding:14px 16px;border:1px solid var(--line2);border-radius:12px;background:var(--surf);text-align:left}
+.tx-card b{font:700 14.5px var(--font);color:var(--ink)}.tx-card p{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink2)}
+.tx-card i{font:600 11.5px var(--mono);font-style:normal;color:var(--tx-ac);margin-top:auto}
+.tx-cardb{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:14px 16px;border:1px solid var(--line2);border-radius:12px;background:var(--surf)}
+.tx-cardb:hover,.tx-card:hover{border-color:var(--tx-ln);box-shadow:0 0 0 1px var(--tx-ln),0 8px 24px var(--tx-glow)}
+.tx-ic{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:9px;color:#fff;background:radial-gradient(90% 120% at 90% 0%,var(--tx-ac),transparent 70%),var(--tx-bg)}
+.tx-n{font:700 12px var(--mono);color:var(--tx-ac)}
+.tx-tl{list-style:none;margin:0;padding:0 0 0 14px;border-left:2px solid var(--line2)}
+.tx-tl li{position:relative;display:grid;grid-template-columns:110px 1fr;gap:12px;padding:7px 0}
+.tx-tl li::before{content:"";position:absolute;left:-20px;top:13px;width:10px;height:10px;border-radius:50%;background:var(--tx-ac);box-shadow:0 0 0 3px var(--bg)}
+.tx-tl li.fut::before{background:var(--bg);border:2px solid var(--tx-ac2);width:6px;height:6px}
+.tx-tl time{font:600 12.5px var(--mono);color:var(--ink)}.tx-tl span{font-size:14px;color:var(--ink2)}
+.tx-row{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.tx-row:last-child{border-bottom:0}
+.tx-row b{flex:1;font-weight:600;color:var(--ink)}.tx-row span{color:var(--mute);font-size:12.5px}.tx-row time{font:600 12px var(--mono);color:var(--tx-ac);width:44px}
+.tx-row:hover b{color:var(--tx-ac)}
+.mb-bar{flex:1;display:block;height:6px;min-width:40px;border-radius:3px;background:var(--surf2);overflow:hidden}.mb-bar i{display:block;height:100%;border-radius:3px}
+.mb-cont{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.mb-ct{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:4px;padding:14px 16px;border:1px solid var(--line2);border-radius:12px;background:var(--surf);position:relative;overflow:hidden}
+.mb-ct::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--c)}
+.mb-ct span{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.mb-ct b{font:750 26px var(--font);color:var(--ink)}.mb-ct b small{font-size:13px;color:var(--ink2);font-weight:600}
+.mb-ct i{font-style:normal;font-size:12px;color:var(--ink2);margin-bottom:4px}
+.mb-ct.on{border-color:var(--c);box-shadow:0 0 0 1px var(--c)}
+.tx-filt{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.tx-seg{display:flex;flex-wrap:wrap;gap:2px;padding:3px;border:1px solid var(--line2);border-radius:9px;background:var(--surf)}
+.tx-seg button{all:unset;cursor:pointer;padding:5px 10px;border-radius:6px;font:600 12.5px var(--font);color:var(--ink2)}
+.tx-seg button:hover{color:var(--ink)}.tx-seg button.on{background:var(--tx-bg);color:#fff}
+[data-theme=dark] .tx-seg button.on{background:var(--tx-ac)}
+#mbq{flex:1 1 200px;min-width:160px;padding:8px 12px;border:1px solid var(--line2);border-radius:9px;background:var(--surf);color:var(--ink);font:500 13.5px var(--font)}
+.mb-mx{margin-bottom:16px;padding:12px 16px;border:1px solid var(--line2);border-radius:12px;background:var(--surf);overflow-x:auto}
+.mb-mx table{border-collapse:separate;border-spacing:4px;width:100%;min-width:520px}
+.mb-mx th{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:center;padding:4px}
+.mb-mx tbody th{text-align:left;font:600 12.5px var(--font);text-transform:none;letter-spacing:0;color:var(--ink);white-space:nowrap}
+.mb-mx tbody th i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c);margin-right:8px}
+.mb-mx td{text-align:center}
+.mb-mx td button{all:unset;cursor:pointer;display:block;padding:8px 0;border-radius:7px;font:700 14px var(--mono);color:#fff;background:color-mix(in srgb,var(--tx-ac) calc(var(--o)*100%),var(--surf2))}
+.mb-mx td button:hover{outline:2px solid var(--tx-ac2)}
+.mb-mx td span{display:block;padding:8px 0;color:var(--mute);font-family:var(--mono)}
+.mb-mx .note{margin:6px 4px 0}
+.tx-count{font:500 12.5px var(--mono);color:var(--mute);margin:0 0 10px}.tx-count b{color:var(--ink)}
+.mb-cl{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.mb-cc{display:flex;flex-direction:column;gap:10px;padding:16px;border:1px solid var(--line2);border-radius:12px;background:var(--surf);position:relative}
+.mb-cc::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:0 3px 3px 0;background:var(--c)}
+.mb-cc:hover{border-color:var(--tx-ln);box-shadow:0 0 0 1px var(--tx-ln),0 8px 24px var(--tx-glow)}
+.mb-cc header{display:flex;align-items:center;gap:12px}
+.mb-iso{flex:none;display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;font:700 14px var(--mono);color:#fff;background:radial-gradient(90% 120% at 90% 0%,var(--k),transparent 70%),var(--tx-bg)}
+.mb-cc h3{margin:0;font:700 16px var(--font);color:var(--ink)}
+.mb-k{font:500 11px var(--mono);color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+.mb-cc header>div{flex:1;min-width:0}
+.mb-st{flex:none;font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;padding:4px 9px;border-radius:999px;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);border:1px solid color-mix(in srgb,var(--c) 35%,transparent)}
+.mb-fit{display:flex;align-items:center;gap:10px;font:600 11px var(--mono);color:var(--mute);text-transform:uppercase;letter-spacing:.08em}
+.mb-fit b{font:700 14px var(--mono);color:var(--ink)}
+.mb-pl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+.mb-pl li{display:grid;grid-template-columns:86px 1fr;gap:8px;font-size:12.5px}
+.mb-pl b{font:700 12px var(--mono);color:var(--tx-ac)}.mb-pl span{color:var(--ink2)}
+.mb-cc>p{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink)}
+.mb-cc dl{display:grid;grid-template-columns:64px 1fr;gap:4px 8px;margin:0;font-size:12.5px}
+.mb-cc dt{font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mute);padding-top:2px}.mb-cc dd{margin:0;color:var(--ink2)}
+.mb-cc footer{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:10px;border-top:1px solid var(--line)}
+.tx-lk{all:unset;cursor:pointer;font:600 12.5px var(--font);color:var(--tx-ac);text-decoration:none}
+.tx-lk:hover{text-decoration:underline}
+.tx-callout{margin:0 0 20px;padding:16px 20px;border:1px solid var(--tx-ln);border-left:3px solid var(--tx-ac);border-radius:12px;background:linear-gradient(90deg,color-mix(in srgb,var(--tx-ac) 7%,var(--surf)),var(--surf))}
+.tx-callout b{font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--tx-ac)}
+.tx-callout p{margin:6px 0 0;font-size:14.5px;line-height:1.6;color:var(--ink)}
+.mb-tbl{overflow-x:auto;border:1px solid var(--line2);border-radius:12px;background:var(--surf)}
+.mb-tbl table{border-collapse:collapse;width:100%;min-width:720px;font-size:13.5px}
+.mb-tbl th,.mb-tbl td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line)}
+.mb-tbl thead th{font:600 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);background:var(--surf2)}
+.mb-tbl tbody th{font-weight:700;color:var(--ink);width:22%}.mb-tbl td{color:var(--ink2)}
+.mb-tbl tr:last-child th,.mb-tbl tr:last-child td{border-bottom:0}
+.tx-warn{display:inline-block;margin:0 0 12px;padding:6px 10px;border-radius:8px;font:600 12.5px var(--font);color:#8a5a00;background:color-mix(in srgb,#F2B544 18%,var(--surf))}
+[data-theme=dark] .tx-warn{color:#ffd27a}
+.mb-calc{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;margin-bottom:10px}
+.mb-in{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;padding:16px;border:1px solid var(--line2);border-radius:12px;background:var(--surf)}
+.mb-in label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--ink2)}
+.mb-in input{font:600 14px var(--mono);padding:7px 9px;border:1px solid var(--line2);border-radius:8px;background:var(--bg);color:var(--ink);width:100%;box-sizing:border-box}
+.mb-in input:focus{outline:2px solid var(--tx-ac);outline-offset:-1px}
+.mb-in i{font-style:normal;font:500 10.5px var(--mono);color:var(--mute)}
+.mb-res{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:start}
+.mb-res>div{padding:14px;border:1px solid var(--line2);border-radius:12px;background:var(--surf)}
+.mb-res>div.hl{grid-column:1/-1;background:var(--tx-bg);border-color:var(--tx-bg)}
+.mb-res span{display:block;font:600 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.mb-res b{display:block;margin-top:6px;font:750 22px var(--font);color:var(--ink);letter-spacing:-.02em}
+.mb-res .hl span{color:#9fb6ff}.mb-res .hl b{color:#fff;font-size:30px}
+.tx-ul{margin:0;padding-left:20px}.tx-ul li{margin:0 0 8px;font-size:14.5px;line-height:1.55;color:var(--ink)}
+.mb-il{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+.mb-ic{display:flex;flex-direction:column;gap:8px;padding:16px;border:1px solid var(--line2);border-radius:12px;background:var(--surf)}
+.mb-ic:hover{border-color:var(--tx-ln);box-shadow:0 0 0 1px var(--tx-ln),0 8px 24px var(--tx-glow)}
+.mb-ic header{display:flex;align-items:baseline;gap:10px}.mb-ic h3{flex:1;margin:0;font:700 16px var(--font);color:var(--ink)}
+.mb-hz{font:600 11px var(--mono);color:var(--mute)}
+.mb-ic p{margin:0;font-size:13.5px;line-height:1.55;color:var(--ink)}
+.mb-ic .mb-pr{color:var(--ink2)}.mb-pr b{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--tx-ac2)}
+.mb-ix{display:grid;grid-template-columns:auto 1fr 18px auto 1fr 18px;gap:6px 8px;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid var(--line);font:600 10.5px var(--mono);color:var(--mute);text-transform:uppercase;letter-spacing:.06em}
+.mb-ix b{color:var(--ink);font-size:12.5px}
+.tx-dl{display:grid;grid-template-columns:120px 1fr;gap:10px 14px;margin:0}
+.tx-dl dt{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--tx-ac);padding-top:2px}
+.tx-dl dd{margin:0;font-size:14px;line-height:1.5;color:var(--ink)}
+.tx-boxw .tx-dl dt{color:#C2412D}
+[data-theme=dark] .tx-boxw .tx-dl dt{color:#ff8a7a}
+.mb-do{list-style:none;counter-reset:d;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.mb-do li{counter-increment:d;position:relative;display:flex;flex-direction:column;gap:6px;padding:16px 16px 16px 52px;border:1px solid var(--line2);border-radius:12px;background:var(--surf)}
+.mb-do li::before{content:counter(d,decimal-leading-zero);position:absolute;left:16px;top:16px;font:700 13px var(--mono);color:var(--tx-ac)}
+.mb-do b{font:700 14.5px var(--font);color:var(--ink)}.mb-do span{font-size:13.5px;line-height:1.55;color:var(--ink2)}
+.mb-fl{list-style:none;margin:0;padding:0}
+.mb-fl li{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line)}
+.mb-fl time{font:600 12.5px var(--mono);color:var(--tx-ac)}.mb-fl a{font-weight:600;color:var(--ink);text-decoration:none}.mb-fl a:hover{text-decoration:underline}.mb-fl span{font-size:12.5px;color:var(--mute)}
+@media (max-width:1100px){.tx-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.mb-cont{grid-template-columns:1fr 1fr}}
+@media (max-width:800px){.tx-grid2,.mb-calc{grid-template-columns:1fr}}
+@media (max-width:700px){.tx-title{font-size:40px}.tx-mast{flex-direction:column;align-items:flex-start}.tx-kpis{grid-template-columns:1fr 1fr}.tx-kpis b{font-size:22px}
+ .mb-cl,.mb-il{grid-template-columns:1fr}.mb-in{grid-template-columns:1fr}.tx-pl li{grid-template-columns:1fr auto}.tx-pl span{grid-column:1/-1;grid-row:2}
+ .tx-tl li{grid-template-columns:1fr;gap:2px}.tx-dl{grid-template-columns:1fr;gap:2px 0}.tx-dl dd{margin-bottom:8px}.mb-fl li{grid-template-columns:1fr}
+ .tx-tabs{margin-left:calc(var(--mpad,14px)*-1);margin-right:calc(var(--mpad,14px)*-1);padding:8px var(--mpad,14px);top:var(--toph,52px)}
+ #v-maerkte .mhead h1,#v-innovation>h1,#v-netz>h1,#lk h1{font-size:34px!important}}
+.mb-mx td,.mb-mx th{border:0!important;padding:3px!important;background:none}
+.mb-mx td button{width:100%!important;box-sizing:border-box;display:flex!important;align-items:center;justify-content:center;height:36px;padding:0!important}
+.mb-mx td span{display:flex!important;align-items:center;justify-content:center;height:36px;padding:0!important}
+.mb-mx tbody th{padding-right:14px!important;vertical-align:middle}
 </style>
 <script>// https://d3js.org/d3-array/ v3.2.5 Copyright 2010-2026 Mike Bostock
 !function(t,n){"object"==typeof exports&&"undefined"!=typeof module?n(exports):"function"==typeof define&&define.amd?define(["exports"],n):n((t="undefined"!=typeof globalThis?globalThis:t||self).d3=t.d3||{})}(this,function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?1:t>=n?0:NaN}function r(t,n){return null==t||null==n?NaN:n<t?-1:n>t?1:n>=t?0:NaN}function e(t){let e,f,i;function u(t,n,r=0,o=t.length){if(r<o){if(0!==e(n,n))return o;do{const e=r+o>>>1;f(t[e],n)<0?r=e+1:o=e}while(r<o)}return r}return 2!==t.length?(e=n,f=(r,e)=>n(t(r),e),i=(n,r)=>t(n)-r):(e=t===n||t===r?t:o,f=t,i=t),{left:u,center:function(t,n,r=0,e=t.length){const o=u(t,n,r,e-1);return o>r&&i(t[o-1],n)>-i(t[o],n)?o-1:o},right:function(t,n,r=0,o=t.length){if(r<o){if(0!==e(n,n))return o;do{const e=r+o>>>1;f(t[e],n)<=0?r=e+1:o=e}while(r<o)}return r}}}function o(){return 0}function f(t){return null===t?NaN:+t}const i=e(n),u=i.right,l=i.left,c=e(f).center;const s=h(y),a=h(function(t){const n=y(t);return(t,r,e,o,f)=>{n(t,r,(e<<=2)+0,(o<<=2)+0,f<<=2),n(t,r,e+1,o+1,f),n(t,r,e+2,o+2,f),n(t,r,e+3,o+3,f)}});function h(t){return function(n,r,e=r){if(!((r=+r)>=0))throw new RangeError("invalid rx");if(!((e=+e)>=0))throw new RangeError("invalid ry");let{data:o,width:f,height:i}=n;if(!((f=Math.floor(f))>=0))throw new RangeError("invalid width");if(!((i=Math.floor(void 0!==i?i:o.length/f))>=0))throw new RangeError("invalid height");if(!f||!i||!r&&!e)return n;const u=r&&t(r),l=e&&t(e),c=o.slice();return u&&l?(d(u,c,o,f,i),d(u,o,c,f,i),d(u,c,o,f,i),p(l,o,c,f,i),p(l,c,o,f,i),p(l,o,c,f,i)):u?(d(u,o,c,f,i),d(u,c,o,f,i),d(u,o,c,f,i)):l&&(p(l,o,c,f,i),p(l,c,o,f,i),p(l,o,c,f,i)),n}}function d(t,n,r,e,o){for(let f=0,i=e*o;f<i;)t(n,r,f,f+=e,1)}function p(t,n,r,e,o){for(let f=0,i=e*o;f<e;++f)t(n,r,f,f+i,e)}function y(t){const n=Math.floor(t);if(n===t)return function(t){const n=2*t+1;return(r,e,o,f,i)=>{if(!((f-=i)>=o))return;let u=t*e[o];const l=i*t;for(let t=o,n=o+l;t<n;t+=i)u+=e[Math.min(f,t)];for(let t=o,c=f;t<=c;t+=i)u+=e[Math.min(f,t+l)],r[t]=u/n,u-=e[Math.max(o,t-l)]}}(t);const r=t-n,e=2*t+1;return(t,o,f,i,u)=>{if(!((i-=u)>=f))return;let l=n*o[f];const c=u*n,s=c+u;for(let t=f,n=f+c;t<n;t+=u)l+=o[Math.min(i,t)];for(let n=f,a=i;n<=a;n+=u)l+=o[Math.min(i,n+c)],t[n]=(l+r*(o[Math.max(f,n-s)]+o[Math.min(i,n+s)]))/e,l-=o[Math.max(f,n-c)]}}function m(t,n){let r=0;if(void 0===n)for(let n of t)null!=n&&(n=+n)>=n&&++r;else{let e=-1;for(let o of t)null!=(o=n(o,++e,t))&&(o=+o)>=o&&++r}return r}function g(t){return 0|t.length}function v(t){return!(t>0)}function M(t){return"object"!=typeof t||"length"in t?t:Array.from(t)}function w(t,n){let r,e=0,o=0,f=0;if(void 0===n)for(let n of t)null!=n&&(n=+n)>=n&&(r=n-o,o+=r/++e,f+=r*(n-o));else{let i=-1;for(let u of t)null!=(u=n(u,++i,t))&&(u=+u)>=u&&(r=u-o,o+=r/++e,f+=r*(u-o))}if(e>1)return f/(e-1)}function b(t,n){const r=w(t,n);return r?Math.sqrt(r):r}function A(t,n){let r,e;if(void 0===n)for(const n of t)null!=n&&(void 0===r?n>=n&&(r=e=n):(r>n&&(r=n),e<n&&(e=n)));else{let o=-1;for(let f of t)null!=(f=n(f,++o,t))&&(void 0===r?f>=f&&(r=e=f):(r>f&&(r=f),e<f&&(e=f)))}return[r,e]}class x{constructor(){this._partials=new Float64Array(32),this._n=0}add(t){const n=this._partials;let r=0;for(let e=0;e<this._n&&e<32;e++){const o=n[e],f=t+o,i=Math.abs(t)<Math.abs(o)?t-(f-o):o-(f-t);i&&(n[r++]=i),t=f}return n[r]=t,this._n=r+1,this}valueOf(){const t=this._partials;let n,r,e,o=this._n,f=0;if(o>0){for(f=t[--o];o>0&&(n=f,r=t[--o],f=n+r,e=r-(f-n),!e););o>0&&(e<0&&t[o-1]<0||e>0&&t[o-1]>0)&&(r=2*e,n=f+r,r==n-f&&(f=n))}return f}}class InternMap extends Map{constructor(t,n=S){if(super(),Object.defineProperties(this,{_intern:{value:new Map},_key:{value:n}}),null!=t)for(const[n,r]of t)this.set(n,r)}get(t){return super.get(N(this,t))}has(t){return super.has(N(this,t))}set(t,n){return super.set(E(this,t),n)}delete(t){return super.delete(_(this,t))}}class InternSet extends Set{constructor(t,n=S){if(super(),Object.defineProperties(this,{_intern:{value:new Map},_key:{value:n}}),null!=t)for(const n of t)this.add(n)}has(t){return super.has(N(this,t))}add(t){return super.add(E(this,t))}delete(t){return super.delete(_(this,t))}}function N({_intern:t,_key:n},r){const e=n(r);return t.has(e)?t.get(e):r}function E({_intern:t,_key:n},r){const e=n(r);return t.has(e)?t.get(e):(t.set(e,r),r)}function _({_intern:t,_key:n},r){const e=n(r);return t.has(e)&&(r=t.get(e),t.delete(e)),r}function S(t){return null!==t&&"object"==typeof t?t.valueOf():t}function k(t){return t}function T(t,...n){return O(t,k,k,n)}function F(t,...n){return O(t,Array.from,k,n)}function I(t,n){for(let r=1,e=n.length;r<e;++r)t=t.flatMap(t=>t.pop().map(([n,r])=>[...t,n,r]));return t}function j(t,n,...r){return O(t,k,n,r)}function q(t,n,...r){return O(t,Array.from,n,r)}function R(t){if(1!==t.length)throw new Error("duplicate key");return t[0]}function O(t,n,r,e){return function t(o,f){if(f>=e.length)return r(o);const i=new InternMap,u=e[f++];let l=-1;for(const t of o){const n=u(t,++l,o),r=i.get(n);r?r.push(t):i.set(n,[t])}for(const[n,r]of i)i.set(n,t(r,f));return n(i)}(t,0)}function U(t,n){return Array.from(n,n=>t[n])}function L(t,...n){if("function"!=typeof t[Symbol.iterator])throw new TypeError("values is not iterable");t=Array.from(t);let[r]=n;if(r&&2!==r.length||n.length>1){const e=Uint32Array.from(t,(t,n)=>n);return n.length>1?(n=n.map(n=>t.map(n)),e.sort((t,r)=>{for(const e of n){const n=z(e[t],e[r]);if(n)return n}})):(r=t.map(r),e.sort((t,n)=>z(r[t],r[n]))),U(t,e)}return t.sort(P(r))}function P(t=n){if(t===n)return z;if("function"!=typeof t)throw new TypeError("compare is not a function");return(n,r)=>{const e=t(n,r);return e||0===e?e:(0===t(r,r))-(0===t(n,n))}}function z(t,n){return(null==t||!(t>=t))-(null==n||!(n>=n))||(t<n?-1:t>n?1:0)}var C=Array.prototype.slice;function D(t){return()=>t}const G=Math.sqrt(50),B=Math.sqrt(10),H=Math.sqrt(2);function J(t,n,r){const e=(n-t)/Math.max(0,r),o=Math.floor(Math.log10(e)),f=e/Math.pow(10,o),i=f>=G?10:f>=B?5:f>=H?2:1;let u,l,c;return o<0?(c=Math.pow(10,-o)/i,u=Math.round(t*c),l=Math.round(n*c),u/c<t&&++u,l/c>n&&--l,c=-c):(c=Math.pow(10,o)*i,u=Math.round(t/c),l=Math.round(n/c),u*c<t&&++u,l*c>n&&--l),l<u&&.5<=r&&r<2?J(t,n,2*r):[u,l,c]}function K(t,n,r){if(!((r=+r)>0))return[];if((t=+t)===(n=+n))return[t];const e=n<t,[o,f,i]=e?J(n,t,r):J(t,n,r);if(!(f>=o))return[];const u=f-o+1,l=new Array(u);if(e)if(i<0)for(let t=0;t<u;++t)l[t]=(f-t)/-i;else for(let t=0;t<u;++t)l[t]=(f-t)*i;else if(i<0)for(let t=0;t<u;++t)l[t]=(o+t)/-i;else for(let t=0;t<u;++t)l[t]=(o+t)*i;return l}function Q(t,n,r){return J(t=+t,n=+n,r=+r)[2]}function V(t,n,r){let e;for(;;){const o=Q(t,n,r);if(o===e||0===o||!isFinite(o))return[t,n];if(o>0){const r=Math.ceil(t/o),e=Math.floor(n/o);t=(r-(r*o>t))*o,n=(e+(e*o<n))*o}else if(o<0){const r=-o,e=Math.ceil(t*r),f=Math.floor(n*r);t=(e-(e/r>t))/r,n=(f+(f/r<n))/r}e=o}}function W(t){return Math.max(1,Math.ceil(Math.log(m(t))/Math.LN2)+1)}function X(){var t=k,n=A,r=W;function e(e){Array.isArray(e)||(e=Array.from(e));var o,f,i,l=e.length,c=new Array(l);for(o=0;o<l;++o)c[o]=t(e[o],o,e);var s=n(c),a=s[0],h=s[1],d=r(c,a,h);if(!Array.isArray(d)){const t=h,r=+d;if(n===A&&([a,h]=V(a,h,r)),(d=K(a,h,r))[0]<=a&&(i=Q(a,h,r)),d[d.length-1]>=h)if(t>=h&&n===A){const t=Q(a,h,r);isFinite(t)&&(t>0?h=(Math.floor(h/t)+1)*t:t<0&&(h=(Math.ceil(h*-t)+1)/-t))}else d.pop()}for(var p=d.length,y=0,m=p;d[y]<=a;)++y;for(;d[m-1]>h;)--m;(y||m<p)&&(d=d.slice(y,m),p=m-y);var g,v=new Array(p+1);for(o=0;o<=p;++o)(g=v[o]=[]).x0=o>0?d[o-1]:a,g.x1=o<p?d[o]:h;if(isFinite(i)){if(i>0)for(o=0;o<l;++o)null!=(f=c[o])&&a<=f&&f<=h&&v[Math.min(p,Math.floor((f-a)/i))].push(e[o]);else if(i<0)for(o=0;o<l;++o)if(null!=(f=c[o])&&a<=f&&f<=h){const t=Math.floor((a-f)*i);v[Math.min(p,t+(d[t]<=f))].push(e[o])}}else for(o=0;o<l;++o)null!=(f=c[o])&&a<=f&&f<=h&&v[u(d,f,0,p)].push(e[o]);return v}return e.value=function(n){return arguments.length?(t="function"==typeof n?n:D(n),e):t},e.domain=function(t){return arguments.length?(n="function"==typeof t?t:D([t[0],t[1]]),e):n},e.thresholds=function(t){return arguments.length?(r="function"==typeof t?t:D(Array.isArray(t)?C.call(t):t),e):r},e}function Y(t,n){let r;if(void 0===n)for(const n of t)null!=n&&(r<n||void 0===r&&n>=n)&&(r=n);else{let e=-1;for(let o of t)null!=(o=n(o,++e,t))&&(r<o||void 0===r&&o>=o)&&(r=o)}return r}function Z(t,n){let r,e=-1,o=-1;if(void 0===n)for(const n of t)++o,null!=n&&(r<n||void 0===r&&n>=n)&&(r=n,e=o);else for(let f of t)null!=(f=n(f,++o,t))&&(r<f||void 0===r&&f>=f)&&(r=f,e=o);return e}function $(t,n){let r;if(void 0===n)for(const n of t)null!=n&&(r>n||void 0===r&&n>=n)&&(r=n);else{let e=-1;for(let o of t)null!=(o=n(o,++e,t))&&(r>o||void 0===r&&o>=o)&&(r=o)}return r}function tt(t,n){let r,e=-1,o=-1;if(void 0===n)for(const n of t)++o,null!=n&&(r>n||void 0===r&&n>=n)&&(r=n,e=o);else for(let f of t)null!=(f=n(f,++o,t))&&(r>f||void 0===r&&f>=f)&&(r=f,e=o);return e}function nt(t,n,r=0,e=1/0,o){if(n=Math.floor(n),r=Math.floor(Math.max(0,r)),e=Math.floor(Math.min(t.length-1,e)),!(r<=n&&n<=e))return t;for(o=void 0===o?z:P(o);e>r;){if(e-r>600){const f=e-r+1,i=n-r+1,u=Math.log(f),l=.5*Math.exp(2*u/3),c=.5*Math.sqrt(u*l*(f-l)/f)*(i-f/2<0?-1:1);nt(t,n,Math.max(r,Math.floor(n-i*l/f+c)),Math.min(e,Math.floor(n+(f-i)*l/f+c)),o)}const f=t[n];let i=r,u=e;for(rt(t,r,n),o(t[e],f)>0&&rt(t,r,e);i<u;){for(rt(t,i,u),++i,--u;o(t[i],f)<0;)++i;for(;o(t[u],f)>0;)--u}0===o(t[r],f)?rt(t,r,u):(++u,rt(t,u,e)),u<=n&&(r=u+1),n<=u&&(e=u-1)}return t}function rt(t,n,r){const e=t[n];t[n]=t[r],t[r]=e}function et(t,r=n){let e,o=!1;if(1===r.length){let f;for(const i of t){const t=r(i);(o?n(t,f)>0:0===n(t,t))&&(e=i,f=t,o=!0)}}else for(const n of t)(o?r(n,e)>0:0===r(n,n))&&(e=n,o=!0);return e}function ot(t,n,r){if(t=Float64Array.from(function*(t,n){if(void 0===n)for(let n of t)null!=n&&(n=+n)>=n&&(yield n);else{let r=-1;for(let e of t)null!=(e=n(e,++r,t))&&(e=+e)>=e&&(yield e)}}(t,r)),(e=t.length)&&!isNaN(n=+n)){if(n<=0||e<2)return $(t);if(n>=1)return Y(t);var e,o=(e-1)*n,f=Math.floor(o),i=Y(nt(t,f).subarray(0,f+1));return i+($(t.subarray(f+1))-i)*(o-f)}}function ft(t,n,r=f){if(!isNaN(n=+n)){if(e=Float64Array.from(t,(n,e)=>f(r(t[e],e,t))),n<=0)return tt(e);if(n>=1)return Z(e);var e,o=Uint32Array.from(t,(t,n)=>n),i=e.length-1,u=Math.floor(i*n);return nt(o,u,0,i,(t,n)=>z(e[t],e[n])),(u=et(o.subarray(0,u+1),t=>e[t]))>=0?u:-1}}function it(t,n){return[t,n]}function ut(t,r=n){if(1===r.length)return tt(t,r);let e,o=-1,f=-1;for(const n of t)++f,(o<0?0===r(n,n):r(n,e)<0)&&(e=n,o=f);return o}var lt=ct(Math.random);function ct(t){return function(n,r=0,e=n.length){let o=e-(r=+r);for(;o;){const e=t()*o--|0,f=n[o+r];n[o+r]=n[e+r],n[e+r]=f}return n}}function st(t){if(!(o=t.length))return[];for(var n=-1,r=$(t,at),e=new Array(r);++n<r;)for(var o,f=-1,i=e[n]=new Array(o);++f<o;)i[f]=t[f][n];return e}function at(t){return t.length}function ht(t){return t instanceof InternSet?t:new InternSet(t)}function dt(t,n){const r=t[Symbol.iterator](),e=new Set;for(const t of n){const n=pt(t);if(e.has(n))continue;let o,f;for(;({value:o,done:f}=r.next());){if(f)return!1;const t=pt(o);if(e.add(t),Object.is(n,t))break}}return!0}function pt(t){return null!==t&&"object"==typeof t?t.valueOf():t}t.Adder=x,t.InternMap=InternMap,t.InternSet=InternSet,t.ascending=n,t.bin=X,t.bisect=u,t.bisectCenter=c,t.bisectLeft=l,t.bisectRight=u,t.bisector=e,t.blur=function(t,n){if(!((n=+n)>=0))throw new RangeError("invalid r");let r=t.length;if(!((r=Math.floor(r))>=0))throw new RangeError("invalid length");if(!r||!n)return t;const e=y(n),o=t.slice();return e(t,o,0,r,1),e(o,t,0,r,1),e(t,o,0,r,1),t},t.blur2=s,t.blurImage=a,t.count=m,t.cross=function(...t){const n="function"==typeof t[t.length-1]&&function(t){return n=>t(...n)}(t.pop()),r=(t=t.map(M)).map(g),e=t.length-1,o=new Array(e+1).fill(0),f=[];if(e<0||r.some(v))return f;for(;;){f.push(o.map((n,r)=>t[r][n]));let i=e;for(;++o[i]===r[i];){if(0===i)return n?f.map(n):f;o[i--]=0}}},t.cumsum=function(t,n){var r=0,e=0;return Float64Array.from(t,void 0===n?t=>r+=+t||0:o=>r+=+n(o,e++,t)||0)},t.descending=r,t.deviation=b,t.difference=function(t,...n){t=new InternSet(t);for(const r of n)for(const n of r)t.delete(n);return t},t.disjoint=function(t,n){const r=n[Symbol.iterator](),e=new InternSet;for(const n of t){if(e.has(n))return!1;let t,o;for(;({value:t,done:o}=r.next())&&!o;){if(Object.is(n,t))return!1;e.add(t)}}return!0},t.every=function(t,n){if("function"!=typeof n)throw new TypeError("test is not a function");let r=-1;for(const e of t)if(!n(e,++r,t))return!1;return!0},t.extent=A,t.fcumsum=function(t,n){const r=new x;let e=-1;return Float64Array.from(t,void 0===n?t=>r.add(+t||0):o=>r.add(+n(o,++e,t)||0))},t.filter=function(t,n){if("function"!=typeof n)throw new TypeError("test is not a function");const r=[];let e=-1;for(const o of t)n(o,++e,t)&&r.push(o);return r},t.flatGroup=function(t,...n){return I(F(t,...n),n)},t.flatRollup=function(t,n,...r){return I(q(t,n,...r),r)},t.fsum=function(t,n){const r=new x;if(void 0===n)for(let n of t)(n=+n)&&r.add(n);else{let e=-1;for(let o of t)(o=+n(o,++e,t))&&r.add(o)}return+r},t.greatest=et,t.greatestIndex=function(t,r=n){if(1===r.length)return Z(t,r);let e,o=-1,f=-1;for(const n of t)++f,(o<0?0===r(n,n):r(n,e)>0)&&(e=n,o=f);return o},t.group=T,t.groupSort=function(t,r,e){return(2!==r.length?L(j(t,r,e),([t,r],[e,o])=>n(r,o)||n(t,e)):L(T(t,e),([t,e],[o,f])=>r(e,f)||n(t,o))).map(([t])=>t)},t.groups=F,t.histogram=X,t.index=function(t,...n){return O(t,k,R,n)},t.indexes=function(t,...n){return O(t,Array.from,R,n)},t.intersection=function(t,...n){t=new InternSet(t),n=n.map(ht);t:for(const r of t)for(const e of n)if(!e.has(r)){t.delete(r);continue t}return t},t.least=function(t,r=n){let e,o=!1;if(1===r.length){let f;for(const i of t){const t=r(i);(o?n(t,f)<0:0===n(t,t))&&(e=i,f=t,o=!0)}}else for(const n of t)(o?r(n,e)<0:0===r(n,n))&&(e=n,o=!0);return e},t.leastIndex=ut,t.map=function(t,n){if("function"!=typeof t[Symbol.iterator])throw new TypeError("values is not iterable");if("function"!=typeof n)throw new TypeError("mapper is not a function");return Array.from(t,(r,e)=>n(r,e,t))},t.max=Y,t.maxIndex=Z,t.mean=function(t,n){let r=0,e=0;if(void 0===n)for(let n of t)null!=n&&(n=+n)>=n&&(++r,e+=n);else{let o=-1;for(let f of t)null!=(f=n(f,++o,t))&&(f=+f)>=f&&(++r,e+=f)}if(r)return e/r},t.median=function(t,n){return ot(t,.5,n)},t.medianIndex=function(t,n){return ft(t,.5,n)},t.merge=function(t){return Array.from(function*(t){for(const n of t)yield*n}(t))},t.min=$,t.minIndex=tt,t.mode=function(t,n){const r=new InternMap;if(void 0===n)for(let n of t)null!=n&&n>=n&&r.set(n,(r.get(n)||0)+1);else{let e=-1;for(let o of t)null!=(o=n(o,++e,t))&&o>=o&&r.set(o,(r.get(o)||0)+1)}let e,o=0;for(const[t,n]of r)n>o&&(o=n,e=t);return e},t.nice=V,t.pairs=function(t,n=it){const r=[];let e,o=!1;for(const f of t)o&&r.push(n(e,f)),e=f,o=!0;return r},t.permute=U,t.quantile=ot,t.quantileIndex=ft,t.quantileSorted=function(t,n,r=f){if((e=t.length)&&!isNaN(n=+n)){if(n<=0||e<2)return+r(t[0],0,t);if(n>=1)return+r(t[e-1],e-1,t);var e,o=(e-1)*n,i=Math.floor(o),u=+r(t[i],i,t);return u+(+r(t[i+1],i+1,t)-u)*(o-i)}},t.quickselect=nt,t.range=function(t,n,r){t=+t,n=+n,r=(o=arguments.length)<2?(n=t,t=0,1):o<3?1:+r;for(var e=-1,o=0|Math.max(0,Math.ceil((n-t)/r)),f=new Array(o);++e<o;)f[e]=t+e*r;return f},t.rank=function(t,r=n){if("function"!=typeof t[Symbol.iterator])throw new TypeError("values is not iterable");let e=Array.from(t);const o=new Float64Array(e.length);2!==r.length&&(e=e.map(r),r=n);const f=(t,n)=>r(e[t],e[n]);let i,u;return(t=Uint32Array.from(e,(t,n)=>n)).sort(r===n?(t,n)=>z(e[t],e[n]):P(f)),t.forEach((t,n)=>{const r=f(t,void 0===i?t:i);r>=0?((void 0===i||r>0)&&(i=t,u=n),o[t]=u):o[t]=NaN}),o},t.reduce=function(t,n,r){if("function"!=typeof n)throw new TypeError("reducer is not a function");const e=t[Symbol.iterator]();let o,f,i=-1;if(arguments.length<3){if(({done:o,value:r}=e.next()),o)return;++i}for(;({done:o,value:f}=e.next()),!o;)r=n(r,f,++i,t);return r},t.reverse=function(t){if("function"!=typeof t[Symbol.iterator])throw new TypeError("values is not iterable");return Array.from(t).reverse()},t.rollup=j,t.rollups=q,t.scan=function(t,n){const r=ut(t,n);return r<0?void 0:r},t.shuffle=lt,t.shuffler=ct,t.some=function(t,n){if("function"!=typeof n)throw new TypeError("test is not a function");let r=-1;for(const e of t)if(n(e,++r,t))return!0;return!1},t.sort=L,t.subset=function(t,n){return dt(n,t)},t.sum=function(t,n){let r=0;if(void 0===n)for(let n of t)(n=+n)&&(r+=n);else{let e=-1;for(let o of t)(o=+n(o,++e,t))&&(r+=o)}return r},t.superset=dt,t.thresholdFreedmanDiaconis=function(t,n,r){const e=m(t),o=ot(t,.75)-ot(t,.25);return e&&o?Math.ceil((r-n)/(2*o*Math.pow(e,-1/3))):1},t.thresholdScott=function(t,n,r){const e=m(t),o=b(t);return e&&o?Math.ceil((r-n)*Math.cbrt(e)/(3.49*o)):1},t.thresholdSturges=W,t.tickIncrement=Q,t.tickStep=function(t,n,r){r=+r;const e=(n=+n)<(t=+t),o=e?Q(n,t,r):Q(t,n,r);return(e?-1:1)*(o<0?1/-o:o)},t.ticks=K,t.transpose=st,t.union=function(...t){const n=new InternSet;for(const r of t)for(const t of r)n.add(t);return n},t.variance=w,t.zip=function(){return st(arguments)}});
@@ -31979,6 +32200,7 @@ html.ar-scrolled .ar-bt{opacity:1}
   <section class="view" id="v-briefing"><div id="br"></div></section>
   <section class="view" id="v-pipeline"><div id="pl"></div></section>
   <section class="view" id="v-artikel"><div id="artx"></div></section>
+  <section class="view" id="v-multibase"><div id="mb"></div></section>
   <section class="view" id="v-kreativ"><div id="hub"></div></section>
   <section class="view" id="v-messeki"><div id="mki"></div></section>
   <section class="view" id="v-merkliste"><div id="ml"></div></section>
@@ -35982,7 +36204,7 @@ const BUICO={cs:'seat',vs:'truck',rs:'para',mc:'gauge',se:'wrench'};
 const REGC={'Westeuropa':'#2366C9','Mittel- & Osteuropa':'#5146B8','Nordeuropa':'#0E8A9A','Südeuropa':'#C2412D','Nahost':'#A66A12','Asien-Pazifik':'#1F9A6C','Amerika':'#D9661F','Zentralasien':'#7A4FC4'};
 const xVis=(c,ico,wm,cls)=>`<div class="nw-vis ${cls||''}" style="--rc:${c}"><span class="nw-vi">${brIco(ico,cls&&cls.includes('nw-vis-l')?64:40)}</span>${wm?`<span class="nw-wm">${esc(wm)}</span>`:''}</div>`;
 const oVis=(o,cls)=>{const b=(o.bus||[])[0];return xVis(BUC(b),BUICO[b]||'target',o.market||'',cls);};
-const mVis=(m,cls)=>xVis(REGC[m.region]||'#5A6576','globe',m.name,cls);
+const mVis=(m,cls)=>xVis(REGC[m.region]||'#5A6576','globe',m.a2?`${m.a2} · ${m.heat||0}`:m.name,cls);
 const iVis=(i,cls)=>xVis(cv(i.div),'bulb',(i.nodes||[]).map(n=>(S.nodes[n]||{}).name).filter(Boolean)[0]||'',cls);
 const oKick=(k,o)=>{const bus=o.bus||[];const e=oEvents(k,o)[0];return `${bus.map(b=>`<span class="nw-kick" style="--rc:${BUC(b)}">${esc(BUN(b))}</span>`).join('')}${relB((o.prio||0)*4)}${e?`<span class="nw-dt">Termin ${esc(dShort(e.d))}</span>`:''}`;};
 function nwMast(over,title,line,act){return `<div class="nw-mast"><div><p class="nw-over">${over}</p><h1 class="nw-title">${esc(title)}</h1>${line?`<p class="nw-date">${line}</p>`:''}</div>${act?`<div class="nw-act">${act}</div>`:''}</div>`;}
@@ -36017,7 +36239,7 @@ function xNodes(ids){const seen=new Set();return ids.map(id=>[id,(S.nodes||{})[i
  .map(([id,n])=>`<div class="ar-bg"><h3>${esc(n.name)} <span>${esc(ARTTY[n.type]||n.type||'')}</span></h3>${xP(n.summary)}</div>`).join('');}
 function xPage(o){/* o: {back, title, vis, kick, lead, kp, kpKey, main, side, order, ty, id} */
  const ord=XORDER[o.ty]||[];const i=ord.indexOf(o.id);const pv=i>0?ord[i-1]:'',nx=i>=0&&i<ord.length-1?ord[i+1]:'';const tt=id=>o.titleOf(id)||'';
- return `<div class="nw ar">
+ return `<div class="nw ar${o.ty!=='chance'?' tx':''}">
  <div class="ar-bar"><button class="ar-back" data-xback>← Zurück ${esc(o.back)}</button><span class="ar-bt">${esc(o.title)}</span><span class="ar-sp"></span>${ord.length?`<button class="btn sm" data-xstep="${esc(pv)}"${pv?'':' disabled'} aria-label="Vorherige">←</button><span class="note">${i>=0?(i+1)+' / '+ord.length:''}</span><button class="btn sm" data-xstep="${esc(nx)}"${nx?'':' disabled'} aria-label="Nächste">→</button>`:''}</div>
  <header class="ar-head">${o.vis}<div class="ar-hb"><div class="nw-kl">${o.kick}</div><h1 class="ar-h1">${esc(o.title)}</h1>${o.lead?`<p class="ar-lead">${esc(o.lead)}</p>`:''}</div></header>
  <div class="ar-grid"><article class="ar-main">${kpBox(o.kp,o.kpKey)}${o.main}</article><aside class="ar-side">${o.side}${o.toc.length>2?`<nav class="ar-box ar-toc"><h3>In diesem Artikel</h3>${o.toc.map(([id,h])=>`<button data-artto="ar-${id}">${esc(h)}</button>`).join('')}</nav>`:''}</aside></div>
@@ -36140,7 +36362,7 @@ function mkFocus(){const v=$('#v-maerkte');if(!v||!S.markets||!Object.keys(S.mar
  const reg=(typeof MK!=='undefined'&&MK.reg&&MK.reg!=='alle')?MK.reg:null;const byH=Object.entries(S.markets).sort((a,b)=>(b[1].heat||0)-(a[1].heat||0));let L=byH.filter(([,m])=>!reg||m.region===reg).slice(0,4);if(!L.length)L=byH.slice(0,4);
  XORDER.markt=Object.entries(S.markets).sort((a,b)=>(b[1].heat||0)-(a[1].heat||0)).map(x=>x[0]);
  const sig=Object.entries(S.signals||{}).filter(([k,s])=>(S.votes||{})[k]!==-1&&Object.values(S.markets).some(m=>(m.signals||[]).includes(k))).sort((a,b)=>(b[1].date||'').localeCompare(a[1].date||'')).slice(0,5);
- f.innerHTML=`<div class="nw mk6"><div class="nw-grid"><div class="nw-main"><h2 class="nw-sh">Märkte im Fokus</h2><div class="nw-cards mk6-cards">${L.map(([k,m])=>`<article class="nw-card" data-xgo="markt:${esc(k)}" tabindex="0">${mVis(m)}<div class="nw-cb"><div class="nw-kl"><span class="nw-kick" style="--rc:${REGC[m.region]||'#5A6576'}">${esc(m.region||'')}</span>${stTag(m.stage)}${relB(m.heat||0)}</div><h3 class="nw-h3">${esc(m.name)}</h3><p class="nw-tz">${esc(m.why||'')}</p></div><div class="nw-cs">${starBtn(k)}</div></article>`).join('')}</div></div>
+ f.innerHTML=`<div class="nw mk6 tx"><div class="nw-grid"><div class="nw-main"><h2 class="nw-sh">Märkte im Fokus</h2><div class="nw-cards mk6-cards">${L.map(([k,m])=>`<article class="nw-card" data-xgo="markt:${esc(k)}" tabindex="0">${mVis(m)}<div class="nw-cb"><div class="nw-kl"><span class="nw-kick" style="--rc:${REGC[m.region]||'#5A6576'}">${esc(m.region||'')}</span>${stTag(m.stage)}${relB(m.heat||0)}</div><h3 class="nw-h3">${esc(m.name)}</h3><p class="nw-tz">${esc(m.why||'')}</p></div><div class="nw-cs">${starBtn(k)}</div></article>`).join('')}</div></div>
  <div class="nw-side"><section class="nw-box nw-box-m"><div class="nw-bh"><h2>Neueste Meldungen</h2><a class="nw-lk" href="#briefing">Briefing ›</a></div><ul class="nw-agl">${sig.map(([k,s])=>{const m=Object.values(S.markets).find(m=>(m.signals||[]).includes(k));return `<li class="nw-ag"><time><b>${esc(dShort(s.date))}</b><i>${esc(m?m.name:'')}</i></time><div><button class="nw-al" data-nwk2="${esc(k)}">${esc(s.title)}</button></div></li>`;}).join('')}</ul></section></div></div></div>`;}
 document.addEventListener('click',e=>{const t=e.target;if(!t.closest)return;const n=t.closest('[data-nwk2]');if(n){e.preventDefault();ARTFROM=true;ARTORIG=location.hash;location.hash='#meldung/'+encodeURIComponent(n.dataset.nwk2);return;}
  const r=t.closest('#v-maerkte tr[data-mk]');if(r&&!t.closest('a,button[data-msort]')){e.preventDefault();e.stopImmediatePropagation();xGo('markt',r.dataset.mk);}},true);
@@ -36149,7 +36371,203 @@ document.addEventListener('click',e=>{const t=e.target;if(!t.closest)return;cons
 /* Innovation: Ideen als Karten, jede mit eigener Seite */
 {const o=renderInno;renderInno=function(){const r=o.apply(this,arguments);try{const el=$('#ideas');if(!el)return r;
  const L=ent('ideas',i=>ideaF==='alle'||i.verdict===ideaF).sort(([,a],[,c])=>(c.total||0)-(a.total||0));XORDER.idee=L.map(x=>x[0]);
- el.classList.add('nw','in6');el.innerHTML=L.map(([id,i])=>{const vt=i.verdict==='überlebt'?'ok':i.verdict==='verworfen'?'hot':'new';return `<article class="nw-card" data-xgo="idee:${esc(id)}" tabindex="0">${iVis(i)}<div class="nw-cb"><div class="nw-kl"><span class="tag ${vt}">${esc(i.verdict||'offen')}</span><span class="nw-dt">TRL ${esc(i.trl??'–')}</span>${i.horizon?`<span class="nw-dt">${esc(i.horizon)}</span>`:''}${i.total?relB(i.total*5):''}</div><h3 class="nw-h3">${esc(i.title)}</h3><p class="nw-tz">${esc(i.hypothesis||'')}</p>${i.need?`<p class="pl6-nx"><b>Bedarf</b> ${esc(i.need)}</p>`:''}</div><div class="nw-cs">${starBtn(id)}</div></article>`;}).join('');}catch(e){}return r;};}
+ el.classList.add('nw','in6','tx');el.innerHTML=L.map(([id,i])=>{const vt=i.verdict==='überlebt'?'ok':i.verdict==='verworfen'?'hot':'new';return `<article class="nw-card" data-xgo="idee:${esc(id)}" tabindex="0">${iVis(i)}<div class="nw-cb"><div class="nw-kl"><span class="tag ${vt}">${esc(i.verdict||'offen')}</span><span class="nw-dt">TRL ${esc(i.trl??'–')}</span>${i.horizon?`<span class="nw-dt">${esc(i.horizon)}</span>`:''}${i.total?relB(i.total*5):''}</div><h3 class="nw-h3">${esc(i.title)}</h3><p class="nw-tz">${esc(i.hypothesis||'')}</p>${i.need?`<p class="pl6-nx"><b>Bedarf</b> ${esc(i.need)}</p>`:''}</div><div class="nw-cs">${starBtn(id)}</div></article>`;}).join('');}catch(e){}return r;};}
+
+
+/* ---------- v55: Bereich „Produkte“ – MULTIBASE ---------- */
+const MBP=[['multibase','MULTIBASE','Modulare Palettenlösung',true],['airseat','airSEAT','Truppen- und Crewsitze'],['flyweight','FLYWEIGHT','Hubschrauber- und eVTOL-Sitze'],['landseat','landSEAT','Minenschutzsitze'],['safechute','safeCHUTE','Rettungs- und Bremsschirme'],['toxicshield','TOXICSHIELD','CBRN-Schutz'],['fuelsys','fuelSENS / fuelDATA','Kraftstoffmessung']];
+const MBCONT={eu:['Europa','#4C8DFF'],ap:['Asien-Pazifik','#2EE6C5'],me:['Nahost & Afrika','#F2B544'],am:['Amerika','#FF7A59']};
+const MBST={kunde:['Kunde','#2EE6C5',4],hoch:['Chance hoch','#4C8DFF',3],mittel:['Chance mittel','#B39DFF',2],beob:['Beobachten','#8A94A6',1]};
+/* Länder: c = ISO-Kürzel, k = Kontinent, pl = [Typ, Bestand/Plan], fit = Einschätzung 0–100 */
+const MBC=[
+ {c:'DE',n:'Deutschland',k:'eu',st:'kunde',fit:96,pl:[['A400M','53, dazu 16 neue taktische finanziert'],['C-130J','3 C-130J-30 + 3 KC-130J (Évreux)'],['CH-47F','60, Zulauf ab 2027']],why:'Erstkunde: 46–48 MedEvac-Palettensysteme für A400M und C-130J, erste Einheit ab Mitte 2027. 16 neue A400M brauchen Rüstsätze.',route:'BAAINBw direkt; bei neuen A400M über Airbus (Line-Fit-Frage) oder separat',hurdle:'Kapazität parallel zur Serie; Zulassung C-130J noch offen'},
+ {c:'FR',n:'Frankreich',k:'eu',st:'hoch',fit:78,pl:[['A400M','größter Besteller (50)'],['C-130J','C-130J-30 + KC-130J (Évreux, mit DE)'],['C-130H','ältere Flotte']],why:'Größte A400M-Flotte, neue A400M-Fähigkeiten über OCCAR beauftragt, erster Löscheinsatz 07/2026. Évreux kennt MULTIBASE aus der Erprobung 2024.',route:'Évreux-Staffel als Brücke; OCCAR; DGA',hurdle:'Starke heimische Industrie, angespannter Haushalt'},
+ {c:'ES',n:'Spanien',k:'eu',st:'mittel',fit:62,pl:[['A400M','Airbus-Endmontage in Sevilla'],['C295','große Flotte']],why:'A400M-Nutzer und Teil der NATO-A400M-Initiative; Medevac-Bedarf wie in DE.',route:'Ejército del Aire über Airbus DS Getafe',hurdle:'Airbus-Heimatmarkt, OEM-Lösungen naheliegend'},
+ {c:'GB',n:'Großbritannien',k:'eu',st:'mittel',fit:58,pl:[['A400M','einziger taktischer Transporter seit Aus der C-130J 2023'],['CH-47','große Chinook-Flotte']],why:'190 Mio. Pfund für mehr A400M-Verfügbarkeit (10/2026): schnelle Rollenwechsel zahlen genau darauf ein.',route:'DE&S; über Partner mit UK-Präsenz',hurdle:'RAF hat eigene Medevac-Ausstattung für den A400M; Martin-Baker-Heimatmarkt'},
+ {c:'BE',n:'Belgien / Luxemburg',k:'eu',st:'hoch',fit:72,pl:[['A400M','BE 7, LU 1 (gemeinsame Einheit)']],why:'Kleine A400M-Flotte mit vielen Rollen – jede Maschine muss mehrere Aufgaben können. Teil der NATO-A400M-Initiative.',route:'Belgische Verteidigung (DGMR), gemeinsame Einheit mit LU',hurdle:'Kleine Stückzahlen'},
+ {c:'TR',n:'Türkei',k:'eu',st:'mittel',fit:50,pl:[['A400M','10'],['C-130B/E','alte Flotte']],why:'A400M-Nutzer, Teil der NATO-Initiative; Ersatz der alten Hercules offen.',route:'SSB (Beschaffungsamt) mit lokalem Partner',hurdle:'Eigene Industrie (TUSAŞ), Exportgenehmigung'},
+ {c:'PL',n:'Polen',k:'eu',st:'hoch',fit:88,pl:[['A400M','8–15 in Verhandlung (SAFE)'],['C-130E/H','gebraucht aus den USA'],['C295','Bestand']],why:'Neuer A400M-Nutzer ohne Bestandsausstattung: Sitze, Medevac und Mehrzweck-Rüstsätze werden komplett neu gebraucht. Airbus sagt Lieferung vor 2030 zu.',route:'Agencja Uzbrojenia; Airbus DS Polen; NATO-A400M-Projekt',hurdle:'Erwartung an polnische Wertschöpfung (PGZ), Preisdruck'},
+ {c:'NL',n:'Niederlande',k:'eu',st:'mittel',fit:55,pl:[['C-390','5 ab Ende 2027'],['CH-47F','Chinook-Flotte']],why:'Neue C-390-Flotte. Achtung: Embraer liefert seit 06/2025 ein eigenes Roll-on-Medizinmodul für die niederländischen C-390 (1 fest + 7 Optionen).',route:'DMO; Zugang eher über Chinook und Sitzpaletten als über Medevac',hurdle:'Medevac-Bedarf durch Embraer-Modul bereits gedeckt'},
+ {c:'AT',n:'Österreich',k:'eu',st:'hoch',fit:90,pl:[['C-390','4 ab 2028 in Hörsching'],['C-130K','2 verbleibend']],why:'FORTE-Studie mit MULTIBASE auf der C-390 bereits gelaufen; deutschsprachiger Kunde, kurze Wege. Bester Kandidat für den ersten Exportauftrag.',route:'Bundesheer / BMLV direkt; Joanneum Research als Partner',hurdle:'C-390-Zulassung fehlt; kleines Budget'},
+ {c:'SE',n:'Schweden',k:'eu',st:'hoch',fit:70,pl:[['C-390','4 ab Ende 2027'],['Tp 84 (C-130H)','6, auch Spezialkräfte und Betankung']],why:'Ersetzt 60 Jahre alte Hercules; Arktis- und Evakuierungsmissionen verlangen flexible Kabinen.',route:'FMV; skandinavischer Vertriebspartner',hurdle:'C-390-Zulassung; Embraer-Eigenlösung möglich'},
+ {c:'PT',n:'Portugal',k:'eu',st:'mittel',fit:60,pl:[['KC-390','erster europäischer Kunde, 7 Optionen offen']],why:'Erfahrenster C-390-Nutzer in Europa (Erdbebenhilfe, Betankung). Referenzkunde für die C-390-Zulassung.',route:'Força Aérea; Embraer/OGMA',hurdle:'Kleines Budget, Embraer-Nähe'},
+ {c:'HU',n:'Ungarn',k:'eu',st:'beob',fit:40,pl:[['C-390','2, Flotte komplett']],why:'Hat die C-390 gleich mit einem Kit für Intensivpatienten bestellt.',route:'Embraer-Servicevertrag',hurdle:'Bedarf bereits gedeckt'},
+ {c:'CZ',n:'Tschechien',k:'eu',st:'hoch',fit:68,pl:[['C-390','2, erste seit 07/2026']],why:'Gerade in der Einführung, Ausstattungsfragen werden jetzt entschieden; Nachbar mit enger Bundeswehr-Kooperation.',route:'Tschechisches Verteidigungsministerium (AMOS)',hurdle:'C-390-Zulassung'},
+ {c:'SK',n:'Slowakei',k:'eu',st:'mittel',fit:55,pl:[['C-390','3 ausgewählt, Vertrag noch nicht wirksam']],why:'Startet bei null; Ausstattung kann gleich mitbestellt werden.',route:'Slowakisches Verteidigungsministerium',hurdle:'Vertrag offen, Budget'},
+ {c:'LT',n:'Litauen',k:'eu',st:'mittel',fit:55,pl:[['C-390','3 ausgewählt, Vertrag noch nicht wirksam']],why:'Neue Flotte an der NATO-Ostflanke; Verwundetentransport hat hohe Priorität.',route:'Litauisches Verteidigungsministerium (DPA)',hurdle:'Vertrag offen, kleine Flotte'},
+ {c:'GR',n:'Griechenland',k:'eu',st:'hoch',fit:70,pl:[['KC-390','3 + 3 Optionen (11/2026), erste 2027'],['C-130B/H','~15, nur 4–7 einsatzbereit']],why:'Vertrag gerade unterschrieben, erste Maschine 2027 – Kabinenausstattung noch offen. Waldbrände: FIRETUBE-Thema.',route:'HAF über HAI (Hellenic Aerospace Industry)',hurdle:'Budget, Embraer-Paket'},
+ {c:'IT',n:'Italien',k:'eu',st:'mittel',fit:52,pl:[['C-130J','9 + 4 KC-130J'],['C-27J','Bestand']],why:'Große C-130J-Flotte; sobald die C-130J-Zulassung steht, direkt adressierbar.',route:'Segredifesa / Leonardo als Partner',hurdle:'Heimische Industrie, Zulassung C-130J'},
+ {c:'DK',n:'Dänemark',k:'eu',st:'mittel',fit:58,pl:[['C-130J-30','4 (Grönland, Arktis, Rettung)']],why:'Prüft A400M-Zukauf; Rettungs- und Arktismissionen brauchen schnelle Rollenwechsel.',route:'DALO',hurdle:'Kleine Flotte'},
+ {c:'NO',n:'Norwegen',k:'eu',st:'mittel',fit:50,pl:[['C-130J','4']],why:'C-130J-Nutzer mit Arktis-Profil.',route:'Forsvarsmateriell',hurdle:'Zulassung C-130J, kleine Flotte'},
+ {c:'RO',n:'Rumänien',k:'eu',st:'beob',fit:38,pl:[['C-130H','gebraucht aus den USA'],['C-27J','Bestand']],why:'Hercules-Nachfolge offen; NATO-Ostflanke.',route:'über US-Partner oder EU-Programme (SAFE)',hurdle:'Kein Nachfolger beschlossen, Budget'},
+ {c:'HR',n:'Kroatien',k:'eu',st:'beob',fit:35,pl:[['A400M','geplant über NATO-Initiative']],why:'Teil der NATO-A400M-Initiative ohne eigene Maschinen.',route:'über NATO-Flotte',hurdle:'Betriebsmodell der NATO-Flotte offen'},
+ {c:'ID',n:'Indonesien',k:'ap',st:'hoch',fit:74,pl:[['A400M','2 + 4 Optionen, u. a. Medevac/humanitär konfiguriert'],['C-130','rund 25, davon 5 C-130J-30']],why:'Inselstaat mit vielen Naturkatastrophen; A400M ausdrücklich für Medevac und humanitäre Hilfe beschafft.',route:'Airbus DS (A400M), Kementerian Pertahanan',hurdle:'Offset-Erwartung, Preis'},
+ {c:'MY',n:'Malaysia',k:'ap',st:'mittel',fit:56,pl:[['A400M','4']],why:'Langjähriger A400M-Nutzer, Katastrophenhilfe in der Region.',route:'Airbus DS, RMAF',hurdle:'Budget'},
+ {c:'KZ',n:'Kasachstan',k:'ap',st:'beob',fit:30,pl:[['A400M','2 (zweite 11/2026)']],why:'Humanitäre und zivile Einsätze mit dem A400M.',route:'Airbus DS',hurdle:'Exportkontrolle, Russland-Nähe'},
+ {c:'UZ',n:'Usbekistan',k:'ap',st:'beob',fit:28,pl:[['C-390','2, erste Q4 2026']],why:'Erster Zentralasien-Kunde der C-390, Fokus Transport und humanitäre Missionen.',route:'Embraer',hurdle:'Exportkontrolle'},
+ {c:'KR',n:'Südkorea',k:'ap',st:'mittel',fit:45,pl:[['C-390','3'],['C-130J','Bestand']],why:'Neue C-390-Flotte plus C-130J.',route:'DAPA mit koreanischem Partner',hurdle:'Starke Eigenindustrie'},
+ {c:'IN',n:'Indien',k:'ap',st:'mittel',fit:60,pl:[['C-130J','12'],['MTA','Ausschreibung 60 Transporter, 48 in Indien gebaut']],why:'Größte offene Transporter-Ausschreibung weltweit. Wer gewinnt, braucht eine Kabinen- und Medevac-Ausstattung für 60 Maschinen.',route:'als Teil eines OEM-Angebots (Embraer, Lockheed oder Airbus) mit Fertigung in Indien',hurdle:'Make in India, lange Verfahren'},
+ {c:'AU',n:'Australien',k:'ap',st:'mittel',fit:52,pl:[['C-130J','Flotte wird durch neue C-130J-30 ersetzt'],['C-17','Bestand'],['CH-47F','Bestand']],why:'Neue C-130J-30-Flotte, große Entfernungen, Katastrophenhilfe im Pazifik.',route:'CASG; australischer Partner',hurdle:'Entfernung, US-Lieferkette'},
+ {c:'NZ',n:'Neuseeland',k:'ap',st:'beob',fit:40,pl:[['C-130J-30','5 neu']],why:'Neue Flotte, Fokus Pazifik-Katastrophenhilfe.',route:'NZDF',hurdle:'Sehr kleiner Markt'},
+ {c:'PH',n:'Philippinen',k:'ap',st:'beob',fit:35,pl:[['C-130H/J','Bestand']],why:'Taifun-Region, humanitäre Einsätze.',route:'über US-Programme',hurdle:'Budget'},
+ {c:'AE',n:'Vereinigte Arabische Emirate',k:'me',st:'hoch',fit:76,pl:[['C-390','10 + 10 Optionen (05/2026), Medevac als Mission'],['C-130H/J','Bestand']],why:'Kaufkräftig, Medevac ausdrücklich Teil der C-390-Missionen, großes Humanitär-Engagement.',route:'über EDGE Group oder Embraer-Paket; IDEX/Dubai Airshow',hurdle:'EDGE als Partner und Wettbewerber; C-390-Zulassung'},
+ {c:'SA',n:'Saudi-Arabien',k:'me',st:'mittel',fit:48,pl:[['C-130H/J','große Flotte'],['KC-130J','Bestand']],why:'Große Hercules-Flotte, hoher Budgetrahmen.',route:'GAMI, lokaler Partner',hurdle:'Lokale Wertschöpfung, Exportgenehmigung'},
+ {c:'QA',n:'Katar',k:'me',st:'beob',fit:42,pl:[['C-130J-30','Bestand'],['C-17','Bestand']],why:'Kleine, moderne Flotte; humanitäre Luftbrücken.',route:'über Messen und Integratoren',hurdle:'Exportgenehmigung'},
+ {c:'EG',n:'Ägypten',k:'me',st:'beob',fit:40,pl:[['C-130H','große Flotte'],['C-130J-30','2 bestellt (2024)']],why:'Einer der größten Hercules-Betreiber in Nahost und Afrika.',route:'über US-Lieferkette (FMS) oder Lockheed',hurdle:'Exportgenehmigung, Budget'},
+ {c:'MA',n:'Marokko',k:'me',st:'beob',fit:32,pl:[['C-130H','Bestand'],['C-27J','Bestand']],why:'Hercules-Flotte mit Katastrophen- und Evakuierungseinsätzen.',route:'über Messen und Partner',hurdle:'Budget'},
+ {c:'TN',n:'Tunesien',k:'me',st:'beob',fit:25,pl:[['C-130H/J','4. C-130H aus den USA im Januar 2026']],why:'Wächst über US-Abgaben.',route:'über US-Programme',hurdle:'Finanzierung'},
+ {c:'NG',n:'Nigeria',k:'me',st:'beob',fit:25,pl:[['C-130H','Bestand'],['C295','Bestand']],why:'Größte Streitkraft Westafrikas mit Lufttransportbedarf.',route:'über Partner und humanitäre Programme',hurdle:'Finanzierung, Exportgenehmigung'},
+ {c:'ZA',n:'Südafrika',k:'me',st:'beob',fit:22,pl:[['C-130BZ','alte Flotte']],why:'Afrikas wichtigster Luftfahrt-Standort, aber kaum Budget.',route:'Denel/Partner',hurdle:'Kein Budget'},
+ {c:'US',n:'USA',k:'am',st:'mittel',fit:55,pl:[['C-130J','USAF ca. 165, USMC, Coast Guard, Navy'],['C-17','große Flotte'],['CH-47F','große Flotte']],why:'Größter Markt der Welt. Spectrum Aeromed hat 2022 die ersten vier MULTIBASE für C-130 gekauft – Türöffner.',route:'Spectrum Aeromed, Autoflug USA, East/West Industries',hurdle:'Buy American, ITAR, starke US-Anbieter'},
+ {c:'CA',n:'Kanada',k:'am',st:'mittel',fit:50,pl:[['C-130J-30','17'],['C-130H','9']],why:'Große Entfernungen, Arktis, Waldbrände: Rollenwechsel und Löschen.',route:'DND/PSPC mit kanadischem Partner',hurdle:'Industrial Benefits-Auflagen'},
+ {c:'BR',n:'Brasilien',k:'am',st:'hoch',fit:72,pl:[['KC-390','8 geliefert, 19 bestellt']],why:'Größter C-390-Nutzer. Eine MULTIBASE-Zulassung über Embraer würde die Tür zu allen C-390-Ländern öffnen.',route:'Embraer als Integrator (Katalogoption)',hurdle:'Embraer bietet eigene Module an; Budget der FAB'},
+ {c:'CO',n:'Kolumbien',k:'am',st:'mittel',fit:45,pl:[['KC-390','2 bestellt (08/2026)']],why:'Ersetzt alte Hercules, viele Einsätze in schwer erreichbaren Regionen.',route:'Embraer-Paket',hurdle:'Budget'},
+ {c:'MX',n:'Mexiko',k:'am',st:'beob',fit:38,pl:[['C-130J-30','2 (2026)']],why:'Erneuert die Hercules-Flotte, Katastrophenhilfe.',route:'über Lockheed-Lieferkette',hurdle:'Kleine Flotte'},
+ {c:'CL',n:'Chile',k:'am',st:'beob',fit:30,pl:[['C-130H/R','Bestand']],why:'Erdbeben- und Waldbrandregion.',route:'über Messen (FIDAE)',hurdle:'Budget, Entfernung'}
+];
+/* Varianten, Zeitleiste, Wettbewerb, Ideen, Vermarktung */
+const MBVAR=[['seat','Sitzpalette','Crashsichere Sitze nach EASA CS-25 (16 g), nach vorn gerichtet, Notsauerstoff. Bis 84 Passagiere in der C-130, bis 125 im A400M.'],['med','Medical','Intensivplätze, Tragen, Schränke und Sitze für medizinisches Personal. Bundeswehr-Konfiguration: 12 Liegen + 4 Intensivplätze.'],['vip','VIP','FLYWEIGHT-SUPERIOR-Sitze und Tische.'],['lav','Toilette, Bordküche, Ruhebereich','Kombinierbar mit allen Paletten; Kabinenmonumente mit Diehl Aviation.'],['cbrn','TOXICSHIELD','Quarantäne- und Schutzzonen für ansteckende oder kontaminierte Patienten.'],['fire','FIRETUBE','Löschwassertanks, außerhalb des Flugzeugs befüllbar, verschiedene Abwurfarten.'],['cmd','Command','Führungs- und Missionsplätze in der Luft (vorgestellt auf der ILA 2026).'],['tent','FORTE-Zelt','Träger für das Kontaminations-Transportzelt (Studie mit Joanneum Research, C-390).']];
+const MBTL=[['2018','Zulassung der Sitzpaletten für den A400M'],['11/2021','Kooperation mit Diehl Aviation (Dubai Airshow)'],['06/2022','Erste vier MULTIBASE an Spectrum Aeromed (USA) für die C-130; ILA-Zelt direkt unter dem A400M-Flügel'],['2022','Erprobung im A400M bei der WTD 61'],['08/2024','Erste MULTIBASE an die deutsch-französische Lufttransportstaffel Évreux (C-130J)'],['01/2025','Interview in der Europäischen Sicherheit & Technik'],['05.11.2025','Haushaltsausschuss gibt rund 48 Mio. € frei'],['10.11.2025','Vertrag mit dem BAAINBw über 46–48 Palettensysteme für den Patiententransport (A400M, C-130J)'],['06/2026','ILA: MISSION BASE am A400M, MULTIBASE Command'],['Mitte 2027','Erste von sechs MedEvac-Einheiten an die Truppe (vorbehaltlich Zulassung)'],['2029','Lieferung abgeschlossen']];
+const MBCOMP=[
+ ['Einzeln eingebaute Patiententransporteinheiten','Bisheriges Bundeswehr-Konzept (Lufthansa Technik, 26 PTE)','Bewährt, Teile vorhanden','Jede Einheit einzeln im Laderaum: mehrere Stunden Umrüstung, höchstens 6 Patienten im A400M'],
+ ['ISO-Container-Module','Sanitäts- oder Unterkunftscontainer, im A400M bis 40 Fuß transportierbar','Günstig, weil Standardbauteile; am Boden sofort als Station nutzbar','Schwer (ein leerer 20-Fuß-Container wiegt rund 2,2 t), sperrig, keine crashsicheren Sitze, belegt viel Laderaum'],
+ ['Hersteller-Kits (Roll-on/Roll-off)','Airbus (A400M, C295), Embraer (C-390 Medizinmodul für NL), Lockheed','Kommt mit dem Flugzeug, Zulassung beim Hersteller','An einen Flugzeugtyp gebunden; Kunde wird vom Hersteller abhängig'],
+ ['US-Medevac-Kits','Spectrum Aeromed, LifePort','Große US-Basis, FMS-fähig','Für US-Plattformen gedacht; Spectrum ist zugleich MULTIBASE-Kunde'],
+ ['Fest eingebaute Truppensitze','Seitenwandsitze des Flugzeugs','Bereits an Bord, keine Zusatzkosten','Kein Komfort, keine medizinische Ausstattung, keine Mischkonfiguration'],
+ ['Airbus Fortion TransHospital','Mobile Sanitätseinrichtungen und Luft-Medevac-Lösungen','Komplettanbieter Boden und Luft','Groß, auf Systemaufträge ausgelegt']];
+const MBWIN=[['Zeit','Umrüstung in rund 90 Minuten statt 4–6 Stunden (Bundeswehr). Die Maschine fliegt in der Zwischenzeit andere Aufträge.'],['Kapazität','12 Liegen und 4 Intensivplätze pro Flug statt bisher höchstens 6 Patienten.'],['Gewicht','Leere Palette 500 kg, Sitzpalette 700 kg – ein Bruchteil eines Containers bei gleicher Stellfläche.'],['Ein System, mehrere Typen','463L/HCU-6-Standard: dieselbe Palette passt in A400M, C-130, C-390 und schwere Hubschrauber.'],['Vorbereitung außerhalb','Paletten werden am Boden ausgerüstet und geprüft; im Flugzeug wird nur noch verladen.'],['Zulassung erledigt','Crashsichere Sitze nach CS-25 und Bundeswehr-Zulassung – für den Kunden kein eigenes Zulassungsprojekt.']];
+const MBIDEA=[
+ {t:'MULTIBASE als Pool',p:'Paletten werden nicht pro Land gekauft, sondern in einem gemeinsamen Pool bereitgehalten – etwa für die NATO-A400M-Flotte oder das Europäische Lufttransportkommando (EATC). Bezahlt wird Bereitschaft und Einsatz.',price:'Senkt die Einstiegshürde für kleine Länder stark.',eff:3,pot:5,hz:'2027'},
+ {t:'Basis kaufen, Rollen mieten',p:'Der Kunde kauft die zugelassene Grundpalette; Sonderrollen wie FIRETUBE, Quarantäne oder VIP kommen als Mietmodul für die Saison oder den Einsatz.',price:'Antwort auf „Container ist billiger“: geringere Erstinvestition, volle Flexibilität.',eff:2,pot:5,hz:'2027'},
+ {t:'Luft und Boden mit einem System',p:'MULTIBASE-Module passen zusätzlich in einen Containerrahmen oder auf ein Fahrzeug. Dasselbe Intensivmodul fliegt im A400M und steht danach als Station am Boden.',price:'Nimmt dem Container sein stärkstes Argument und macht MULTIBASE zur besseren Investition.',eff:4,pot:4,hz:'2028'},
+ {t:'Katalogoption bei Embraer',p:'MULTIBASE wird als zugelassene Option in den C-390-Katalog aufgenommen. Eine Zulassung öffnet rund ein Dutzend Länder.',price:'Vertrieb über den Hersteller, keine Einzelzulassung je Land.',eff:4,pot:5,hz:'2027'},
+ {t:'Chinook-Palette',p:'Eine angepasste Palette für den CH-47F: 60 Maschinen in Deutschland ab 2027, weltweit über 950 Chinooks in rund 20 Ländern.',price:'Großer Markt mit vielen Nutzern, Wiederverwendung der Zulassungsarbeit.',eff:4,pot:4,hz:'2028'},
+ {t:'Evakuierungs-Palette für Zivilisten',p:'Hohe Sitzdichte, Kindersitze, Gepäcknetze – für Botschaftsevakuierungen wie Kabul 2021 oder Sudan 2023.',price:'Einfache Variante, günstiger als Medevac; hält Paletten im Alltag im Einsatz.',eff:2,pot:3,hz:'2027'},
+ {t:'Vernetzte Palette',p:'Sensoren für Patientendaten (SMARTCORE), Gewicht und Schwerpunkt; Daten gehen schon im Flug an das Zielkrankenhaus.',price:'Mehrwert, den kein Container bietet.',eff:4,pot:3,hz:'2029'},
+ {t:'Aufbereitung und Zweitmarkt',p:'Ältere Paletten werden überholt und günstiger an Nutzer mit kleinem Budget abgegeben, etwa in Afrika oder Südostasien.',price:'Erschließt preissensible Märkte, ohne den Neupreis zu senken.',eff:2,pot:3,hz:'2028'},
+ {t:'Löschpalette für rescEU',p:'FIRETUBE als zugelassene Palette für A400M und C-130J; Mitgliedstaaten melden sie in die EU-Löschreserve.',price:'EU-Finanzierung statt nationalem Haushalt.',eff:3,pot:4,hz:'2028'},
+ {t:'Drohnen absetzen aus dem Laderaum',p:'Ein Palettenmodul, das kleine Drohnen oder Lastensegler wie HADIS ausrichtet und mit Extraktionsschirm absetzt.',price:'Neue Rolle mit hohem Wert, kaum Wettbewerb.',eff:5,pot:4,hz:'2029'}];
+const MBMK_NOW=[['Messen','ILA 2022, 2024 und 2026 (Zelt bzw. MISSION BASE direkt am A400M), Dubai Airshow 2021, DEFEA 2023, Paris Air Show 2025'],['Fachpresse','Interview in der Europäischen Sicherheit & Technik (01/2025); Berichte von ES&T und hartpunkt zum Bundeswehr-Auftrag'],['Online','Website-Claim „Ready for change-off“, LinkedIn-Meldung zum Vertrag, Online-Live-Events, Kabinenkonfigurator für airFLEX'],['Partner','Spectrum Aeromed (USA, erster Käufer), Diehl Aviation (Kabinenmonumente), Joanneum Research (FORTE)']];
+const MBMK_GAP=[['Kaum Export','Exportquote rund 14 %; bisher ein Auslandskunde (Spectrum Aeromed).'],['Vertriebslücke','Die Marketing- und Vertriebsleitung ist 11/2025 ausgeschieden.'],['Preis ohne Nutzenrechnung','Der hohe Preis wird nicht mit eingesparter Zeit, Kapazität und Flugzeugverfügbarkeit gegengerechnet.'],['Keine C-390-Zulassung','Die am schnellsten wachsende Plattform in Europa ist noch nicht abgedeckt; Embraer besetzt das Feld mit einem eigenen Modul.'],['Wenig englische Referenzen','Es fehlen belastbare Fallbeispiele mit Zahlen für ausländische Beschaffer.']];
+const MBMK_DO=[
+ ['Referenz Bundeswehr ab Mitte 2027','Erste Einheit an der Truppe als Fallbeispiel auf Englisch: 90 Minuten, 12 + 4 Plätze, Video der Umrüstung im Zeitraffer.'],
+ ['Nutzen statt Preis verkaufen','Für jeden Beschaffer eine Rechnung über eingesparte Stunden, mehr Plätze pro Flug und freie Flugzeugzeit – der Rechner oben ist der Anfang.'],
+ ['Über die Hersteller verkaufen','Airbus: Line-Fit oder Option für die 16 neuen A400M und Polen. Embraer: Katalogoption für die C-390. Lockheed: Option für C-130J-Kunden.'],
+ ['C-390-Cluster gezielt angehen','Österreich als Erstkunde (FORTE-Vorarbeit), danach Tschechien, Schweden, Slowakei, Litauen und Griechenland mit derselben Zulassung.'],
+ ['Pool- und Mietmodelle anbieten','NATO-A400M-Flotte, EATC und EU-Programme (SAFE, rescEU) als Finanzierer statt Einzelhaushalte.'],
+ ['Sanitätsdienste direkt ansprechen','Flugmediziner und Sanitätsdienste sind die Nutzer – Vorführungen bei Übungen und Fachkongressen, nicht nur bei Beschaffern.'],
+ ['Lokale Partner für große Märkte','Indien, Golfstaaten und Polen erwarten Fertigung im Land – Lizenz oder Montage mit lokalem Partner vorbereiten.']];
+/* Zustand */
+let MB={tab:'ueb',cont:'alle',plat:'alle',st:'alle',q:''};try{Object.assign(MB,JSON.parse(localStorage.getItem('lz5_mb')||'{}'));}catch(e){}
+const mbSave=()=>{try{localStorage.setItem('lz5_mb',JSON.stringify({tab:MB.tab,cont:MB.cont,plat:MB.plat,st:MB.st}));}catch(e){}};
+let MBR={n:6,roles:24,old:5,neu:1.5,hr:6000,crew:4,crewH:75,priceMB:1000000,priceAlt:400000,sets:8,yrs:20,wMB:600,wAlt:2200};try{Object.assign(MBR,JSON.parse(localStorage.getItem('lz5_mbr')||'{}'));}catch(e){}
+/* Bereich in der Navigation */
+(function(){try{if(!AREAS.some(a=>a[0]==='produkte')){const i=AREAS.findIndex(a=>a[0]==='wissen');AREAS.splice(i,0,['produkte','Produkte','Produkte',['multibase']]);}if(!VIEWS.some(v=>v[0]==='multibase'))VIEWS.push(['multibase','MULTIBASE']);SUBL.multibase='MULTIBASE';
+ ICON.produkte='<rect x="2" y="10.5" width="14" height="3" rx=".8"/><path d="M4 10.5V6.5h4v4M10 10.5V4.5h4v6M3.5 13.5v1.5M14.5 13.5v1.5M9 13.5v1.5"/>';}catch(e){}})();
+{const o=renderNav;renderNav=function(){const r=o.apply(this,arguments);const a=document.querySelector('#nav a[data-v="produkte"] svg');if(a)a.innerHTML=ICON.produkte;return r;};}
+{const o=renderAll;renderAll=function(){const r=o.apply(this,arguments);if(cur==='multibase')setTimeout(renderMB,0);return r;};}
+{const o=route;route=function(){const r=o.apply(this,arguments);if(cur==='multibase')renderMB();return r;};}
+/* Hilfen */
+const mbFmt=v=>Math.round(v).toLocaleString('de-DE');
+const mbEur=v=>Math.abs(v)>=1e6?(v/1e6).toLocaleString('de-DE',{maximumFractionDigits:1})+' Mio. €':mbFmt(v)+' €';
+const mbMkt=c=>Object.entries(S.markets||{}).find(([,m])=>m.a2===c);
+function mbFairs(c){const m=mbMkt(c);if(!m)return[];try{return mFairs(m[0],m[1]).filter(([,f])=>(f.end||f.start)>=todayISO);}catch(e){return[];}}
+const mbPlats=()=>{const s=new Set();MBC.forEach(x=>x.pl.forEach(p=>s.add(p[0].replace(/-30$/,'').replace(/^KC-390$/,'C-390'))));return['A400M','C-390','C-130J','C-130H','CH-47F'].filter(p=>s.has(p)||p==='C-130H');};
+const mbHas=(x,p)=>x.pl.some(([t])=>{const T=t.replace(/^KC-390$/,'C-390');if(p==='C-130H')return /^C-130(?!J)|^Tp 84/.test(T);if(p==='C-130J')return /C-130J|KC-130J/.test(T);if(p==='CH-47F')return /CH-47/.test(T);return T.startsWith(p);});
+function mbList(){const q=MB.q.trim().toLowerCase();return MBC.filter(x=>(MB.cont==='alle'||x.k===MB.cont)&&(MB.plat==='alle'||mbHas(x,MB.plat))&&(MB.st==='alle'||x.st===MB.st)&&(!q||[x.n,x.c,x.why,x.route,...x.pl.flat()].join(' ').toLowerCase().includes(q))).sort((a,b)=>MBST[b.st][2]-MBST[a.st][2]||b.fit-a.fit);}
+const mbBar=(v,c)=>`<span class="mb-bar"><i style="width:${v}%;background:${c||'var(--tx-ac)'}"></i></span>`;
+/* Seite */
+function renderMB(){const el=$('#mb');if(!el)return;const tabs=[['ueb','Überblick'],['kunden','Kunden weltweit'],['preis','Wettbewerb & Preis'],['ideen','Ideen & Innovation'],['markt','Vermarktung']];
+ el.innerHTML=`<div class="tx mb">
+ <div class="tx-mast"><div><p class="tx-over"><i></i>Produkte · 01 / ${MBP.length}</p><h1 class="tx-title">MULTIBASE</h1><p class="tx-sub">Modulare Palettenlösung für Transportflugzeuge und Hubschrauber – „Ready for change-off“. Stand ${esc(fmtD(todayISO))}, nur öffentliche Quellen; Bewertungen sind als Einschätzung gekennzeichnet.</p></div>
+  <div class="tx-act"><button class="btn sm" data-mbmail>${typeof MAILICO!=='undefined'?MAILICO:''} Kernpunkte als E-Mail</button></div></div>
+ <nav class="mb-prod" aria-label="Produkte">${MBP.map(([k,n,d,on])=>`<button class="${on?'on':''}" ${on?'':'disabled'} title="${esc(on?d:d+' – folgt')}"><b>${esc(n)}</b><span>${esc(on?d:'folgt')}</span></button>`).join('')}</nav>
+ <nav class="tx-tabs" role="tablist">${tabs.map(([k,l],i)=>`<button role="tab" aria-selected="${MB.tab===k}" class="${MB.tab===k?'on':''}" data-mbtab="${k}"><em>${String(i+1).padStart(2,'0')}</em>${esc(l)}</button>`).join('')}</nav>
+ <div id="mbb">${mbBody()}</div></div>`;}
+function mbBody(){try{return ({ueb:mbUeb,kunden:mbKunden,preis:mbPreis,ideen:mbIdeen,markt:mbMarkt})[MB.tab]();}catch(e){console.error(e);return '<div class="glass pad note">Dieser Teil konnte nicht angezeigt werden.</div>';}}
+function mbUeb(){const nK=MBC.filter(x=>x.st==='kunde').length,nH=MBC.filter(x=>x.st==='hoch').length;
+ const ops=Object.entries(S.opps||{}).filter(([,o])=>/multibase/i.test([o.product,o.title,o.why].join(' '))).sort((a,b)=>(b[1].prio||0)-(a[1].prio||0));
+ const sig=Object.entries(S.signals||{}).filter(([k,s])=>(s.nodes||[]).includes('multibase')&&(S.votes||{})[k]!==-1).sort((a,b)=>(b[1].date||'').localeCompare(a[1].date||'')).slice(0,6);
+ return `<div class="tx-kpis">
+  <div><span>Umrüstung MedEvac</span><b>90<small> min</small></b><i>statt 4–6 h (Bundeswehr)</i></div>
+  <div><span>Plätze pro Flug</span><b>12 + 4</b><i>Liegen + Intensiv, bisher max. 6</i></div>
+  <div><span>Bundeswehr-Auftrag</span><b>46–48</b><i>Palettensysteme, rund 48 Mio. € freigegeben</i></div>
+  <div><span>Palette</span><b>108 × 88<small> in</small></b><i>463L/HCU-6 · 500–700 kg</i></div>
+  <div><span>Länder in der Analyse</span><b>${MBC.length}</b><i>${nK} Kunde · ${nH} mit hoher Chance</i></div></div>
+ <div class="tx-grid2"><section class="tx-box"><h2 class="tx-h"><em>A</em>Was MULTIBASE ist</h2>
+  <p>Eine Palette im Standardformat 463L/HCU-6, auf die Sitze, Liegen, Intensivplätze, Schränke, Toiletten oder Sondermodule montiert werden. Die Paletten werden außerhalb des Flugzeugs vorbereitet; zwei Personen bauen eine Palette in rund 20 Minuten auf. Ein Transportflugzeug wird so in unter zwei Stunden vom Frachter zum Passagier-, VIP- oder MedEvac-Flugzeug.</p>
+  <p>Technische Daten: 2.300 × 3.000 × 2.150 mm, leere Palette 500 kg, Sitzpalette 700 kg, Sitze crashsicher nach EASA CS-25 (16 g), Sauerstoff, Schwimmwesten, Patientensicherung.</p></section>
+  <section class="tx-box"><h2 class="tx-h"><em>B</em>Plattformen</h2><ul class="tx-pl">
+  <li><b>A400M</b><span>Sitzpaletten zugelassen 2018, Erprobung WTD 61 2022, MedEvac-Serie ab Mitte 2027</span><i class="ok">zugelassen</i></li>
+  <li><b>C-130 / C-130J</b><span>Spectrum Aeromed 2022, Évreux 2024, Bundeswehr-Vertrag schließt die C-130J ein</span><i class="mid">in Arbeit</i></li>
+  <li><b>C-390</b><span>FORTE-Studie mit Joanneum Research; Embraer liefert für NL ein eigenes Modul</span><i class="no">fehlt</i></li>
+  <li><b>CH-53K / CH-47F</b><span>Variante für schwere Transporthubschrauber; CH-47F offen</span><i class="no">offen</i></li></ul></section></div>
+ <section class="tx-sec"><h2 class="tx-h"><em>C</em>Varianten</h2><div class="tx-cards">${MBVAR.map(([ic,t,d])=>`<div class="tx-card"><span class="tx-ic">${brIco({seat:'seat',med:'target',vip:'seat',lav:'doc',cbrn:'flask',fire:'para',cmd:'chip',tent:'globe'}[ic]||'news',20)}</span><b>${esc(t)}</b><p>${esc(d)}</p></div>`).join('')}</div></section>
+ <section class="tx-sec"><h2 class="tx-h"><em>D</em>Bisheriger Weg</h2><ol class="tx-tl">${MBTL.map(([d,t])=>`<li class="${/2027|2029/.test(d)?'fut':''}"><time>${esc(d)}</time><span>${esc(t)}</span></li>`).join('')}</ol></section>
+ <div class="tx-grid2"><section class="tx-box"><h2 class="tx-h"><em>E</em>Chancen in der Pipeline</h2>${ops.map(([k,o])=>`<button class="tx-row" data-xgo="chance:${esc(k)}"><b>${esc(o.title)}</b><span>${esc(o.market||'')}</span>${relB((o.prio||0)*4)}</button>`).join('')||'<p class="note">Keine.</p>'}</section>
+ <section class="tx-box"><h2 class="tx-h"><em>F</em>Meldungen</h2>${sig.map(([k,s])=>`<button class="tx-row" data-mbsig="${esc(k)}"><time>${esc(dShort(s.date))}</time><b>${esc(s.title)}</b></button>`).join('')||'<p class="note">Keine.</p>'}</section></div>`;}
+function mbKunden(){const L=mbList();const all=MBC;
+ const byC=Object.entries(MBCONT).map(([k,[n,c]])=>{const g=all.filter(x=>x.k===k);return [k,n,c,g.length,g.filter(x=>x.st==='kunde'||x.st==='hoch').length,Math.round(g.reduce((s,x)=>s+x.fit,0)/Math.max(1,g.length))];});
+ const plats=['A400M','C-390','C-130J','C-130H','CH-47F'];
+ return `<div class="mb-cont">${byC.map(([k,n,c,cnt,hi,avg])=>`<button class="mb-ct${MB.cont===k?' on':''}" data-mbcont="${k}" style="--c:${c}"><span>${esc(n)}</span><b>${cnt}<small> Länder</small></b><i>${hi} mit hoher Chance · Ø Passung ${avg}</i>${mbBar(avg,c)}</button>`).join('')}</div>
+ <div class="tx-filt"><div class="tx-seg">${[['alle','Alle Kontinente'],...Object.entries(MBCONT).map(([k,v])=>[k,v[0]])].map(([k,l])=>`<button class="${MB.cont===k?'on':''}" data-mbcont="${k}">${esc(l)}</button>`).join('')}</div>
+  <div class="tx-seg">${[['alle','Alle Typen'],...plats.map(p=>[p,p])].map(([k,l])=>`<button class="${MB.plat===k?'on':''}" data-mbplat="${esc(k)}">${esc(l)}</button>`).join('')}</div>
+  <div class="tx-seg">${[['alle','Alle'],...Object.entries(MBST).map(([k,v])=>[k,v[0]])].map(([k,l])=>`<button class="${MB.st===k?'on':''}" data-mbst="${k}">${esc(l)}</button>`).join('')}</div>
+  <input id="mbq" type="search" placeholder="Land, Flugzeug, Partner …" value="${esc(MB.q)}"></div>
+ <div class="mb-mx"><table><thead><tr><th></th>${plats.map(p=>`<th>${esc(p)}</th>`).join('')}</tr></thead><tbody>${Object.entries(MBCONT).map(([k,[n,c]])=>`<tr><th style="--c:${c}"><i></i>${esc(n)}</th>${plats.map(p=>{const g=all.filter(x=>x.k===k&&mbHas(x,p));return `<td>${g.length?`<button data-mbmx="${k}|${esc(p)}" title="${esc(g.map(x=>x.n).join(', '))}" style="--o:${Math.min(1,.25+g.length/8)}">${g.length}</button>`:'<span>–</span>'}</td>`;}).join('')}</tr>`).join('')}</tbody></table><p class="note">Anzahl Länder je Kontinent und Flugzeugtyp, die in der Analyse stehen. Klick filtert die Liste.</p></div>
+ <p class="tx-count"><b>${L.length}</b> von ${all.length} Ländern · sortiert nach Status und Passung · Passung = Einschätzung aus Plattform, Bedarf, Zugang und Hürden</p>
+ <div class="mb-cl">${L.map(x=>{const S2=MBST[x.st];const m=mbMkt(x.c);const fs=mbFairs(x.c);const C=MBCONT[x.k];return `<article class="mb-cc" style="--c:${S2[1]};--k:${C[1]}">
+  <header><span class="mb-iso">${esc(x.c)}</span><div><h3>${esc(x.n)}</h3><span class="mb-k">${esc(C[0])}</span></div><span class="mb-st">${esc(S2[0])}</span></header>
+  <div class="mb-fit"><span>Passung</span>${mbBar(x.fit,S2[1])}<b>${x.fit}</b></div>
+  <ul class="mb-pl">${x.pl.map(([t,d])=>`<li><b>${esc(t)}</b><span>${esc(d)}</span></li>`).join('')}</ul>
+  <p>${esc(x.why)}</p>
+  <dl><dt>Zugang</dt><dd>${esc(x.route)}</dd><dt>Hürde</dt><dd>${esc(x.hurdle)}</dd></dl>
+  <footer>${m?`<button class="tx-lk" data-xgo="markt:${esc(m[0])}">Marktprofil →</button>`:''}${fs.length?`<a class="tx-lk" href="#messe/${esc(fs[0][0])}">Messe: ${esc(fs[0][1].short||fs[0][1].name)} ${esc(dShort(fs[0][1].start))}</a>`:''}</footer></article>`;}).join('')||'<p class="note">Keine Länder in dieser Auswahl.</p>'}</div>`;}
+function mbCalc(){const r=MBR;const tSave=Math.max(0,r.old-r.neu);const hSaved=tSave*r.roles*r.n;const vAir=hSaved*r.hr;const vCrew=hSaved*r.crew*r.crewH;const yearly=vAir+vCrew;
+ const extra=(r.priceMB-r.priceAlt)*r.sets;const pay=yearly>0?extra/yearly:Infinity;const life=yearly*r.yrs-extra;const wDiff=(r.wAlt-r.wMB)*r.sets;
+ return {hSaved,yearly,extra,pay,life,wDiff};}
+function mbCalcOut(){const c=mbCalc();return `<div class="mb-res"><div><span>Gesparte Bodenzeit pro Jahr</span><b>${mbFmt(c.hSaved)} h</b></div><div><span>Wert pro Jahr</span><b>${mbEur(c.yearly)}</b></div><div><span>Mehrpreis MULTIBASE gesamt</span><b>${mbEur(c.extra)}</b></div><div class="hl"><span>Mehrpreis ist zurück nach</span><b>${isFinite(c.pay)?(c.pay<0?'sofort':c.pay.toLocaleString('de-DE',{maximumFractionDigits:1})+' Jahren'):'–'}</b></div><div><span>Vorteil über die Nutzungsdauer</span><b>${mbEur(c.life)}</b></div><div><span>Weniger Gewicht im Laderaum</span><b>${mbFmt(c.wDiff)} kg</b></div></div>`;}
+function mbPreis(){const r=MBR;const f=(k,l,u,step)=>`<label><span>${esc(l)}</span><input type="number" min="0" step="${step||1}" data-mbr="${k}" value="${r[k]}"><i>${esc(u)}</i></label>`;
+ return `<div class="tx-callout"><b>Ausgangslage</b><p>MULTIBASE ist teuer. Für die 46–48 Palettensysteme der Bundeswehr hat der Haushaltsausschuss rund 48 Mio. € freigegeben (ES&T). Das sind grob 1 Mio. € pro Palettensystem – einschließlich Ersatzteilen, Ausbildung, Dokumentation und Zulassung, die in solchen Vorlagen meist enthalten sind (Einschätzung). Ein Sanitäts- oder Unterkunftscontainer kostet in der Anschaffung deutlich weniger. Ein Preisvergleich Stück gegen Stück verliert MULTIBASE deshalb fast immer – der Vergleich muss über Zeit, Kapazität und Flugzeugverfügbarkeit laufen.</p></div>
+ <section class="tx-sec"><h2 class="tx-h"><em>A</em>Womit Kunden MULTIBASE vergleichen</h2><div class="mb-tbl"><table><thead><tr><th>Alternative</th><th>Beispiele</th><th>Stärke</th><th>Schwäche</th></tr></thead><tbody>${MBCOMP.map(([a,b,c,d])=>`<tr><th>${esc(a)}</th><td>${esc(b)}</td><td>${esc(c)}</td><td>${esc(d)}</td></tr>`).join('')}</tbody></table></div></section>
+ <section class="tx-sec"><h2 class="tx-h"><em>B</em>Wo MULTIBASE den höheren Preis zurückholt</h2><div class="tx-cards">${MBWIN.map(([t,d],i)=>`<div class="tx-card"><span class="tx-n">${String(i+1).padStart(2,'0')}</span><b>${esc(t)}</b><p>${esc(d)}</p></div>`).join('')}</div></section>
+ <section class="tx-sec"><h2 class="tx-h"><em>C</em>Rechner: rechnet sich der Mehrpreis?</h2>
+  <p class="tx-warn">Alle Werte sind frei angenommene Beispielwerte, keine AUTOFLUG-Preise. Eigene Zahlen eintragen – sie bleiben nur in diesem Browser.</p>
+  <div class="mb-calc"><div class="mb-in">${f('n','Flugzeuge mit Rollenwechsel','Stück')}${f('roles','Rollenwechsel pro Flugzeug und Jahr','pro Jahr')}${f('old','Umrüstzeit heute','Stunden',.5)}${f('neu','Umrüstzeit mit MULTIBASE','Stunden',.5)}${f('hr','Wert einer Flugzeugstunde am Boden','€/h',500)}${f('crew','Techniker je Umrüstung','Personen')}${f('crewH','Stundensatz Techniker','€/h',5)}${f('sets','Anzahl Palettensätze','Sätze')}${f('priceMB','Preis MULTIBASE je Satz','€',50000)}${f('priceAlt','Preis Alternative je Satz','€',50000)}${f('yrs','Nutzungsdauer','Jahre')}${f('wMB','Gewicht MULTIBASE je Satz','kg',50)}${f('wAlt','Gewicht Alternative je Satz','kg',50)}</div>
+  <div id="mbres">${mbCalcOut()}</div></div>
+  <p class="note">Gerechnet wird nur, was sich messen lässt: gesparte Stunden × (Flugzeugstunde + Techniker). Nicht enthalten sind die zusätzlichen Plätze pro Flug (12 + 4 statt 6), die ganze Flüge sparen können – das ist das stärkste Argument im Verkaufsgespräch.</p></section>
+ <section class="tx-sec"><h2 class="tx-h"><em>D</em>Was am Preis selbst geändert werden kann</h2><ul class="tx-ul">
+  <li><b>Preisstufen:</b> zugelassene Grundpalette als Einstieg, Module einzeln dazu – statt kompletter Sätze.</li>
+  <li><b>Miet- und Poolmodelle:</b> Sonderrollen (Löschen, Quarantäne, VIP) für Saison oder Einsatz vermieten; NATO- oder EATC-Pool.</li>
+  <li><b>Gleiche Teile über alle Varianten:</b> mehr Gleichteile zwischen Sitz-, Medical- und VIP-Palette senken Herstellkosten und Ersatzteillager.</li>
+  <li><b>Einfachere Exportvariante:</b> weniger Optionen, feste Konfigurationen für Länder mit kleinem Budget.</li>
+  <li><b>Finanzierung mitliefern:</b> SAFE-Darlehen, rescEU und EDIP als Weg, den Preis aus EU-Mitteln zu bezahlen.</li></ul></section>`;}
+function mbIdeen(){const own=Object.entries(S.ideas||{}).filter(([,i])=>(i.nodes||[]).includes('multibase')||/multibase/i.test(i.title+' '+(i.hypothesis||''))).sort((a,b)=>(b[1].total||0)-(a[1].total||0));
+ const sc=i=>Math.round((i.pot*2+(6-i.eff))*10/1.5);
+ return `<section class="tx-sec"><h2 class="tx-h"><em>A</em>Neue Ideen für MULTIBASE</h2><p class="tx-p">Bewertet nach Potenzial (1–5) und Aufwand (1–5). Jede Idee zeigt, ob sie beim Preisproblem hilft.</p>
+ <div class="mb-il">${MBIDEA.slice().sort((a,b)=>sc(b)-sc(a)).map((i,j)=>`<article class="mb-ic"><header><span class="tx-n">${String(j+1).padStart(2,'0')}</span><h3>${esc(i.t)}</h3><span class="mb-hz">${esc(i.hz)}</span></header><p>${esc(i.p)}</p><p class="mb-pr"><b>Preis:</b> ${esc(i.price)}</p><div class="mb-ix"><span>Potenzial</span>${mbBar(i.pot*20,'var(--tx-ac2)')}<b>${i.pot}</b><span>Aufwand</span>${mbBar(i.eff*20,'#FF7A59')}<b>${i.eff}</b></div></article>`).join('')}</div></section>
+ ${own.length?`<section class="tx-sec"><h2 class="tx-h"><em>B</em>Ideen aus dem Innovationsbereich</h2><div class="tx-cards">${own.map(([id,i])=>`<button class="tx-card tx-cardb" data-xgo="idee:${esc(id)}"><span class="tag ${i.verdict==='überlebt'?'ok':i.verdict==='verworfen'?'hot':'new'}">${esc(i.verdict||'offen')}</span><b>${esc(i.title)}</b><p>${esc(i.hypothesis||'')}</p><i>TRL ${esc(i.trl??'–')} · ${esc(i.horizon||'')} →</i></button>`).join('')}</div></section>`:''}`;}
+function mbMarkt(){const fair=MBC.filter(x=>x.st==='hoch'||x.st==='kunde').flatMap(x=>mbFairs(x.c).map(([k,f])=>[k,f,x])).filter((v,i,a)=>a.findIndex(y=>y[0]===v[0])===i).sort((a,b)=>(a[1].start||'').localeCompare(b[1].start||'')).slice(0,10);
+ return `<div class="tx-grid2"><section class="tx-box"><h2 class="tx-h"><em>A</em>So wurde bisher vermarktet</h2><dl class="tx-dl">${MBMK_NOW.map(([a,b])=>`<dt>${esc(a)}</dt><dd>${esc(b)}</dd>`).join('')}</dl></section>
+ <section class="tx-box tx-boxw"><h2 class="tx-h"><em>B</em>Was fehlt</h2><dl class="tx-dl">${MBMK_GAP.map(([a,b])=>`<dt>${esc(a)}</dt><dd>${esc(b)}</dd>`).join('')}</dl></section></div>
+ <section class="tx-sec"><h2 class="tx-h"><em>C</em>Was wir ändern können</h2><ol class="mb-do">${MBMK_DO.map(([a,b])=>`<li><b>${esc(a)}</b><span>${esc(b)}</span></li>`).join('')}</ol></section>
+ <section class="tx-sec"><h2 class="tx-h"><em>D</em>Nächste Messen in Ländern mit hoher Chance</h2>${fair.length?`<ul class="mb-fl">${fair.map(([k,f,x])=>`<li><time>${esc(fmtD(f.start))}</time><a href="#messe/${esc(k)}">${esc(f.name)}</a><span>${esc(f.city||'')} · ${esc(x.n)}</span></li>`).join('')}</ul>`:'<p class="note">Keine passenden Messen im Kalender.</p>'}</section>`;}
+function mbMailText(){const L=['Bundeswehr-Referenz: 46–48 Palettensysteme, rund 48 Mio. € freigegeben, erste Einheit Mitte 2027; Umrüstung 90 min statt 4–6 h, 12 Liegen + 4 Intensiv statt 6 Patienten.',
+ 'Beste Exportchancen (Einschätzung): '+MBC.filter(x=>x.st==='hoch').sort((a,b)=>b.fit-a.fit).slice(0,6).map(x=>x.n).join(', ')+'.',
+ 'C-390 ist die wachsende Plattform in Europa; MULTIBASE ist dort noch nicht zugelassen, Embraer liefert für NL ein eigenes Medizinmodul.',
+ 'Preis: Stückvergleich gegen Container verliert; Vergleich über Zeit, Plätze pro Flug und Flugzeugverfügbarkeit führen.',
+ 'Ideen mit dem größten Hebel: Pool-Modell, Grundpalette kaufen und Rollen mieten, Katalogoption bei Embraer.'];
+ return ['Lagezentrum: MULTIBASE – Kernpunkte',['MULTIBASE – Kernpunkte ('+fmtD(todayISO)+')','',...L.map(x=>'– '+x),'',`Alles im AUTOFLUG Lagezentrum: ${LZURL}#multibase`].join('\n')];}
+document.addEventListener('click',e=>{const t=e.target;if(!t.closest||!t.closest('#mb'))return;
+ const tb=t.closest('[data-mbtab]');if(tb){MB.tab=tb.dataset.mbtab;mbSave();renderMB();return;}
+ const c=t.closest('[data-mbcont]');if(c){MB.cont=MB.cont===c.dataset.mbcont&&c.classList.contains('mb-ct')?'alle':c.dataset.mbcont;mbSave();$('#mbb').innerHTML=mbBody();return;}
+ const p=t.closest('[data-mbplat]');if(p){MB.plat=p.dataset.mbplat;mbSave();$('#mbb').innerHTML=mbBody();return;}
+ const s=t.closest('[data-mbst]');if(s){MB.st=s.dataset.mbst;mbSave();$('#mbb').innerHTML=mbBody();return;}
+ const mx=t.closest('[data-mbmx]');if(mx){const[k,pl]=mx.dataset.mbmx.split('|');MB.cont=k;MB.plat=pl;mbSave();$('#mbb').innerHTML=mbBody();const l=$('#mbb .mb-cl');if(l)l.scrollIntoView({behavior:'smooth',block:'start'});return;}
+ const sg=t.closest('[data-mbsig]');if(sg){ARTFROM=true;ARTORIG=location.hash;location.hash='#meldung/'+encodeURIComponent(sg.dataset.mbsig);return;}
+ if(t.closest('[data-mbmail]')){const r=mbMailText();mailOpen(r[0],r[1]);}});
+let MBQT=null;document.addEventListener('input',e=>{const t=e.target;if(t.id==='mbq'){MB.q=t.value;clearTimeout(MBQT);MBQT=setTimeout(()=>{const y=scrollY;$('#mbb').innerHTML=mbBody();const q=$('#mbq');if(q){q.focus();q.setSelectionRange(q.value.length,q.value.length);}scrollTo(0,y);},200);return;}
+ if(t.dataset&&t.dataset.mbr){const v=parseFloat(t.value);MBR[t.dataset.mbr]=isFinite(v)?v:0;try{localStorage.setItem('lz5_mbr',JSON.stringify(MBR));}catch(e2){}const o=$('#mbres');if(o)o.innerHTML=mbCalcOut();}});
 
 function renderAll(){favMigrate();if(cur==='merkliste')setTimeout(renderMerk,0);if(cur==='messeki')setTimeout(renderMki,0);HADJ=null;HNAMES=null;if(cur==='kreativ')setTimeout(renderHub,0);try{if(S.bus)for(const k in S.bus)S.bus[k].color=buCol(k);}catch(e){}for(const k in MPSC)delete MPSC[k];if(cur==='briefing')setTimeout(renderBrief,0);if(cur==='pipeline')setTimeout(renderPipe,0);if(cur==='landkarte')setTimeout(renderLk,0);if(cur==='planer')setTimeout(renderPlaner,0);setTimeout(decorateHeads,0);renderNav();renderStatus();renderCockpit();renderQuick();renderToday();renderTenders();renderMarkets();renderOpps();renderSignale();renderInno();renderFristen();renderMessen();renderFirmen();if(cur==='fair')renderFairPage();if(cur==='co')renderCoPage();renderSparten();renderComp();renderLuecken();renderLog();}
 
